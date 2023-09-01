@@ -11,7 +11,7 @@ labels:
 summary: "A postfix calculator that implements 3 types of stacks which the user can select."
 ---
 
-<img class="img-fluid" src="../img/image.png">
+img/StackCalc.png
 
 This project is a postfix calculator with a graphical user interface. On startup, the calculator lets you choose between 3 different types of stacks to implement. The first is Java's pre-defined stack from its own library, the second is an array stack with a limited amount of storage, and the third is a linked stack which implements linked lists.
 
