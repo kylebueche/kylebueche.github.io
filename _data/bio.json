@@ -26,7 +26,7 @@
     },
     {
       "name": "Toolsets/OS",
-      "keywords": [ "Microsoft Windows", "Unix", "Git/GitHub", "Eclipse", "VI", ]
+      "keywords": [ "Microsoft Windows", "Unix", "Git/GitHub", "Eclipse", "VI" ]
     }
   ],
   "education": [
