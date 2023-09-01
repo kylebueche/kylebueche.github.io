@@ -6,7 +6,7 @@
     "email": "bueche@hawaii.edu",
     "phone": "808-NoThanks",
     "website": "https://kylebueche.github.io",
-    "summary": "I am studying for a B.S. in Computer Science in the Department of Information and Computer Sciences at the University of Hawaii. I expect to graduate in Spring, 2026.",
+    "summary": "I am studying for a B.S. in Computer Science in the Department of Information and Computer Sciences at the University of Hawaii. I expect to graduate in Spring of 2026.",
     "location": { "address": "", "postalCode": "96822", "city": "Honolulu", "countryCode": "USA", "region": "Hawaii" },
     "profiles": [
       { "network": "github", "username": "kylebueche", "url": "http://github.com/kylebueche" },
@@ -14,7 +14,8 @@
     ]
   },
   "interests": [
-    { "name": "2D & 3D Animation" },
+    { "name": "2D Animation },
+    { "name": "3D Animation" },
     { "name": "Game Development" },
     { "name": "Artificial Intelligence" }
   ],
