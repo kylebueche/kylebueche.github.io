@@ -6,10 +6,10 @@
 
 /* See https://getbootstrap.com/docs/5.2/customize/css-variables/#root-variables for variables to override. */
 :root {
-  --tf-blue1: #073db3;
-  --tf-blue2: #1b3ca9;
-  --tf-blue3: #2f5dd0;
-  --tf-blue4: #bdc9f0;
+  --tf-blue1: #073db9;
+  --tf-blue2: #1b3cb0;
+  --tf-blue3: #2f5dc5;
+  --tf-blue4: #bdc9e9;
   --bs-font-sans-serif: "Open Sans", sans-serif;
   --bs-link-color: var(--tf-blue1);
   --tf-pill-bg: var(--tf-blue3);
