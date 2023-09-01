@@ -1,7 +1,7 @@
 ---
 layout: project
 type: project
-image: img/image.png
+image: <img width="474" alt="image" src="https://github.com/kylebueche/kylebueche.github.io/assets/38002610/c2707d50-936c-4dd4-a8d8-700ce56c74a8">
 title: "Sudoku Solver"
 date: 2023-04-21
 published: true
