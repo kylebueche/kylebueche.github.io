@@ -1,7 +1,7 @@
 ---
 layout: project
 type: project
-image: img/image.png
+image: img/StackCalc.png
 title: "Stack Calculator With GUI"
 date: 2023-03-24
 published: true
