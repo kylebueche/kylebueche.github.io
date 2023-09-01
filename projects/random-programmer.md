@@ -1,7 +1,7 @@
 ---
 layout: project
 type: project
-image: img/image.png
+image: img/264968353-45bd6b1b-5178-494d-9dab-fc6de5235caf.png
 title: "Random Programmer"
 date: 2023-02-03
 published: true
