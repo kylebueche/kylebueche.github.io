@@ -26,7 +26,7 @@
     },
     {
       "name": "Toolsets/OS",
-      "keywords": [ "Windows" ]
+      "keywords": [ "Microsoft Windows", "Unix", "Git/GitHub", "Eclipse", "VI", ]
     }
   ],
   "education": [
@@ -34,60 +34,63 @@
       "institution": "University of Hawaii, Honolulu, HI",
       "area": "Computer Science (expected Spring, 2026)",
       "studyType": "B.S.",
-      "startDate": "2022-08-15",
+      "startDate": "2022",
       "endDate": "Present",
-      "courses": [ "ICS 111", "ICS 211", "ICS 141", "ICS 241", "ICS 212", "ICS 314", "ICS 486", "ACM 215"
+      "courses": [ "Software Engineering I", "AR/VR Development", "Introduction to 3D Animation", "Program Structure", "Discrete Mathematics I & II", "Introduction to Computer Science I & II"
       ]
     }
   ],
   "work": [
     {
-      "company": "",
-      "position": "",
-      "website": "",
-      "startDate": "",
-      "endDate": "",
+      "company": "niversity of Hawaii at Manoa Student Housing Services",
+      "position": "Resident Assistant",
+      "website": "https://manoa.hawaii.edu/housing/",
+      "startDate": "2023-08",
+      "endDate": "Present",
       "summary": "",
       "highlights": [
-        "",
-        ""
+        "Build community among a floor of first-year residents",
+        "Manage conflicts and de-escelate situations"
       ]
     },
     {
-      "company": "",
-      "position": "",
-      "website": "",
-      "startDate": "",
-      "endDate": "",
+      "company": "University of Hawaii at Manoa School of Architecture",
+      "position": "Computer Lab Assistant",
+      "website": "http://www.arch.hawaii.edu/",
+      "startDate": "2023-01",
+      "endDate": "2023-05",
       "summary": "",
       "highlights": [
-        "",
-        ""
+        "Manage printing and plotting jobs on different types of paper and boards for SoA students",
+        "Update the School of Architecture website's 'News & Events' tab",
+        "Assist teachers and students at the UH Manoa School of Architecture with computers, projectors, and printers"
       ]
     }
   ],
   "volunteer": [
     {
-      "organization": "",
+      "organization": "Pearl City High School PTSA",
       "website": "",
-      "position": "",
-      "startDate": "",
-      "endDate": "",
+      "position": "Fundraisers",
+      "startDate": "2020",
+      "endDate": "2022",
       "summary": "",
       "highlights": [
-        "",
-        ""
+        "80+ hours spent volunteering for fundraisers for Project Grad",
       ]
     },
     {
-      "organization": "",
-      "website": "",
+      "organization": "Boy Scouts of America",
+      "website": "https://www.scouting.org/",
       "position": "",
-      "startDate": "",
-      "endDate": "",
-      "summary": "",
+      "startDate": "2010",
+      "endDate": "2022",
+      "summary": "Countless hours spent volunteering for various community service projects",
       "highlights": [
-        ""
+        "Lead an Eagle Scout Project to install 127 plants and 3 palm trees at Pearl City High School",
+        "Helped with several other Eagle Scout Projects throghout the years",
+        "Several renovations for schools & churches",
+        "Several park, trail, & community cleanups",
       ]
     }
   ],
@@ -102,7 +105,7 @@
       "title": "1st Place",
       "date": "2023",
       "awarder": "Family Barbecue",
-      "summary": "Me and my brother won the family cookoff with a copy of L&L's barbecue chicken recipe"
+      "summary": "Me and my brother won the family cookoff with a clone of L&L's barbecue chicken recipe"
     }
   ],
   "references": [
