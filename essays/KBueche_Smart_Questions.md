@@ -10,7 +10,7 @@ labels:
   - Stack Exchange
 ---
 
-![image](https://github.com/kylebueche/kylebueche.github.io/assets/38002610/1843fae1-351f-4be8-abcc-e536f0f6e8a6)
+<img width="400px" class="rounded float-start pe-4" src="../img/query.png">
 
 When asking questions on support forums, it is best to make your queries look well structured and organized so that people who know how to help you can waste little effort in doing so. In "[How To Ask Questions The Smart Way](http://www.catb.org/esr/faqs/smart-questions.html)," Eric Raymond details the best way to format your queries so that helpers are more likely to take notice. According to Raymond, the best queries.
 
