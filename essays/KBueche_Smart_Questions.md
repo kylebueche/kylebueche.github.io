@@ -48,7 +48,7 @@ This post has a pretty good name format, but it can be improved. A better name a
 #### Here's an Example of a Not-So-Smart Question:
 
 
-[whats problem?? i'am learning installation valet in laravel](https://stackoverflow.com/questions/77050128/whats-problem-iam-learning-installation-valet-in-laravel) 
+"[whats problem?? i'am learning installation valet in laravel](https://stackoverflow.com/questions/77050128/whats-problem-iam-learning-installation-valet-in-laravel)"
 
 ```
 Your requirements could not be resolved to an installable set of packages.
