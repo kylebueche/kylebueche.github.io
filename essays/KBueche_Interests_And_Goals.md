@@ -6,7 +6,7 @@ title: "Interests and Goals in Software Engineering"
 date: 2023-08-31
 published: true
 labels:
-  - Computer Science
+  - Computer Science, Animation, Game Dev
 ---
 
 As I am currently in my third semester of college, I have lots of room to explore my major and venture into specific areas. That being said, I'm already working towards my goal of attaining the Creative Computational Media Certificate. I am currently taking Introduction to 3D Animation, as well as AR/VR Development, two required courses in the CCM Certificate program. I took Discrete Mathematics II over the summer, which has allowed me to get a bit of a headstart by taking Software Engineering I alongside Program Structure this semester. You might be able to tell by now, but I really want to try out game development.
