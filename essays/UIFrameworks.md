@@ -9,7 +9,7 @@ labels:
   - Computer Science
 ---
 
-<img width="300px" class="rounded float-start pe-4" src="../img/ESLint_logo.png">
+<img width="300px" class="rounded float-start pe-4" src="../img/bootstrap-logo.svg">
 
 #### The Good:
 Over the last few days, my course in Software Engineering I has required the use of ESLint in order to enforce someone's idea of 'best' coding style and practices. Almost every coding assignment we do for this class is self-timed, and we try to come up with solutions to a given problem in the fastest possible time. The past few assignments have shown me how helpful a style enforcer can be when writing code in a major time crunch. Sometimes there just isn't enough time to worry about how it looks or how readable it is, and a simple ESLint fix file command can take care of that in less than a second. For these reasons Tools like ESLint have become very appealing to me. Despite this, I have come not to like the 'best practice' enforcement that comes with ESLint.
