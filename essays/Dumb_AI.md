@@ -111,7 +111,7 @@ ChatGPT is probably not going to fix my toaster. Ill stick with YouTube tutorial
 
 ## V Challenges and Opportunities
 
-
+Resources that people have written or otherwise documented have always been better for my personal challenges than AI.
 
 ## VI Comparative Analysis
 
