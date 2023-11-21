@@ -91,24 +91,23 @@ Honestly why even bother programming. Whatever ChatGPT spits out for a given cod
 
 ### 12. Documenting code
 
-Not particularly useful for generating documentation. The generated text isn't really useful at explaining the useful insights you would want. 
+Just write comments and a readme file, come on. If you can't explain what your code is doing, do you know what you're trying to code?
 
 ### 13. Quality assurance
 
-I think it only helps with finding error in code rather than ensuring quality. That's the job for ESLint.
+I personally would want to assure quality myself, rather than having an AI say "Yeah that seems pretty quality."
 
 ### 14. Other uses in ICS 314 not listed
 
-n/a
+If I don't have a specific reason to use AI over just using Google, I don't see the point.
 
 ## III Impact on Learning and Understanding
 
-If you had the opportunity to learn from a tutor, you would know how useful it is to be able to ask them questions and have them correct your issues. This is the true educational value you can get with AI to a much smaller extent. I use it for 
-topics or concepts that I really want to learn and I find it useful. 
+AI has helped me learn random things that I'm curious about, like what happened to the remaining Aztec people after the Spanish conquered them? It turns out that much of Aztec culture was foundational for Mexican culture. Things like Dia De Los Muertos, even the wide use of beans, corn, and chilies were all from the Aztec people.
 
 ## IV Practical Applications
 
-You're not going to be using AI to build AI or other projects. A wrench isn't going to fix the car, the mechanic is. 
+
 
 ## V Challenges and Opportunities
 
