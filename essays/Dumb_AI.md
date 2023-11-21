@@ -8,7 +8,7 @@ labels:
   - Artificial Intelligence
 ---
 
-<img src="../img/bender.webp" alt="">
+<img src="../img/bender.webp" width="400px" alt="">
 
 
 
