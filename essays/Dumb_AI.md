@@ -103,24 +103,23 @@ If I don't have a specific reason to use AI over just using Google, I don't see 
 
 ## III Impact on Learning and Understanding
 
-AI has helped me learn random things that I'm curious about, like what happened to the remaining Aztec people after the Spanish conquered them? It turns out that much of Aztec culture was foundational for Mexican culture. Things like Dia De Los Muertos, even the wide use of beans, corn, and chilies were all from the Aztec people.
+AI has helped me learn random things that I'm curious about, like what happened to the remaining Aztec people after the Spanish conquered them? It turns out that much of Aztec culture was foundational for Mexican culture. Things like Dia De Los Muertos, even the wide use of beans, corn, and chilies were all from the Aztec people. ChatGPT gave me a pretty good summary, but for things I want to dive deep in to learn and understand, I would not use AI.
 
 ## IV Practical Applications
 
-
+ChatGPT is probably not going to fix my toaster. Ill stick with YouTube tutorials.
 
 ## V Challenges and Opportunities
 
-I found it challenging to have AI help as the course progressed further, however I found it had immense potential when it came to learning and finding solutions. These are however abstract and not concrete. A human brain is still needed to parse 
-through the information.
+
 
 ## VI Comparative Analysis
 
-All AI does is help you learn faster. I like to call it the devil's tool, because while it can be useful for learning, it is equally tempting to fall into the trap of using it as a crutch. 
+
 
 ## VII Future Considerations
 
-AI won't be replacing Software Engineers anytime in the future, but it will make them more efficient.
+
 
 ## VIII Conclusion
 
