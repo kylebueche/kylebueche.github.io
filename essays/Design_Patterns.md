@@ -23,4 +23,4 @@ Let's answer that first question. I think that the best way to explain design pa
 
 An example of a design pattern is defining a method in a parent class, such that all classes that inherit it are required to incorporate that method. If you need to do a lot of area calculations on different shapes, you could incorporate a square and circle class that inherit from shape. Then shape could require an area method, thus ensuring that circle.area() and square.area() will always work.
 
-The next question gets a bit tricky, because it's hard to say what counts as a design pattern and what doesn't. 
+The next question gets a bit tricky, because it's hard to say what counts as a design pattern and what doesn't. An example of a design pattern in my own code is error handling by value. I don't like the idea of throwing errors because then you don't know when something will throw one. If you have documented error return values, I would consider these design patterns, but there may be some who don't. 
