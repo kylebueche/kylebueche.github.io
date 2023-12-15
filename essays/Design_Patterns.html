@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="title" content="Design Patterns | Kyle Bueche | Professional Portfolio">
+    <meta name="description" content="">
+    <meta name="image" content="https://github.com/kylebueche.png">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Kyle Bueche | Professional Portfolio">
+    <meta property="og:url" content="https://kylebueche.github.io/essays/Design_Patterns.html">
+    <meta property="og:title" content="Design Patterns | Kyle Bueche | Professional Portfolio">
+    <meta property="og:description" content="">
+    <meta property="og:image" content="https://github.com/kylebueche.png">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/techfolio-theme/darkblue.css">
+    <link rel="stylesheet" type="text/css" href="/css/rouge/github.css">
+    <!-- Load MathJax if 'mathjax: true' is found in your _config.yml. -->
+    
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-MML-AM_CHTML">
+    </script>
+    
+
+    <title>Design Patterns | Kyle Bueche | Professional Portfolio</title>
+  </head>
+  <body>
+  <header class="navbar navbar-expand navbar-light bg-light bg-gradient border-bottom">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/">Kyle Bueche</a>
+    <div class="ms-auto">
+      <ul class="navbar-nav mb-2 mb-lg-0">
+        <a class="nav-link" href="/#projects">Projects</a>
+        <a class="nav-link" href="/#essays">Essays</a>
+        <a class="nav-link" href="/resume.html">Resume</a>
+      </ul>
+    </div>
+  </div>
+</header>
+
+<div class="container py-4">
+  <h1 class="display-4">Design Patterns</h1>
+  <span class="date">29 Nov 2023</span>
+  <hr>
+  <p><img width="300px" class="rounded float-start pe-4" src="../img/interview.jpg" /></p>
+
+<p>In a common interview in the Computer Science field, you may find yourself asked “What are design patterns?”, followed by “What design patterns have you used in your own code?” How you answer these questions now can tell you a lot about what habits of yours are solid, and what habits you may need to improve.</p>
+
+<h4 id="coding-style">Coding Style</h4>
+
+<p>Let’s get one thing straight. Everyone’s coding style is different, and there are many people online who won’t approve of yours, no matter what your style is. The only person who should ever dictate how to style your code is an employer (Especially in a team setting). Aside from that, do your own thing.</p>
+
+<h4 id="programming-paradigms">Programming Paradigms</h4>
+
+<p>Programming paradigms are language structures such as being Object-Oriented or Procedural. Paradigms are another aspect of how you write your code that don’t constitute a design pattern. That is, different pardigms and languages allow for different design patterns, but are not themselves considered design patterns. In Object-Oriented languages, design patterns largely involve the structure of creating, managing, and interfacing between classes. In procedural langauges, design patterns focus more on the way you structure functions to separate concerns, reuse code, and reuse code.</p>
+
+<h4 id="design-patterns">Design Patterns</h4>
+
+<p>Let’s answer that first question. I think that the best way to explain design patterns is by explaining what they do. A given design pattern can allow others to read your code and understand what it’s doing without looking too far into it, as long as they’re aware that you’re using the design pattern. Conforming to a design pattern creates readable, scalable, and consistent code, which is just a lot more pleasant to deal with than scattered messy code. Design patterns can be as simple or as complex as you need.</p>
+
+<p>An example of a design pattern is defining a method in a parent class, such that all classes that inherit it are required to incorporate that method. If you need to do a lot of area calculations on different shapes, you could incorporate a square and circle class that inherit from shape. Then shape could require an area method, thus ensuring that circle.area() and square.area() will always work.</p>
+
+<p>The next question gets a bit tricky, because it’s hard to say what counts as a design pattern and what doesn’t. An example of a design pattern in my own code is error handling by value. I don’t like the idea of throwing errors because then you don’t know when something will throw one. If you have documented error return values, you can then write code to handle each error case with a simple switch or with if statements. Another design pattern is the separation of concerns. This could be incorporated as the separation of tasks into different functions. Like one function to handle a user input, and another to handle the response to that input. This could be further expanded into a complete separation of frontend and backend, which is commonplace in many workplace scenarios. I’ve used this design pattern in both C and C++ projects for my university course in Program Structure. I would consider these to be design patterns, but there may be some who don’t.</p>
+
+<p>Whatever design patterns you use, understand why you use them, and consider other design patterns. That’s not to say you should change your ways, but exposing yourself to new schools of thought in the world of design patterns can help you adapt better to what a potential employer might prefer. Imagine getting that question during an interview and having tons to list without even having to think! But most of all, you’ll be able to adapt to patterns that better suit the type of project you’re working on. Happy coding!</p>
+
+</div>
+
+<footer class="navbar navbar-expand navbar-light bg-light bg-gradient border-top">
+  <div class="container-fluid">
+    <div class="ms-auto">
+      <ul class="navbar-nav mb-2 mb-lg-0">
+        <small><a class="nav-link" href="https://techfolios.github.io">Made with Techfolios</a></small>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+  </body>
+</html>

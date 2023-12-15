@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="title" content="Stack Calculator With GUI | Kyle Bueche | Professional Portfolio">
+    <meta name="description" content="">
+    <meta name="image" content="https://github.com/kylebueche.png">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Kyle Bueche | Professional Portfolio">
+    <meta property="og:url" content="https://kylebueche.github.io/projects/stack-calculator.html">
+    <meta property="og:title" content="Stack Calculator With GUI | Kyle Bueche | Professional Portfolio">
+    <meta property="og:description" content="">
+    <meta property="og:image" content="https://github.com/kylebueche.png">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/techfolio-theme/darkblue.css">
+    <link rel="stylesheet" type="text/css" href="/css/rouge/github.css">
+    <!-- Load MathJax if 'mathjax: true' is found in your _config.yml. -->
+    
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-MML-AM_CHTML">
+    </script>
+    
+
+    <title>Stack Calculator With GUI | Kyle Bueche | Professional Portfolio</title>
+  </head>
+  <body>
+  <header class="navbar navbar-expand navbar-light bg-light bg-gradient border-bottom">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/">Kyle Bueche</a>
+    <div class="ms-auto">
+      <ul class="navbar-nav mb-2 mb-lg-0">
+        <a class="nav-link" href="/#projects">Projects</a>
+        <a class="nav-link" href="/#essays">Essays</a>
+        <a class="nav-link" href="/resume.html">Resume</a>
+      </ul>
+    </div>
+  </div>
+</header>
+
+<div class="container py-4">
+  <h1 class="display-4">Stack Calculator With GUI</h1>
+ <p>This project is a postfix calculator with a Graphical User Interface (GUI). On startup, the calculator lets you choose between 3 different types of stacks to implement. The first is Java’s pre-defined stack from its own library, the second is an array stack with a limited amount of storage, and the third is a linked stack which implements linked lists. The GUIis implemented using Java Swing, and allows users to ‘build’ numbers with the calculator’s buttons before adding them to the stack. Users can add and remove digits from 0-9, as well as a maximum of one decimal, and there’s a single button to change the positive sign to a negative sign and vice versa.</p>
+
+<p>A postfix calculator is a calculator that requires 2 number values before it accepts an operator. If you enter 5, and then 3, and then the subtraction operator, the calculator reads it as 5 - 3, which is 2. The values 5 and 3 are removed from the calculator’s memory, and value 2 is added. Note that you can add as many values as you want, but the last 2 values you added will be used for whatever operation you choose, and will then be replaced with the result. 3 2 5 * - is read as 2 * 5 - 3.</p>
+
+<p>Throughout this project I gained a lot of insight into graphical user interfaces, and the different ways number input systems can be handled. My calculator uses the Java Swing library to create a fixed-size window which is a certain fraction of the default display’s size. Then a text window, scroll pane, and buttons are added. Creating a GUI for the first time requires a lot of messing around and looking through documentation. In the future, I would prefer to use a library that gives more control over what buttons and windows look like, but I appreciate Swing for not being too complicated. ‘Building’ numbers was a challenge. I decided to add the first number, multiply it by ten, add the next number, and repeat until you add the last number. The difficulty lied in building decimals, and I had to run a second loop to solve that.</p>
+
+<p><a href="https://github.com/kylebueche/StackCalculatorWithGUI">Here’s</a> the source code for my project, and here’s what the calculator looks like:</p>
+
+<p><img width="211" alt="image" src="https://github.com/kylebueche/kylebueche.github.io/assets/38002610/eeb792e1-51b7-47ef-b164-002a3d2ca93e" /></p>
+
+</div>
+
+<footer class="navbar navbar-expand navbar-light bg-light bg-gradient border-top">
+  <div class="container-fluid">
+    <div class="ms-auto">
+      <ul class="navbar-nav mb-2 mb-lg-0">
+        <small><a class="nav-link" href="https://techfolios.github.io">Made with Techfolios</a></small>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+  </body>
+</html>

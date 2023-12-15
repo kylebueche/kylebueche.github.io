@@ -1,0 +1,116 @@
+{
+  "basics": {
+    "name": "Kyle Bueche",
+    "label": "Student",
+    "picture": "https://github.com/kylebueche.png",
+    "email": "bueche@hawaii.edu",
+    "phone": "808-NoThanks",
+    "website": "https://kylebueche.github.io",
+    "summary": "I am studying for a B.S. in Computer Science in the Department of Information and Computer Sciences at the University of Hawaii. I expect to graduate in Spring of 2026.",
+    "location": { "address": "", "postalCode": "96822", "city": "Honolulu", "countryCode": "USA", "region": "Hawaii" },
+    "profiles": [
+      { "network": "github", "username": "kylebueche", "url": "http://github.com/kylebueche" },
+      { "network": "linkedin", "username": "Kyle Bueche", "url": "http://linkedin.com/in/kyle-bueche-6199b41b5/" }
+    ]
+  },
+  "interests": [
+    { "name": "Creative Media" },
+    { "name": "3D Animation" },
+    { "name": "Game Development" },
+    { "name": "Artificial Intelligence" }
+  ],
+  "skills": [
+    {
+      "name": "Languages and Frameworks",
+      "keywords": [ "C", "Java", "Javascript", "Python" ]
+    },
+    {
+      "name": "Toolsets/OS",
+      "keywords": [ "Microsoft Windows", "Unix", "Git/GitHub", "Eclipse", "VI" ]
+    }
+  ],
+  "education": [
+    {
+      "institution": "University of Hawaii, Honolulu, HI",
+      "area": "Computer Science (expected Spring, 2026)",
+      "studyType": "B.S.",
+      "startDate": "2022",
+      "endDate": "Present",
+      "courses": [ "Software Engineering I", "AR/VR Development", "Introduction to 3D Animation", "Program Structure", "Discrete Mathematics I & II", "Introduction to Computer Science I & II"
+      ]
+    }
+  ],
+  "work": [
+    {
+      "company": "niversity of Hawaii at Manoa Student Housing Services",
+      "position": "Resident Assistant",
+      "website": "",
+      "startDate": "2023-08",
+      "endDate": "Present",
+      "summary": "",
+      "highlights": [
+        "Build community among a floor of first-year residents",
+        "Manage conflicts and de-escelate situations"
+      ]
+    },
+    {
+      "company": "University of Hawaii at Manoa School of Architecture",
+      "position": "Computer Lab Assistant",
+      "website": "",
+      "startDate": "2023-01",
+      "endDate": "2023-05",
+      "summary": "",
+      "highlights": [
+        "Manage printing and plotting jobs on different types of paper and boards for SoA students",
+        "Update the School of Architecture website's 'News & Events' tab",
+        "Assist teachers and students at the UH Manoa School of Architecture with computers, projectors, and printers"
+      ]
+    }
+  ],
+  "volunteer": [
+    {
+      "organization": "Pearl City High School PTSA",
+      "website": "",
+      "position": "Fundraisers",
+      "startDate": "2020",
+      "endDate": "2022",
+      "summary": "",
+      "highlights": [
+        "80+ hours spent volunteering for fundraisers for Project Grad",
+      ]
+    },
+    {
+      "organization": "Boy Scouts of America",
+      "website": "",
+      "position": "",
+      "startDate": "2010",
+      "endDate": "2022",
+      "summary": "Countless hours spent volunteering for various community service projects",
+      "highlights": [
+        "Lead an Eagle Scout Project to install 127 plants and 3 palm trees at Pearl City High School",
+        "Helped with several other Eagle Scout Projects throghout the years",
+        "Several renovations for schools & churches",
+        "Several park, trail, & community cleanups",
+      ]
+    }
+  ],
+  "awards": [
+    {
+      "title": "Eagle Scout",
+      "date": "2022",
+      "awarder": "Boy Scouts of America",
+      "summary": "Achieve the rank of Eagle"
+    },
+    {
+      "title": "1st Place",
+      "date": "2023",
+      "awarder": "Family Barbecue",
+      "summary": "Me and my brother won the family cookoff with a clone of L&L's barbecue chicken recipe"
+    }
+  ],
+  "references": [
+    {
+      "name": "Available upon request"
+    }
+  ]
+}

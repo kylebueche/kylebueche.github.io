@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="title" content="Ask To Learn, Not To Leave | Kyle Bueche | Professional Portfolio">
+    <meta name="description" content="">
+    <meta name="image" content="https://github.com/kylebueche.png">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Kyle Bueche | Professional Portfolio">
+    <meta property="og:url" content="https://kylebueche.github.io/essays/Smart_Questions.html">
+    <meta property="og:title" content="Ask To Learn, Not To Leave | Kyle Bueche | Professional Portfolio">
+    <meta property="og:description" content="">
+    <meta property="og:image" content="https://github.com/kylebueche.png">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/techfolio-theme/darkblue.css">
+    <link rel="stylesheet" type="text/css" href="/css/rouge/github.css">
+    <!-- Load MathJax if 'mathjax: true' is found in your _config.yml. -->
+    
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-MML-AM_CHTML">
+    </script>
+    
+
+    <title>Ask To Learn, Not To Leave | Kyle Bueche | Professional Portfolio</title>
+  </head>
+  <body>
+  <header class="navbar navbar-expand navbar-light bg-light bg-gradient border-bottom">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/">Kyle Bueche</a>
+    <div class="ms-auto">
+      <ul class="navbar-nav mb-2 mb-lg-0">
+        <a class="nav-link" href="/#projects">Projects</a>
+        <a class="nav-link" href="/#essays">Essays</a>
+        <a class="nav-link" href="/resume.html">Resume</a>
+      </ul>
+    </div>
+  </div>
+</header>
+
+<div class="container py-4">
+  <h1 class="display-4">Ask To Learn, Not To Leave</h1>
+  <span class="date">05 Sep 2023</span>
+  <hr>
+  <p><img width="300px" class="rounded float-start pe-4" src="../img/query.png" /></p>
+<h4 id="how-to-ask-questions-in-help-forums">How to Ask Questions in Help Forums:</h4>
+
+<p>When asking questions on support forums, it is best to make your queries look well structured and organized so that people who know how to help you can waste little effort in doing so. In “<a href="http://www.catb.org/esr/faqs/smart-questions.html">How To Ask Questions The Smart Way</a>,” Eric Raymond details the best way to format your queries so that helpers are more likely to take notice. According to Raymond, the best queries have titles that use “Object - Deviation.” “Object” refers to the specific circumstances in which the issue takes place. “Deviation” refers to the specific issue or abnormality that you’re facing. Put together, this can be something like “Spotify Version 1.2 on Windows 11 with Steelseries headset - Sound Distorted.” This lets helpers know about the software and hardware components that you’re dealing with, as the issue could lie in any one of these components. Seperating the problem from the components allows helpers to easily see what the problem is that they are searching for. This title structure also helps eliminate hunch biases that could point helpers in the wrong direction based on a guess.</p>
+
+<h4 id="heres-a-good-example-of-what-raymond-calls-a-smart-question">Here’s a Good Example of What Raymond Calls a “Smart Question”:</h4>
+
+<p>“<a href="https://stackoverflow.com/questions/77049920/scilab-java-integration-exception-handling">Scilab Java Integration: Exception Handling?</a>”</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>I am working with Scilab Java integration. I am using Scilab 2023.1.0 and OpenJDK jdk8u352-b08 to compile the java classes.
+When my Java code causes an exception, I do not get the information about what is wrong.
+
+Example java code:
+
+public class DScope
+{
+
+    public void exceptiontest(int val) throws Exception
+    {
+        System.err.println("Inspecting: '" + val + "'");
+        if (val &lt; 0)
+        {
+            throw new Exception("value is &lt;0");
+        }
+        
+    }
+}...
+</code></pre></div></div>
+<p>This post has a pretty good name format, but it can be improved. A better name according to Raymond might be “Scilab Java Integration 2023.1.0 Exception Handling - Error Message Lost.” The current title, however, is a lot better than many other queries on StackExchange. Thes post is concise and detailed enough to be pleasant to those who read it, while also informing them exactly what the issue is and what the asker already knows. It’s great that the user provides an exerpt of their code, and the actual results of it in contrast to their expected results. As of the publishing date of this essay, the post was posted today (exact time unknown), and has received a reply which could help the user to identify the source of their issue.</p>
+
+<h4 id="heres-an-example-of-a-not-so-smart-question">Here’s an Example of a Not-So-Smart Question:</h4>
+
+<p>“<a href="https://stackoverflow.com/questions/77050128/whats-problem-iam-learning-installation-valet-in-laravel">whats problem?? i’am learning installation valet in laravel</a>”</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Your requirements could not be resolved to an installable set of packages.
+
+Problem 1 - cretueusebiu/valet-windows[v0.1.0, ..., v0.1.2] require symfony/process ^3.0 -&gt; found symfony/process[v3.0.0, ..., v3.4.47]
+but the package is fixed to v6.3.4 (lock file version) by a partial update and that version does not match. Make sure you list it as an
+argument for the update command. - cretueusebiu/valet-windows[v0.1.3, ..., v0.1.8, v1.0.0, ..., v1.0.8] require symfony/process
+~2.7|~3.0 -&gt; found symfony/process[v2.7.0, ..., v2.8.52, v3.0.0, ..., v3.4.47] but the package is fixed to v6.3.4 (lock file version) by
+a partial update and that version does not match. Make sure you list it as an argument for the update command. -
+cretueusebiu/valet-windows[2.0.3, ..., 2.1.2] require illuminate/container ~5.1 -&gt;...
+</code></pre></div></div>
+
+<p>I feel that I don’t need to explain the issue with the title, but we’ve seen that there is room for improvement in both good and bad post titles. This is just unreadable, and no one in their right mind is going to try to make sense of it (for good reason). This user posted copy-pasted error jargon without even trying to understand it themselves, instead opting to end their jargon query with “how to solve this problem??” This post will probably make some people mad, and has an incredibly low chance of ever receiving a helpful response.</p>
+
+<p>I hope this helps illustrate the difference between different kinds of questions. While terms like good and bad are subjective, there are types of questions that are more likely to be answered, and asking these questions will help you learn. On the contrary, there are other types that will likely never be answered, and the people who ask them typically aren’t putting in any effort to learn. You have a choice in how you learn, but good answers are earned.</p>
+
+</div>
+
+<footer class="navbar navbar-expand navbar-light bg-light bg-gradient border-top">
+  <div class="container-fluid">
+    <div class="ms-auto">
+      <ul class="navbar-nav mb-2 mb-lg-0">
+        <small><a class="nav-link" href="https://techfolios.github.io">Made with Techfolios</a></small>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+  </body>
+</html>
