@@ -14,6 +14,10 @@ summary: "An AR Rubik's Cube that you can manipulate and solve on your phone."
 
 This project involved the use of unity as well as an augmented reality library, to place a 3d model of a Rubik's Cube onto a handheld cube. The handheld cube has printed patterns on each side that help the software map the Rubik's Cube onto the right area of the screen. The cube is fully functional and solveable, and movement of the cube is entirely controlled by your hand in the real world. Manipulating the Rubik's Cube's faces is as simple as swiping the cube on the screen.
 
+img/AR-Rubiks - Trim.mp4
+
 #### Project Demo
 
-<video width="537" alt="video" src="img/AR-Rubiks - Trim.mp4" type="video/mp4">
+<video width="537" height="700" controls>
+  <source src="img/AR-Rubiks - Trim.mp4" type="video/mp4">
+</video>
