@@ -16,4 +16,4 @@ This project involved the use of unity as well as an augmented reality library, 
 
 #### Project Demo
 
-<img width="537" alt="image" src="https://github.com/kylebueche/kylebueche.github.io/assets/38002610/45bd6b1b-5178-494d-9dab-fc6de5235caf">
+<img width="537" alt="image" src="img/AR-Rubiks - Trim">
