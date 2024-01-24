@@ -16,4 +16,4 @@ This project involved the use of unity as well as an augmented reality library, 
 
 #### Project Demo
 
-<video width="537" alt="video" src="img/AR-Rubiks - Trim" type="video/mp4">
+<video width="537" alt="video" src="img/AR-Rubiks - Trim.mp4" type="video/mp4">
