@@ -18,6 +18,6 @@ This project involved the use of unity as well as an augmented reality library, 
 <img width = 300, src="img/Rubik1">
 <img width = 300, src="img/Rubik2">
 
-(Here's)[https://github.com/kylebueche/kylebueche.github.io/assets/38002610/b7c9e8a4-6e45-4bed-9027-bd5f3166e36b] a link to a video showing off the project.
+[Here's](https://github.com/kylebueche/kylebueche.github.io/assets/38002610/b7c9e8a4-6e45-4bed-9027-bd5f3166e36b) a link to a video showing off the project.
 
 As you can see, the swiping system isn't fully fleshed out, but this can be redone, as the important thing is that the proper face is selected.
