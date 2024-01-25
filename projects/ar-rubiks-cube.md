@@ -1,7 +1,7 @@
 ---
 layout: project
 type: project
-image: img/Rubik2
+image: img/Rubik2.png
 title: "AR Rubik's Cube"
 date: 2023-09-03
 published: true
@@ -15,8 +15,8 @@ This project involved the use of unity as well as an augmented reality library, 
 
 #### Project Demo
 
-<img class="img-fluid" src="img/Rubik1">
-<img class="img-fluid" src="img/Rubik2">
+<img class="img-fluid" src="img/Rubik1.png">
+<img class="img-fluid" src="img/Rubik2.png">
 
 [Here's](https://github.com/kylebueche/kylebueche.github.io/assets/38002610/b7c9e8a4-6e45-4bed-9027-bd5f3166e36b) a link to a video showing off the project.
 
