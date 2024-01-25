@@ -14,7 +14,7 @@ summary: "A ray tracer in windows built entirely from scratch."
 
 First things first, this project is incomplete. The good news? Heres a yellow screen!
 
-<img class="img-fluid" src="img/RayTracer2.png">
+<img class="img-fluid" src="../img/RayTracer2.png">
 
 #### First Attempt
 
@@ -85,8 +85,8 @@ pixelGrid.pixels[(y * pixelGrid.width + x)] = 0x00010100 * (int) (256 * (pixelGr
 
 Now we have the following gradient:
 
-<img class="img-fluid" src="img/RayTracer2.png">
+<img class="img-fluid" src="../img/RayTracer2.png">
 
 And if we resize it:
 
-<img class="img-fluid" src="img/RayTracer3.png">
+<img class="img-fluid" src="../img/RayTracer3.png">
