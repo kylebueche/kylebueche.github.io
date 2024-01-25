@@ -1,0 +1,216 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="title" content="Ray Tracer From Scratch in C | Kyle Bueche | Professional Portfolio">
+    <meta name="description" content="">
+    <meta name="image" content="https://github.com/kylebueche.png">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Kyle Bueche | Professional Portfolio">
+    <meta property="og:url" content="https://kylebueche.github.io/projects/ray-tracer.html">
+    <meta property="og:title" content="Ray Tracer From Scratch in C | Kyle Bueche | Professional Portfolio">
+    <meta property="og:description" content="">
+    <meta property="og:image" content="https://github.com/kylebueche.png">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/techfolio-theme/darkblue.css">
+    <link rel="stylesheet" type="text/css" href="/css/rouge/github.css">
+    <!-- Load MathJax if 'mathjax: true' is found in your _config.yml. -->
+    
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-MML-AM_CHTML">
+    </script>
+    
+
+    <title>Ray Tracer From Scratch in C | Kyle Bueche | Professional Portfolio</title>
+  </head>
+  <body>
+  <header class="navbar navbar-expand navbar-light bg-light bg-gradient border-bottom">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/">Kyle Bueche</a>
+    <div class="ms-auto">
+      <ul class="navbar-nav mb-2 mb-lg-0">
+        <a class="nav-link" href="/#projects">Projects</a>
+        <a class="nav-link" href="/#essays">Essays</a>
+        <a class="nav-link" href="/resume.html">Resume</a>
+      </ul>
+    </div>
+  </div>
+</header>
+
+<div class="container py-4">
+  <h1 class="display-4">Ray Tracer From Scratch in C</h1>
+ <p>First things first, this project is incomplete. The good news? Heres a yellow screen!</p>
+
+<p><img class="img-fluid" src="../img/RayTracer.png" /></p>
+
+<h4 id="first-attempt">First Attempt</h4>
+
+<p>During my first attempt at this project, I was researching the math behind ray tracers. I wanted to write everything myself, and I was working in one file. Quickly things began to get messy.</p>
+
+<p>I decided to forego all the vector math, in an effort to just have a color appear on the screen. Nothing showed up, but I had successfully opened a window!</p>
+
+<h4 id="square-one">Square One</h4>
+
+<p>At this point, I decided to just restart. I created a new file main.c where I opened the window, and created the gameloop.</p>
+
+<p>The process of opening a window in c with no libraries is a bit complicated, but it boils down to creating a window “class” (not an object-oriented-programming class), registering the class, creating the window, and showing the window.</p>
+
+<p>The reason we do this is that Windows needs to build a bridge between your code and their built in window interface. The code is a little long and hard to make sense of from a glance, so I won’t be showing it here.</p>
+
+<p>The window making process also requires us to create a function that handles each of its cases, and sends the unhandled ones to the default handler. One of these cases is WM_PAINT, which allows us to paint the screen. My code for that segment looks like this:</p>
+
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">case</span> <span class="n">WM_PAINT</span><span class="p">:</span>
+<span class="p">{</span>
+    <span class="k">static</span> <span class="n">PAINTSTRUCT</span> <span class="n">paint</span><span class="p">;</span>
+    <span class="k">static</span> <span class="n">HDC</span> <span class="n">device_context</span><span class="p">;</span>
+    <span class="n">device_context</span> <span class="o">=</span> <span class="n">BeginPaint</span><span class="p">(</span><span class="n">window_handle</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">paint</span><span class="p">);</span>
+    <span class="n">BitBlt</span><span class="p">(</span><span class="n">device_context</span><span class="p">,</span>
+           <span class="n">paint</span><span class="p">.</span><span class="n">rcPaint</span><span class="p">.</span><span class="n">left</span><span class="p">,</span> <span class="n">paint</span><span class="p">.</span><span class="n">rcPaint</span><span class="p">.</span><span class="n">top</span><span class="p">,</span>
+           <span class="n">paint</span><span class="p">.</span><span class="n">rcPaint</span><span class="p">.</span><span class="n">right</span> <span class="o">-</span> <span class="n">paint</span><span class="p">.</span><span class="n">rcPaint</span><span class="p">.</span><span class="n">left</span><span class="p">,</span>
+           <span class="n">paint</span><span class="p">.</span><span class="n">rcPaint</span><span class="p">.</span><span class="n">bottom</span> <span class="o">-</span> <span class="n">paint</span><span class="p">.</span><span class="n">rcPaint</span><span class="p">.</span><span class="n">top</span><span class="p">,</span>
+           <span class="n">frame_device_context</span><span class="p">,</span>
+           <span class="n">paint</span><span class="p">.</span><span class="n">rcPaint</span><span class="p">.</span><span class="n">left</span><span class="p">,</span> <span class="n">paint</span><span class="p">.</span><span class="n">rcPaint</span><span class="p">.</span><span class="n">top</span><span class="p">,</span>
+           <span class="n">SRCCOPY</span><span class="p">);</span>
+    <span class="n">EndPaint</span><span class="p">(</span><span class="n">window_handle</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">paint</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="k">break</span><span class="p">;</span>
+</code></pre></div></div>
+
+<p>This code looks at frame_device_context which contains the pixel array that we copy over to the screen.</p>
+
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">while</span> <span class="p">(</span><span class="o">!</span><span class="n">quit</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="k">static</span> <span class="n">MSG</span> <span class="n">message</span> <span class="o">=</span> <span class="p">{</span> <span class="mi">0</span> <span class="p">};</span>
+    <span class="k">while</span> <span class="p">(</span><span class="n">PeekMessage</span><span class="p">(</span><span class="o">&amp;</span><span class="n">message</span><span class="p">,</span> <span class="nb">NULL</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">PM_REMOVE</span><span class="p">))</span>
+    <span class="p">{</span>
+        <span class="n">TranslateMessage</span><span class="p">(</span><span class="o">&amp;</span><span class="n">message</span><span class="p">);</span>
+        <span class="n">DispatchMessage</span><span class="p">(</span><span class="o">&amp;</span><span class="n">message</span><span class="p">);</span>
+    <span class="p">}</span>
+    <span class="cm">/* This is where we do everything for the game. */</span>
+    <span class="k">for</span> <span class="p">(</span><span class="n">x</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="n">pixelGrid</span><span class="p">.</span><span class="n">width</span><span class="p">;</span> <span class="n">x</span><span class="o">++</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="k">for</span> <span class="p">(</span><span class="n">y</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">y</span> <span class="o">&lt;</span> <span class="n">pixelGrid</span><span class="p">.</span><span class="n">height</span><span class="p">;</span> <span class="n">y</span><span class="o">++</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="n">pixelGrid</span><span class="p">.</span><span class="n">pixels</span><span class="p">[(</span><span class="n">y</span> <span class="o">*</span> <span class="n">pixelGrid</span><span class="p">.</span><span class="n">width</span> <span class="o">+</span> <span class="n">x</span><span class="p">)]</span> <span class="o">=</span> <span class="mh">0x00ffff00</span><span class="p">;</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+    <span class="n">InvalidateRect</span><span class="p">(</span><span class="n">window_handle</span><span class="p">,</span> <span class="nb">NULL</span><span class="p">,</span> <span class="n">FALSE</span><span class="p">);</span>
+    <span class="n">UpdateWindow</span><span class="p">(</span><span class="n">window_handle</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>pixelGrid.pixels is a pointer to our pixel grid. In the first part of our loop, we handle messages such as window resizing or painting to the screen. Then, we set the rgb values as such: 0x00RRGGBB. At the end of our loop, we invalidate the entire window screen so that it has to be redrawn, and then we update the window. At the start of the loop, the WM_DRAW message will be dispatched to our handler function, which will copy everything from our array to the screen. 0x00ffff00 is the hexadecimal for yellow in 24-bit color. This is how we get our yellow screen above.</p>
+
+<p>The nice thing about this is that we are constantly setting resetting each pixel as fast as we can, so we essentially have a realtime renderer. Let’s change the color line to the following:</p>
+
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">pixelGrid</span><span class="p">.</span><span class="n">pixels</span><span class="p">[(</span><span class="n">y</span> <span class="o">*</span> <span class="n">pixelGrid</span><span class="p">.</span><span class="n">width</span> <span class="o">+</span> <span class="n">x</span><span class="p">)]</span> <span class="o">=</span> <span class="mh">0x00010100</span> <span class="o">*</span> <span class="p">(</span><span class="kt">int</span><span class="p">)</span> <span class="p">(</span><span class="mi">256</span> <span class="o">*</span> <span class="p">(</span><span class="n">pixelGrid</span><span class="p">.</span><span class="n">width</span> <span class="o">-</span> <span class="n">x</span><span class="p">)</span> <span class="o">/</span> <span class="n">pixelGrid</span><span class="p">.</span><span class="n">width</span><span class="p">)</span>
+                                            <span class="o">+</span> <span class="mh">0x00000001</span> <span class="o">*</span> <span class="p">(</span><span class="kt">int</span><span class="p">)</span> <span class="p">(</span><span class="mi">256</span> <span class="o">*</span> <span class="p">(</span><span class="n">pixelGrid</span><span class="p">.</span><span class="n">height</span> <span class="o">-</span> <span class="n">y</span><span class="p">)</span> <span class="o">/</span> <span class="n">pixelGrid</span><span class="p">.</span><span class="n">height</span><span class="p">);</span>
+</code></pre></div></div>
+
+<p>Now we have the following gradient:</p>
+
+<p><img class="img-fluid" src="../img/RayTracer2.png" /></p>
+
+<p>And if we resize it:</p>
+
+<p><img class="img-fluid" src="../img/RayTracer3.png" /></p>
+
+<h4 id="ray-tracing">Ray Tracing!</h4>
+
+<p>So, as you may know, this project is currently incomplete. I didn’t want to rely on any libraries, and this means implementing a bunch of math and vector math functions.</p>
+
+<p>Heres an outline for what I plan to do:</p>
+<ol>
+  <li>Create a vector from the origin of the camera, in the direction of a pixel on the screen.</li>
+  <li>Use a function to check whether a ray following this vector will intersect a plane defined by a triangle.</li>
+  <li>Find the closest triangle which is intersected.</li>
+  <li>Set the pixel’s color to the color of the triangle.</li>
+  <li>Repeat this process for every pixel.</li>
+</ol>
+
+<p>The first step in this process is vector math, which I’ve started to implement:</p>
+
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kr">inline</span> <span class="n">vector3d</span> <span class="nf">v3dAdd</span><span class="p">(</span><span class="n">vector3d</span> <span class="n">a</span><span class="p">,</span> <span class="n">vector3d</span> <span class="n">b</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="n">rerun</span> <span class="p">{</span> <span class="p">(</span><span class="n">a</span><span class="p">.</span><span class="n">x</span> <span class="o">+</span> <span class="n">b</span><span class="p">.</span><span class="n">x</span><span class="p">),</span> <span class="p">(</span><span class="n">a</span><span class="p">.</span><span class="n">y</span> <span class="o">+</span> <span class="n">b</span><span class="p">.</span><span class="n">y</span><span class="p">),</span> <span class="p">(</span><span class="n">a</span><span class="p">.</span><span class="n">z</span> <span class="o">+</span> <span class="n">b</span><span class="p">.</span><span class="n">z</span><span class="p">)</span> <span class="p">};</span>
+<span class="p">}</span>
+
+<span class="kr">inline</span> <span class="n">vector3d</span> <span class="nf">v3dSubtract</span><span class="p">(</span><span class="n">vector3d</span> <span class="n">a</span><span class="p">,</span> <span class="n">vector3d</span> <span class="n">b</span><span class="p">);</span>
+<span class="p">{</span>
+    <span class="k">return</span> <span class="p">{</span> <span class="p">(</span><span class="n">a</span><span class="p">.</span><span class="n">x</span> <span class="o">-</span> <span class="n">b</span><span class="p">.</span><span class="n">x</span><span class="p">),</span> <span class="p">(</span><span class="n">a</span><span class="p">.</span><span class="n">y</span> <span class="o">-</span> <span class="n">b</span><span class="p">.</span><span class="n">y</span><span class="p">),</span> <span class="p">(</span><span class="n">a</span><span class="p">.</span><span class="n">z</span> <span class="o">-</span> <span class="n">b</span><span class="p">.</span><span class="n">z</span><span class="p">)</span> <span class="p">};</span>
+<span class="p">}</span>
+
+<span class="kr">inline</span> <span class="n">vector3d</span> <span class="nf">v3dMultiply</span><span class="p">(</span><span class="n">vector3d</span> <span class="n">a</span><span class="p">,</span> <span class="kt">double</span> <span class="n">b</span><span class="p">);</span>
+<span class="p">{</span>
+    <span class="k">return</span> <span class="p">{</span> <span class="p">(</span><span class="n">a</span><span class="p">.</span><span class="n">x</span> <span class="o">*</span> <span class="n">b</span><span class="p">),</span> <span class="p">(</span><span class="n">a</span><span class="p">.</span><span class="n">y</span> <span class="o">*</span> <span class="n">b</span><span class="p">),</span> <span class="p">(</span><span class="n">a</span><span class="p">.</span><span class="n">z</span> <span class="o">*</span> <span class="n">b</span><span class="p">)</span> <span class="p">};</span>
+<span class="p">}</span>
+
+<span class="kr">inline</span> <span class="n">vector3d</span> <span class="nf">v3dDivide</span><span class="p">(</span><span class="n">vector3d</span> <span class="n">a</span><span class="p">,</span> <span class="kt">double</span> <span class="n">b</span><span class="p">);</span>
+<span class="p">{</span>
+    <span class="k">return</span> <span class="p">{</span> <span class="p">(</span><span class="n">a</span><span class="p">.</span><span class="n">x</span> <span class="o">/</span> <span class="n">b</span><span class="p">),</span> <span class="p">(</span><span class="n">a</span><span class="p">.</span><span class="n">y</span> <span class="o">/</span> <span class="n">b</span><span class="p">),</span> <span class="p">(</span><span class="n">a</span><span class="p">.</span><span class="n">z</span> <span class="o">/</span> <span class="n">b</span><span class="p">)</span> <span class="p">};</span>
+<span class="p">}</span>
+
+<span class="kr">inline</span> <span class="kt">double</span> <span class="nf">v3dLengthSqr</span><span class="p">(</span><span class="n">vector3d</span> <span class="n">a</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="k">return</span> <span class="n">sqr</span><span class="p">(</span><span class="n">a</span><span class="p">.</span><span class="n">x</span><span class="p">)</span> <span class="o">+</span> <span class="n">sqr</span><span class="p">(</span><span class="n">a</span><span class="p">.</span><span class="n">y</span><span class="p">)</span> <span class="o">+</span> <span class="n">sqr</span><span class="p">(</span><span class="n">a</span><span class="p">.</span><span class="n">z</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kr">inline</span> <span class="kt">double</span> <span class="nf">v3dLength</span><span class="p">(</span><span class="n">vector3d</span> <span class="n">a</span><span class="p">);</span>
+<span class="p">{</span>
+    <span class="k">return</span> <span class="n">sqrt</span><span class="p">(</span><span class="n">v3dLengthSqr</span><span class="p">(</span><span class="n">a</span><span class="p">));</span>
+<span class="p">}</span>
+
+<span class="kr">inline</span> <span class="kt">double</span> <span class="nf">v3dNormalized</span><span class="p">(</span><span class="n">vector3d</span> <span class="o">*</span><span class="n">a</span><span class="p">);</span>
+<span class="p">{</span>
+    <span class="kt">double</span> <span class="n">x</span> <span class="o">=</span> <span class="n">v3dLength</span><span class="p">(</span><span class="o">*</span><span class="n">a</span><span class="p">)</span>
+    <span class="n">v3dDivide</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">v3dLength</span><span class="p">(</span><span class="n">a</span><span class="p">));</span>
+    <span class="k">return</span> <span class="n">x</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>These functions haven’t been tested yet, and I’m not sure if I want to change the original vectors’ values using pointers, or if I want to return a new vector every time. I’m also not fully sure how inline functions work with memory management on the stack, but the idea is to reduce function call overhead since these functions will be called many many many times per second.</p>
+
+<p>Some of these functions rely on these basic math functions I’ve written:</p>
+
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kr">inline</span> <span class="kt">double</span> <span class="nf">sqr</span><span class="p">(</span><span class="kt">double</span> <span class="n">x</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="k">return</span> <span class="n">x</span> <span class="o">*</span> <span class="n">x</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kr">inline</span> <span class="kt">double</span> <span class="nf">sqrt</span><span class="p">(</span><span class="kt">double</span> <span class="n">x</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="kt">double</span> <span class="n">epsilon</span> <span class="o">=</span> <span class="mi">0</span><span class="p">.</span><span class="mo">000001</span><span class="p">;</span>
+    <span class="kt">double</span> <span class="n">guess</span> <span class="o">=</span> <span class="n">x</span> <span class="o">/</span> <span class="mi">2</span><span class="p">.</span><span class="mi">0</span><span class="p">;</span>
+    <span class="k">while</span> <span class="p">((</span><span class="n">guess</span> <span class="o">*</span> <span class="n">guess</span> <span class="o">-</span> <span class="n">x</span><span class="p">)</span> <span class="o">&gt;</span> <span class="n">epsilon</span> <span class="o">||</span> <span class="p">(</span><span class="n">x</span> <span class="o">-</span> <span class="n">guess</span> <span class="o">*</span> <span class="n">guess</span><span class="p">)</span> <span class="o">&gt;</span> <span class="n">epsilon</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">guess</span> <span class="o">=</span> <span class="p">(</span><span class="n">guess</span> <span class="o">+</span> <span class="p">(</span><span class="n">x</span> <span class="o">/</span> <span class="n">guess</span><span class="p">))</span> <span class="o">/</span> <span class="mi">2</span><span class="p">.</span><span class="mi">0</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="k">return</span> <span class="n">guess</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>The sqrt method is based on Newton’s method for calculating a square root. Another idea is to treat the range from 0 to x as a binary search range, and then checking if (0 + x)/2 squared is less than, greater than, or equal to the square root. In practice, however, this has the same runtime as Newton’s algorithm, and Newton’s algorithm takes less iterations on average.</p>
+
+<p>Eventually, when I’ve implemented dot products and cross products and the line-plant-intersection-checker, I’ll try drawing a basic triangle in 3d space.</p>
+
+<h4 id="additional-notes">Additional Notes</h4>
+
+<p>The finished product is not going to be very efficient, as every operation defined by me is happening on the cpu. Despite this, my goal is to understand how a ray tracer works behind the scenes. Once I’ve finished this project, I’ll take a stab at using a graphics API like DirectX to do the same thing more efficiently (and probably more elegantly).</p>
+
+</div>
+
+<footer class="navbar navbar-expand navbar-light bg-light bg-gradient border-top">
+  <div class="container-fluid">
+    <div class="ms-auto">
+      <ul class="navbar-nav mb-2 mb-lg-0">
+        <small><a class="nav-link" href="https://techfolios.github.io">Made with Techfolios</a></small>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+  </body>
+</html>

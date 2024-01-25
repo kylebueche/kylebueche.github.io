@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="title" content="Coding Standards | Kyle Bueche | Professional Portfolio">
+    <meta name="description" content="">
+    <meta name="image" content="https://github.com/kylebueche.png">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Kyle Bueche | Professional Portfolio">
+    <meta property="og:url" content="https://kylebueche.github.io/essays/Coding_Standards.html">
+    <meta property="og:title" content="Coding Standards | Kyle Bueche | Professional Portfolio">
+    <meta property="og:description" content="">
+    <meta property="og:image" content="https://github.com/kylebueche.png">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/techfolio-theme/darkblue.css">
+    <link rel="stylesheet" type="text/css" href="/css/rouge/github.css">
+    <!-- Load MathJax if 'mathjax: true' is found in your _config.yml. -->
+    
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-MML-AM_CHTML">
+    </script>
+    
+
+    <title>Coding Standards | Kyle Bueche | Professional Portfolio</title>
+  </head>
+  <body>
+  <header class="navbar navbar-expand navbar-light bg-light bg-gradient border-bottom">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/">Kyle Bueche</a>
+    <div class="ms-auto">
+      <ul class="navbar-nav mb-2 mb-lg-0">
+        <a class="nav-link" href="/#projects">Projects</a>
+        <a class="nav-link" href="/#essays">Essays</a>
+        <a class="nav-link" href="/resume.html">Resume</a>
+      </ul>
+    </div>
+  </div>
+</header>
+
+<div class="container py-4">
+  <h1 class="display-4">Coding Standards</h1>
+  <span class="date">20 Sep 2023</span>
+  <hr>
+  <p><img width="300px" class="rounded float-start pe-4" src="../img/ESLint_logo.png" /></p>
+
+<h4 id="the-good">The Good:</h4>
+<p>Over the last few days, my course in Software Engineering I has required the use of ESLint in order to enforce someone’s idea of ‘best’ coding style and practices. Almost every coding assignment we do for this class is self-timed, and we try to come up with solutions to a given problem in the fastest possible time. The past few assignments have shown me how helpful a style enforcer can be when writing code in a major time crunch. Sometimes there just isn’t enough time to worry about how it looks or how readable it is, and a simple ESLint fix file command can take care of that in less than a second. For these reasons Tools like ESLint have become very appealing to me. Despite this, I have come not to like the ‘best practice’ enforcement that comes with ESLint.</p>
+
+<h4 id="the-bad-and-the-ugly">The Bad and the Ugly:</h4>
+<p>There are certain times when ESLint just annoys me. I don’t want to write “this” in each and every function. I think that rule is just silly. And it may even contribute to worse code. Sometimes when I create a class, I only want to use the functions in it. I don’t want to actually store things in it. But I find myself using “this.x = “ to define a variable x in functions. I feel like it defeats the point of having local variables, because if I accidentally repeat a variable name between functions, I could screw up the program. Of course, I can always use let and const, but “this” must be used at least once per function according to ESLint. I may be overlooking the intended use case for “this” in Javascript functions, but I’m new to Javascript. For these reasons I do not find ESLint to be enjoyable, helpful, or beginner-friendly when it comes to enforcing ‘best practices.’</p>
+
+<h4 id="the-takeaway">The Takeaway:</h4>
+<p>I think the best style enforcer is one that allows you to input a specific example of your style for several different cases. It should be easy enough for an IDE to ask the user to rewrite a sample code doc in their own style for reference. I also think that IDEs in general should have less buttons. The point of an IDE is to make it easier to write code, but it’s overwhelming to have a million different settings when all I really use is the file manager, console, and run button. I find that any piece of consumer software that needs a tutorial for each feature is really unpleasant to use, to the point that I’d rather just build my own software from the ground up.</p>
+
+</div>
+
+<footer class="navbar navbar-expand navbar-light bg-light bg-gradient border-top">
+  <div class="container-fluid">
+    <div class="ms-auto">
+      <ul class="navbar-nav mb-2 mb-lg-0">
+        <small><a class="nav-link" href="https://techfolios.github.io">Made with Techfolios</a></small>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+  </body>
+</html>
