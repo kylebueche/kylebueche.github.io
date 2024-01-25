@@ -16,6 +16,7 @@ First things first, this project is incomplete. The good news? Heres a yellow sc
 
 <img class="img-fluid" src="../img/RayTracer.png">
 
+
 #### First Attempt
 
 During my first attempt at this project, I was researching the math behind ray tracers. I wanted to write everything myself, and I was working in one file. Quickly things began to get messy.
@@ -87,6 +88,90 @@ Now we have the following gradient:
 
 <img class="img-fluid" src="../img/RayTracer2.png">
 
+
 And if we resize it:
 
+
 <img class="img-fluid" src="../img/RayTracer3.png">
+
+#### Ray Tracing!
+
+So, as you may know, this project is currently incomplete. I didn't want to rely on any libraries, and this means implementing a bunch of math and vector math functions.
+
+Heres an outline for what I plan to do:
+1. Create a vector from the origin of the camera, in the direction of a pixel on the screen.
+2. Use a function to check whether a ray following this vector will intersect a plane defined by a triangle.
+3. Find the closest triangle which is intersected.
+4. Set the pixel's color to the color of the triangle.
+5. Repeat this process for every pixel.
+
+The first step in this process is vector math, which I've started to implement:
+
+```c
+inline vector3d v3dAdd(vector3d a, vector3d b)
+{
+    rerun { (a.x + b.x), (a.y + b.y), (a.z + b.z) };
+}
+
+inline vector3d v3dSubtract(vector3d a, vector3d b);
+{
+    return { (a.x - b.x), (a.y - b.y), (a.z - b.z) };
+}
+
+inline vector3d v3dMultiply(vector3d a, double b);
+{
+    return { (a.x * b), (a.y * b), (a.z * b) };
+}
+
+inline vector3d v3dDivide(vector3d a, double b);
+{
+    return { (a.x / b), (a.y / b), (a.z / b) };
+}
+
+inline double v3dLengthSqr(vector3d a)
+{
+    return sqr(a.x) + sqr(a.y) + sqr(a.z);
+}
+
+inline double v3dLength(vector3d a);
+{
+    return sqrt(v3dLengthSqr(a));
+}
+
+inline double v3dNormalized(vector3d *a);
+{
+    double x = v3dLength(*a)
+    v3dDivide(a, v3dLength(a));
+    return x;
+}
+```
+
+These functions haven't been tested yet, and I'm not sure if I want to change the original vectors' values using pointers, or if I want to return a new vector every time. I'm also not fully sure how inline functions work with memory management on the stack, but the idea is to reduce function call overhead since these functions will be called many many many times per second.
+
+Some of these functions rely on these basic math functions I've written:
+
+```c
+inline double sqr(double x)
+{
+    return x * x;
+}
+
+inline double sqrt(double x)
+{
+    double epsilon = 0.000001;
+    double guess = x / 2.0;
+    while ((guess * guess - x) > epsilon || (x - guess * guess) > epsilon)
+    {
+        guess = (guess + (x / guess)) / 2.0;
+    }
+    return guess;
+}
+```
+
+The sqrt method is based on Newton's method for calculating a square root. Another idea is to treat the range from 0 to x as a binary search range, and then checking if (0 + x)/2 squared is less than, greater than, or equal to the square root. In practice, however, this has the same runtime as Newton's algorithm, and Newton's algorithm takes less iterations on average.
+
+Eventually, when I've implemented dot products and cross products and the line-plant-intersection-checker, I'll try drawing a basic triangle in 3d space.
+
+#### Additional Notes
+
+The finished product is not going to be very efficient, as every operation defined by me is happening on the cpu. Despite this, my goal is to understand how a ray tracer works behind the scenes. Once I've finished this project, I'll take a stab at using a graphics API like DirectX to do the same thing more efficiently (and probably more elegantly).
