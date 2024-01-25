@@ -1,23 +1,28 @@
 ---
 layout: project
 type: project
-image: img/Rubik2
-title: "Ray Tracer From Scratch"
+image: img/RayTracer
+title: "Ray Tracer From Scratch in C"
 date: 2023-09-03
 published: true
 labels:
-  - Unity
-  - ICS486
-summary: "An AR Rubik's Cube that you can manipulate and solve on your phone."
+  - C
+  - Windows GDI
+  - In Progress
+summary: "A ray tracer in windows built entirely from scratch."
 ---
 
-This project involved the use of unity as well as an augmented reality library, to place a 3d model of a Rubik's Cube onto a handheld cube. The handheld cube has printed patterns on each side that help the software map the Rubik's Cube onto the right area of the screen. The cube is fully functional and solveable, and movement of the cube is entirely controlled by your hand in the real world. Manipulating the Rubik's Cube's faces is as simple as swiping the cube on the screen.
+First things first, this project is incomplete. The good news? Heres a yellow screen!
 
-#### Project Demo
+<img class="img-fluid" src="img/RayTracer1">
 
-<img width = 300 alt="img" src="img/Rubik1">
-<img width = 300 alt="img" src="img/Rubik2">
+#### First Attempt
 
-(Here's)[https://github.com/kylebueche/kylebueche.github.io/assets/38002610/b7c9e8a4-6e45-4bed-9027-bd5f3166e36b] a link to a video showing off the project.
+During my first attempt at this project, I was researching the math behind ray tracers. I wanted to write everything myself, and I was working in one file. Quickly things began to get messy.
 
-As you can see, the swiping system isn't fully fleshed out, but this can be redone, as the important thing is that the proper face is selected.
+I decided to forego all the vector math, in an effort to just have a color appear on the screen. Nothing showed up, but I had successfully opened a window!
+
+#### Square One
+
+At this point, I decided to just restart. I created a new file main.c where I opened the window, and created the gameloop.
+
