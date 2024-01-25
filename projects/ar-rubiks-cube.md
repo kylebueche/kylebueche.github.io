@@ -22,7 +22,7 @@ After rotating a few faces and rotating the cube in my hand:
 <img class="img-fluid" src="../img/Rubik2.png">
 
 
-The cube maps best in high light conditions, but it follows your hand pretty accurately.
+The cube maps best in high light conditions, but it follows your hand pretty accurately. For this to work, you do need to print out a special pattern onto the surface of a cube, to be recognized by the mapping software.
 
 #### Project Demo
 
