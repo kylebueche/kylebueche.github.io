@@ -16,6 +16,6 @@ This project involved the use of unity as well as an augmented reality library, 
 
 #### Project Demo
 
-<video width="537" height="700" controls>
-  <source src="img/AR-Rubiks" type="video/mp4">
-</video>
+https://github.com/kylebueche/kylebueche.github.io/assets/38002610/b7c9e8a4-6e45-4bed-9027-bd5f3166e36b
+
+As you can see, the swiping system isn't fully fleshed out, but this can be redone, as the important thing is that the proper face is selected.
