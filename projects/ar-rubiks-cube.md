@@ -15,11 +15,14 @@ This project involved the use of unity as well as an augmented reality library, 
 
 <img class="img-fluid" src="../img/Rubik1.png">
 
+
 After rotating a few faces and rotating the cube in my hand:
+
 
 <img class="img-fluid" src="../img/Rubik2.png">
 
-The cube maps best in high light conditions.
+
+The cube maps best in high light conditions, but it follows your hand pretty accurately.
 
 #### Project Demo
 
