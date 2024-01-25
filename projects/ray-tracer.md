@@ -14,7 +14,7 @@ summary: "A ray tracer in windows built entirely from scratch."
 
 First things first, this project is incomplete. The good news? Heres a yellow screen!
 
-<img class="img-fluid" src="../img/RayTracer2.png">
+<img class="img-fluid" src="../img/RayTracer.png">
 
 #### First Attempt
 
