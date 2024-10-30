@@ -9,7 +9,7 @@ labels:
   - Computer Science
 ---
 
-<img width="300px" class="rounded float-start pe-4" src="../img/interview.jpg">
+<img width="300px" class="rounded float-start pe-4" src="../img/essays/interview.jpg">
 
 In a common interview in the Computer Science field, you may find yourself asked "What are design patterns?”, followed by “What design patterns have you used in your own code?” How you answer these questions now can tell you a lot about what habits of yours are solid, and what habits you may need to improve.
 

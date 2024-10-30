@@ -9,7 +9,7 @@ labels:
   - Computer Science
 ---
 
-<img width="300px" class="rounded float-start pe-4" src="../img/bootstrap-logo.svg">
+<img width="300px" class="rounded float-start pe-4" src="../img/essays/bootstrap-logo.svg">
 
 #### The Good:
 Over the last few days, my course in Software Engineering I has required the use of Bootstrap 5 in the replication of the graphical aspects of several websites. As i sit here recovering from those experiences, I'm trying very very hard to think of something I like about Bootstrap. I did enjoy the free icons, and row/col layouts, but I feel that relying on those things may limit what I can do with HTML. I don't enjoy Bootstrap, but I feel like that may change once I'm more comfortable with basic HTML and CSS.

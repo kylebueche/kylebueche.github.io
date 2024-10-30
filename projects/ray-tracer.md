@@ -1,7 +1,7 @@
 ---
 layout: project
 type: project
-image: img/RayTracer.png
+image: img/ray-tracer/demo-1.png
 title: "Ray Tracer From Scratch in C"
 date: 2023-09-03
 published: true
@@ -12,10 +12,38 @@ labels:
 summary: "A ray tracer in windows built entirely from scratch."
 ---
 
-First things first, this project is incomplete. The good news? Heres a yellow screen!
+One day I woke up and decided that I wanted to build a ray tracer. I didn't know anything about how at the time, but I wanted to understand every part of it. I built this ray tracer from the ground up, in plain C, without the use of any unnecessary libraries. This project was not meant to be performant, but rather a learning experience. In order to achieve this, I implemented every function necessary from scratch. I worked out math problems for ray-plane and ray-sphere intersections, and learned how common code implementations are derived from these equations. This was a deep dive into the nitty gritty of what makes a ray tracer a ray tracer.
 
-<img class="img-fluid" src="../img/RayTracer.png">
+I seriously, seriously was so stubborn about not using any libraries throughout this project. For the longest time, I elected to not use math.h, the standard c math library. Instead, I wrote complex math functions myself. I might've had delusions of faster performance at the time, I don't know. Pro tip: Implementing a square root function is a fun little project, but it won't be as fast or accurate by a longshot. Standard libraries use built in CPU instructions for math where they can, which is multitudes faster. I had some crazy unique visual bugs that were solved by switching to math.h's sqrt function.
 
+The only libraries 0used in this project are windows.h to open a window and draw to the screen, and math.h for some nice stress free maths. I did not use OpenGL or DirectX, everything is executed directly on the CPU. As you can imagine, this is quite slow, but at the time CPU logic was the most familiar and accessible to me, so I just did it.
+
+#### Demo of All Current Features
+
+<img class="img-fluid" src="../img/ray-tracer/demo-1.png">
+
+This image is the culmination of months of work on this project. It took about 2 minutes to render. So without further ado, here's a full list of features I've implemented:
+- Spheres and planes as scene objects
+- Point lights, directional lights, and spherical lights
+- Lambertian and specular reflection with an adjustment for 'reflectiveness'
+- Refraction with an adjustable refractive index
+- Soft shadows when spherical lights are used
+- Anti-Aliasing adjustable to any level of detail.
+
+And here's a list of all the cool algorithms and data structures I implemented throughout this project:
+- ObjectNode struct that lets me chain several types of objects into one linkedlist
+ - This is basically like implementing objects in C. It was so tedious and I yearned for C++
+- A whole freakin ton of vector math. Addition, subtraction, normalization, dot products, you name it
+- Ray-plane intersection
+- Ray-sphere intersection
+- An algorithm that finds the closest object in a ray's path
+- Sum of lambertians algorithm that calculates the light seen from all direct sources at a point.
+- Reflection algorithm that takes a ray and a normal and outputs a reflection ray
+- Refraction algorithm that takes a ray, a normal, and a refractive index, and outputs a refractive ray
+- Trace Ray algorithm that finds the closest object a ray hits, determines its transparency and roughness, and recursively reflects and refracts rays until the limit is reached
+- Camera rig that has a height, width, and depth, and accurately spaced pixels based on the current window size. It can shoot a bunch of evenly spaces rays per pixel and average them for Anti-Aliasing
+
+I won't be going too much into the nitty gritty details of building this thing here, but you can read further down for some of my earlier ramblings while building this project.
 
 #### First Attempt
 
@@ -75,7 +103,9 @@ while (!quit)
 }
 ```
 
-pixelGrid.pixels is a pointer to our pixel grid. In the first part of our loop, we handle messages such as window resizing or painting to the screen. Then, we set the rgb values as such: 0x00RRGGBB. At the end of our loop, we invalidate the entire window screen so that it has to be redrawn, and then we update the window. At the start of the loop, the WM_DRAW message will be dispatched to our handler function, which will copy everything from our array to the screen. 0x00ffff00 is the hexadecimal for yellow in 24-bit color. This is how we get our yellow screen above.
+pixelGrid.pixels is a pointer to our pixel grid. In the first part of our loop, we handle messages such as window resizing or painting to the screen. Then, we set the rgb values as such: 0x00RRGGBB. At the end of our loop, we invalidate the entire window screen so that it has to be redrawn, and then we update the window. At the start of the loop, the WM_DRAW message will be dispatched to our handler function, which will copy everything from our array to the screen. 0x00ffff00 is the hexadecimal for yellow in 24-bit color. Voila! A yellow screen!
+
+<img class="img-fluid" src="../img/ray-tracer/displaying-color.png">
 
 The nice thing about this is that we are constantly setting resetting each pixel as fast as we can, so we essentially have a realtime renderer. Let's change the color line to the following:
 
@@ -86,15 +116,16 @@ pixelGrid.pixels[(y * pixelGrid.width + x)] = 0x00010100 * (int) (256 * (pixelGr
 
 Now we have the following gradient:
 
-<img class="img-fluid" src="../img/RayTracer2.png">
-
+<img class="img-fluid" src="../img/ray-tracer/displaying-gradient-1.png">
 
 And if we resize it:
 
+<img class="img-fluid" src="../img/ray-tracer/displaying-gradient-2.png">
 
-<img class="img-fluid" src="../img/RayTracer3.png">
+Huzzah!
 
-#### Ray Tracing!
+
+#### Some Stuff I Wrote Way Before Finishing This Project
 
 So, as you may know, this project is currently incomplete. I didn't want to rely on any libraries, and this means implementing a bunch of math and vector math functions.
 

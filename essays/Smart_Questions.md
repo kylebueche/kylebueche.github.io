@@ -10,7 +10,7 @@ labels:
   - Stack Exchange
 ---
 
-<img width="300px" class="rounded float-start pe-4" src="../img/query.png">
+<img width="300px" class="rounded float-start pe-4" src="../img/essays/query.png">
 #### How to Ask Questions in Help Forums:
 
 

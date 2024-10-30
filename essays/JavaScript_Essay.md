@@ -9,7 +9,7 @@ labels:
   - Computer Science
 ---
 
-<img width="200px" class="rounded float-start pe-4" src="../img/6370953191227392.png">
+<img width="200px" class="rounded float-start pe-4" src="../img/essays/6370953191227392.png">
 
 Of all the programming languages I've come to know, JavaScript reminds me of Python the most. I began my coding journey with Python in middle school, but that was a time before I understood how and why code actually works. After a long break from middle school to college, I forgot everything about Python and was introduced to Java.
 

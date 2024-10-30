@@ -1,7 +1,7 @@
 ---
 layout: project
 type: project
-image: img/264968353-45bd6b1b-5178-494d-9dab-fc6de5235caf.png
+image: img/random-programmer/demo-1.png
 title: "Random Programmer"
 date: 2023-02-03
 published: true
@@ -14,4 +14,4 @@ This project generated random code including method calls, conditionals, assignm
 
 Here is an example output when the program is run, and the compound statement limiter is set to 5:                        
 
-<img width="537" alt="image" src="https://github.com/kylebueche/kylebueche.github.io/assets/38002610/45bd6b1b-5178-494d-9dab-fc6de5235caf">
+<img width="537" alt="image" src="../img/random-programmer/demo-1.png">
