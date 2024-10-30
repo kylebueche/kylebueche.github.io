@@ -27,6 +27,6 @@ The cube maps best in high light conditions, but it follows your hand pretty acc
 #### Project Demo
 
 
-<video class="img-fluid" src="../img/ar-rubiks-cube/demo-video-1.mp4" controls></video>
+<video width="500" src="../img/ar-rubiks-cube/demo-video-1.mp4" controls></video>
 
 As you can see, the swiping system isn't fully fleshed out, but this can be redone, as the important thing is that the proper face is selected.
