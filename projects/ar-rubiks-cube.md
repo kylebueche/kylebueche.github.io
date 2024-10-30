@@ -27,6 +27,6 @@ The cube maps best in high light conditions, but it follows your hand pretty acc
 #### Project Demo
 
 
-<video src="demo-video-1" width="320" height="240" controls></video>
+<video class="img-fluid" src="demo-video-1.mp4" controls></video>
 
 As you can see, the swiping system isn't fully fleshed out, but this can be redone, as the important thing is that the proper face is selected.
