@@ -1,12 +1,12 @@
 {
   "basics": {
     "name": "Kyle Bueche",
-    "label": "Student",
+    "label": "Student at the University of Hawaiʻi at Mānoa",
     "picture": "https://github.com/kylebueche.png",
     "email": "bueche@hawaii.edu",
     "phone": "808-NoThanks",
     "website": "https://kylebueche.github.io",
-    "summary": "I am studying for a Bachelor’s degree in Computer Science with a Concentration in Creative Computational Media at the University of Hawaiʻi at Mānoa. I expect to graduate in Spring of 2026.",
+    "summary": "I am studying for a Bachelor’s degree in Computer Science with a Concentration in Creative Computational Media.",
     "location": { "address": "", "postalCode": "", "city": "Honolulu", "countryCode": "", "region": "Hawaii" },
     "profiles": [
       { "network": "github", "username": "kylebueche", "url": "http://github.com/kylebueche" },
