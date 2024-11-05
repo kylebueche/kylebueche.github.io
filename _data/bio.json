@@ -21,13 +21,15 @@
     {
       "name": "Soft Skills",
       "keywords": [ "Adaptable to languages/software", "Communicative" ]
+    },
     {
       "name": "Languages",
       "keywords": [ "C", "C++", "Lisp", "Java", "Javascript", "Python" ]
     },
     {
       "name": "APIs",
-      "keywords": [ "OpenGL", "OpenCV", ]
+      "keywords": [ "OpenGL", "OpenCV" ]
+    },
     {
       "name": "Toolsets",
       "keywords": [ "Git/GitHub", "Unity", "Unreal Engine", "Maya", "Blender" ]
