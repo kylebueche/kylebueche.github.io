@@ -3,11 +3,9 @@
     "name": "Kyle Bueche",
     "label": "Student at the University of Hawaiʻi at Mānoa",
     "picture": "https://github.com/kylebueche.png",
-    "email": "bueche@hawaii.edu",
-    "phone": "808",
+    "email": "kyle.bueche@gmail.com",
     "website": "https://kylebueche.github.io",
     "summary": "I am studying for a Bachelor’s degree in Computer Science with a Concentration in Creative Computational Media.",
-    "location": { "address": "", "postalCode": "", "city": "Honolulu", "countryCode": "", "region": "Hawaii" },
     "profiles": [
       { "network": "github", "username": "kylebueche", "url": "http://github.com/kylebueche" },
       { "network": "linkedin", "username": "Kyle Bueche", "url": "http://linkedin.com/in/kyle-bueche-6199b41b5/" }
@@ -15,18 +13,24 @@
   },
   "interests": [
     { "name": "Creative Media" },
-    { "name": "3D Animation" },
+    { "name": "3D Computer Graphics" },
     { "name": "Game Development" },
     { "name": "Artificial Intelligence" }
   ],
   "skills": [
     {
-      "name": "Languages and Frameworks",
-      "keywords": [ "C", "Java", "Javascript", "Python" ]
+      "name": "Soft Skills",
+      "keywords": [ "Adaptable to languages/software", "Communicative" ]
+    {
+      "name": "Languages",
+      "keywords": [ "C", "C++", "Lisp", "Java", "Javascript", "Python" ]
     },
     {
-      "name": "Toolsets/OS",
-      "keywords": [ "Microsoft Windows", "Unix", "Git/GitHub", "Eclipse", "VI" ]
+      "name": "APIs",
+      "keywords": [ "OpenGL", "OpenCV", ]
+    {
+      "name": "Toolsets",
+      "keywords": [ "Git/GitHub", "Unity", "Unreal Engine", "Maya", "Blender" ]
     }
   ],
   "education": [
@@ -36,81 +40,55 @@
       "studyType": "B.S.",
       "startDate": "2022",
       "endDate": "Present",
-      "courses": [ "Software Engineering I", "AR/VR Development", "Introduction to 3D Animation", "Program Structure", "Discrete Mathematics I & II", "Introduction to Computer Science I & II"
+      "courses": [ "Algorithms", "Computer Graphics", "3D Animation", "AR/VR Development", "Software Engineering"
       ]
     }
   ],
   "work": [
     {
-      "company": "niversity of Hawaii at Manoa Student Housing Services",
-      "position": "Resident Assistant",
-      "website": "",
-      "startDate": "2023-08",
-      "endDate": "Present",
-      "summary": "",
+      "company": "Oceanit",
+      "position": "Computer Science Intern",
+      "website": "oceanit.com",
+      "startDate": "2024-05",
+      "endDate": "2024-07",
+      "summary": "Worked on various projects involving SQL, Javascript, and OpenCV",
       "highlights": [
-        "Build community among a floor of first-year residents",
-        "Manage conflicts and de-escelate situations"
+        "Innovation Project involving ray tracing"
       ]
     },
     {
       "company": "University of Hawaii at Manoa School of Architecture",
       "position": "Computer Lab Assistant",
-      "website": "",
       "startDate": "2023-01",
       "endDate": "2023-05",
       "summary": "",
       "highlights": [
-        "Manage printing and plotting jobs on different types of paper and boards for SoA students",
-        "Update the School of Architecture website's 'News & Events' tab",
-        "Assist teachers and students at the UH Manoa School of Architecture with computers, projectors, and printers"
+        "Assist teachers and students at the UH Manoa School of Architecture with computers, projectors, and printers",
+        "Update the School of Architecture's news website",
+        "Manage printing and plotting jobs on large printers for SoA students"
       ]
     }
   ],
   "volunteer": [
     {
       "organization": "Pearl City High School PTSA",
-      "website": "",
-      "position": "Fundraisers",
       "startDate": "2020",
       "endDate": "2022",
-      "summary": "",
       "highlights": [
         "80+ hours spent volunteering for fundraisers for Project Grad",
       ]
     },
     {
       "organization": "Boy Scouts of America",
-      "website": "",
-      "position": "",
       "startDate": "2010",
       "endDate": "2022",
       "summary": "Countless hours spent volunteering for various community service projects",
       "highlights": [
         "Lead an Eagle Scout Project to install 127 plants and 3 palm trees at Pearl City High School",
-        "Helped with several other Eagle Scout Projects throghout the years",
+        "Helped with several other Eagle Scout Projects throughout the years",
         "Several renovations for schools & churches",
         "Several park, trail, & community cleanups",
       ]
-    }
-  ],
-  "awards": [
-    {
-      "title": "Eagle Scout",
-      "date": "2022",
-      "awarder": "Boy Scouts of America",
-      "summary": "Achieve the rank of Eagle"
-    },
-    {
-      "title": "1st Place",
-      "date": "2023",
-      "awarder": "Family Barbecue",
-      "summary": "Me and my brother won the family cookoff with a clone of L&L's barbecue chicken recipe"
-    }
-  ],
-  "references": [
-    {
-      "name": "Available upon request"
     }
   ]
 }
