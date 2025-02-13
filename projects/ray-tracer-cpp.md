@@ -13,3 +13,14 @@ labels:
 summary: "Another ray tracer in windows built by following 'Ray Tracing in One Weekend.'"
 ---
 
+<div>
+  <span>
+    <img src="..img/ray-tracer-cpp/ppm-viewer.png" height="100%" alt="PPM Viewer">
+  </span>
+  <span>
+    <img src="..img/ray-tracer-cpp/rainbow.png" height="100%" alt="PPM Viewer">
+  </span>
+  <span>
+    <img src="..img/ray-tracer-cpp/rainbow2.png" height="100%" alt="PPM Viewer">
+  </span>
+</div>
