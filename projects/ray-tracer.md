@@ -6,9 +6,11 @@ title: "Ray Tracer From Scratch in C"
 date: 2023-09-03
 published: true
 labels:
-  - C
-  - Windows GDI
+  - Computer Graphics
+  - Rendering
   - Ray Tracing
+  - Windows GDI
+  - C
 summary: "A ray tracer in windows built entirely from scratch."
 ---
 
