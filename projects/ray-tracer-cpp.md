@@ -23,6 +23,7 @@ If you're interested in ray tracing, and don't know where to start, I heavily re
 
 ## Demo of all current features
 <img class="border" src="../img/ray-tracer-cpp/final-demo.png" height="350px" alt="Final-demo">
+
 This image follows the scene described in the last entry of the first book. It initially took 12 hours to render, but after implementing multi-threading, it went down to about an hour (I have a 12 core processor).
 
 
