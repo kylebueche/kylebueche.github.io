@@ -1,7 +1,7 @@
 ---
 layout: project
 type: project
-image: img/ray-tracer/demo-1.png
+image: img/ray-tracer/thumbnail.png
 title: "Ray Tracer From Scratch in C"
 date: 2023-09-03
 published: true
