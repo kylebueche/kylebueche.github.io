@@ -17,4 +17,4 @@ This program chooses a legal answer for each open square from left to right, top
 
 Here is my program's solution for the famous 'AI Escargot' sudoku problem:                          
 
-<img width="474" alt="image" src="../img/sudoku-solver/demo-1.png">
+<img width="350" alt="image" src="../img/sudoku-solver/demo-1.png">
