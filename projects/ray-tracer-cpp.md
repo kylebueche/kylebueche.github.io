@@ -57,7 +57,7 @@ Followed by this, we have a diffusely shaded sphere, and then gamma correction f
 </div>
 
  
-After the initial setup, I implemented the different reflection models:
+After the initial setup, I implemented the different reflection and refraction models:
 
 <div>
   <span>
