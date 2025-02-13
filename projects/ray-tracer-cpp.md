@@ -43,7 +43,7 @@ This ray tracer features:
 
 Here we have the initial surface-normal gradient shading, shown in the online ppm viewer as Windows does not have a way to view ppm image files. Followed by this, we have a diffusely shaded sphere, and then gamma correction for image files:
 
-<div style="padding-bottom:15px;">
+<div style="padding-bottom:40px;">
   <span>
     <img class="border" src="../img/ray-tracer-cpp/rainbow.png" height="250px" alt="Rainbow">
   </span>
@@ -58,7 +58,7 @@ Here we have the initial surface-normal gradient shading, shown in the online pp
  
 After the initial setup, I implemented the different reflection and refraction models:
 
-<div style="padding-bottom:15px;">
+<div style="padding-bottom:40px;">
   <span>
     <img class="border" src="../img/ray-tracer-cpp/rough-reflect.png" height="250px" alt="reflect">
   </span>
@@ -70,7 +70,7 @@ After the initial setup, I implemented the different reflection and refraction m
 
 And we can specify if we want reflection to be specular or glossy:
 
-<div style="padding-bottom:15px;">
+<div style="padding-bottom:40px;">
   <span>
     <img class="border" src="../img/ray-tracer-cpp/specular-reflect.png" height="250px" alt="specular">
   </span>
@@ -82,7 +82,7 @@ And we can specify if we want reflection to be specular or glossy:
 
 We can then use 2 refracting spheres to simulate a bubble, and even up the resolution and samples a little to get a nicer output:
 
-<div style="padding-bottom:15px;">
+<div style="padding-bottom:40px;">
   <span>
     <img class="border" src="../img/ray-tracer-cpp/lamb.png" height="250px" alt="highresglass">
   </span>
@@ -94,7 +94,7 @@ We can then use 2 refracting spheres to simulate a bubble, and even up the resol
 
 Now lets try adjusting our field of view for funzies
 
-<div style="padding-bottom:15px;">
+<div style="padding-bottom:40px;">
   <span>
     <img class="border" src="../img/ray-tracer-cpp/zoomed.png" height="250px" alt="close">
   </span>
@@ -109,7 +109,7 @@ Now lets try adjusting our field of view for funzies
 
 And finally, let's set our depth of field:
 
-<div  style="padding-bottom:15px;">
+<div  style="padding-bottom:40px;">
   <img class="border" src="../img/ray-tracer-cpp/depth1.png" height="350px" alt="depth of field">
 </div>
 
