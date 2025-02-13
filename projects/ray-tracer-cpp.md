@@ -38,15 +38,27 @@ This ray tracer features:
 - Efficient multithreading, and a percent completion counter.
 - Outputting images to a ppm file.
 
-Here we have the initial surface-normal gradient shading, shown in the online ppm viewer as Windows does not have a way to view ppm image files. 
+Here we have the initial surface-normal gradient shading, shown in the online ppm viewer as Windows does not have a way to view ppm image files.
+
+Followed by this, we have a diffusely shaded sphere, and then gamma correction for image files.
+
 <div>
   <span>
-    <img class="border" src="../img/ray-tracer-cpp/rainbow.png" height="250px" alt="Rainbow">
+    <div>
+      <p>Normal Vector RGB Shading</p>
+      <img class="border" src="../img/ray-tracer-cpp/rainbow.png" height="250px" alt="Rainbow">
+    </div>
   </span>
   <span>
-    <img class="border" src="../img/ray-tracer-cpp/better-diffuse.png" height="250px" alt="Better Diffuse">
+    <div>
+      <p>Diffuse shading</p>
+      <img class="border" src="../img/ray-tracer-cpp/better-diffuse.png" height="250px" alt="Better Diffuse">
+    </div>
   </span>
   <span>
-    <img class="border" src="../img/ray-tracer-cpp/gamma-corrected.png" height="250px" alt="Gamma Corrected">
+    <div>
+      <p>Image Output Gamma Correction</p>
+      <img class="border" src="../img/ray-tracer-cpp/gamma-corrected.png" height="250px" alt="Gamma Corrected">
+    </div>
   </span>
 </div>
