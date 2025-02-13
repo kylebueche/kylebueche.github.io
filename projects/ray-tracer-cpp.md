@@ -42,7 +42,7 @@ Here we have the initial surface-normal gradient shading, shown in the online pp
 <div>
   <span>
     <img class="border" src="../img/ray-tracer-cpp/rainbow.png" height="250px" alt="Rainbow">
-  </span
+  </span>
   <span>
     <img class="border" src="../img/ray-tracer-cpp/better-diffuse.png" height="250px" alt="Better Diffuse">
   </span>
