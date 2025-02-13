@@ -22,7 +22,7 @@ The only libraries 0used in this project are windows.h to open a window and draw
 
 #### Demo of All Current Features
 
-<img height="500px" src="../img/ray-tracer/demo-1.png">
+<img height="350px" src="../img/ray-tracer/demo-1.png">
 
 This image is the culmination of months of work on this project. It took about 2 minutes to render. So without further ado, here's a full list of features I've implemented:
 - Implicit spheres and planes
@@ -107,7 +107,7 @@ while (!quit)
 
 pixelGrid.pixels is a pointer to our pixel grid. In the first part of our loop, we handle messages such as window resizing or painting to the screen. Then, we set the rgb values as such: 0x00RRGGBB. At the end of our loop, we invalidate the entire window screen so that it has to be redrawn, and then we update the window. At the start of the loop, the WM_DRAW message will be dispatched to our handler function, which will copy everything from our array to the screen. 0x00ffff00 is the hexadecimal for yellow in 24-bit color. Voila! A yellow screen!
 
-<img height="500px" src="../img/ray-tracer/displaying-color.png">
+<img height="350px" src="../img/ray-tracer/displaying-color.png">
 
 The nice thing about this is that we are constantly setting resetting each pixel as fast as we can, so we essentially have a realtime renderer. Let's change the color line to the following:
 
@@ -118,11 +118,11 @@ pixelGrid.pixels[(y * pixelGrid.width + x)] = 0x00010100 * (int) (256 * (pixelGr
 
 Now we have the following gradient:
 
-<img height="500px" src="../img/ray-tracer/displaying-gradient-1.png">
+<img height="350px" src="../img/ray-tracer/displaying-gradient-1.png">
 
 And if we resize it:
 
-<img height="250px" src="../img/ray-tracer/displaying-gradient-2.png">
+<img height="350px" src="../img/ray-tracer/displaying-gradient-2.png">
 
 Huzzah!
 
