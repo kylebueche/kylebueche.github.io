@@ -8,7 +8,7 @@ published: true
 labels:
   - C
   - Windows GDI
-  - In Progress
+  - Ray Tracing
 summary: "A ray tracer in windows built entirely from scratch."
 ---
 
