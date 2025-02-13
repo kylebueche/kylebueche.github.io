@@ -38,9 +38,11 @@ This ray tracer features:
 - Efficient multithreading, and a percent completion counter.
 - Outputting images to a ppm file.
 
+
 Here we have the initial surface-normal gradient shading, shown in the online ppm viewer as Windows does not have a way to view ppm image files.
 
-Followed by this, we have a diffusely shaded sphere, and then gamma correction for image files.
+
+Followed by this, we have a diffusely shaded sphere, and then gamma correction for image files:
 
 <div>
   <span>
@@ -54,6 +56,7 @@ Followed by this, we have a diffusely shaded sphere, and then gamma correction f
   </span>
 </div>
 
+ 
 After the initial setup, I implemented the different reflection models:
 
 <div>
@@ -68,6 +71,7 @@ After the initial setup, I implemented the different reflection models:
   </span>
 </div>
 
+
 And we can specify if we want reflection to be specular or glossy:
 
 <div>
@@ -79,10 +83,11 @@ And we can specify if we want reflection to be specular or glossy:
   </span>
 </div>
 
-We can then use 2 refracting spheres to simulate a bubble, and even upp the resolution and samples a little to get a nicer output:
+
+We can then use 2 refracting spheres to simulate a bubble, and even up the resolution and samples a little to get a nicer output:
 
 <div>
   <span>
-    <img class="border" src="../img/ray-tracer-cpp/air-bubble.png" height="250px" alt="glass">
+    <img class="border" src="../img/ray-tracer-cpp/air-bubble.png" height="300px" alt="glass">
   </span>
 </div>
