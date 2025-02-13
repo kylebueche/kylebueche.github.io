@@ -53,4 +53,31 @@ Followed by this, we have a diffusely shaded sphere, and then gamma correction f
     <img class="border" src="../img/ray-tracer-cpp/gamma-corrected.png" height="250px" alt="Gamma Corrected">
   </span>
 </div>
-<div><span>Normal Vector RGB Shading</span><span>Diffuse shading</span><span>Image Output Gamma Correction</span></div>
+
+After the initial setup, I implemented the different reflection models:
+
+<div>
+  <span>
+    <img class="border" src="../img/ray-tracer-cpp/lamb.png" height="250px" alt="rough">
+  </span>
+  <span>
+    <img class="border" src="../img/ray-tracer-cpp/reflect.png" height="250px" alt="metal">
+  </span>
+  <span>
+    <img class="border" src="../img/ray-tracer-cpp/refract.png" height="250px" alt="glass">
+  </span>
+</div>
+
+And we can specify if we want reflection to be specular or glossy, and we can use 2 refracting spheres to simulate a bubble:
+
+<div>
+  <span>
+    <img class="border" src="../img/ray-tracer-cpp/specular-reflect.png" height="250px" alt="specular">
+  </span>
+  <span>
+    <img class="border" src="../img/ray-tracer-cpp/rough-reflect.png" height="250px" alt="glossy">
+  </span>
+  <span>
+    <img class="border" src="../img/ray-tracer-cpp/air-bubble.png" height="250px" alt="glass">
+  </span>
+</div>
