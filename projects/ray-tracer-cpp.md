@@ -10,17 +10,31 @@ labels:
   - Rendering
   - Ray Tracing
   - C++
+  - OpenMP
+  - Visual Studio
 summary: "Another ray tracer in windows built by following 'Ray Tracing in One Weekend.'"
 ---
 
+For round 2 of ray tracing, I chose C++, and boy did it streamline things. C is great, don't get me wrong, but it really helped me appreciate the simple abstractions that C++ can offer a ray tracing project. This time, I followed a book, and learned that every graphics engine is faced with fundemental design decisions. I made such decisions in my last ray tracer, aimlessly and for better or worse. The book has given me insights into what design paths are available, and the structure that a graphics engine can take.
+
+If you're interested in ray tracing, and don't know where to start, I heavily recommend checking out [Ray Tracing in One Weekend - The Book Series](https://raytracing.github.io/).
+
+## Demo of all current features
+<img class="border" src="../img/ray-tracer-cpp/final-demo.png" height="350px" alt="Final-demo">
+This image follows the scene described in the last entry of the first book. It initially took 12 hours to render, but after implementing multi-threading, it went down to about an hour (I have a 12 core processor).
+
+I wanted to leverage the GPU to make rendering even faster, but unfortunately, I decided that I should use Visual Studio for the first time ever for this project. OpenMP, the parallel processing library I was using, has the capability to offload work to the GPU as of version 4.0. Visual Studio supports OpenMP 2.0 built in. This was intended to be a quick project, so I wasn't going to go download a local version of OpenMP 4.0+ or any other libraries. Overall, I am satisfied with the 12x speedup.
+
+This ray tracer features:
+- 
 <div>
   <span>
-    <img class="border" src="../img/ray-tracer-cpp/ppm-viewer.png" height="100px" alt="PPM Viewer">
+    <img class="border" src="../img/ray-tracer-cpp/rainbow.png" height="250px" alt="Rainbow">
+  </span
+  <span>
+    <img class="border" src="../img/ray-tracer-cpp/.png" height="250px" alt="Rainbow">
   </span>
   <span>
-    <img class="border" src="../img/ray-tracer-cpp/rainbow.png" height="100px" alt="Rainbow">
-  </span>
-  <span>
-    <img class="border" src="../img/ray-tracer-cpp/rainbow2.png" height="100px" alt="PPM Viewer">
+    <img class="border" src="../img/ray-tracer-cpp/rainbow2.png" height="250px" alt="PPM Viewer">
   </span>
 </div>
