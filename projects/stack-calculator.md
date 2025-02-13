@@ -19,4 +19,4 @@ Throughout this project I gained a lot of insight into graphical user interfaces
 
 [Here's](https://github.com/kylebueche/StackCalculatorWithGUI) the source code for my project, and here's what the calculator looks like:                                  
 
-<img width="211" alt="image" src="../img/stack-calculator/demo-1.png">
+<img width="300px" alt="image" src="../img/stack-calculator/demo-1.png">
