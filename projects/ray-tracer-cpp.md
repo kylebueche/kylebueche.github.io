@@ -15,7 +15,9 @@ labels:
 summary: "Another ray tracer in windows built by following 'Ray Tracing in One Weekend.'"
 ---
 
-For round 2 of ray tracing, I chose C++, and boy did it streamline things. C is great, don't get me wrong, but it really helped me appreciate the simple abstractions that C++ can offer a ray tracing project. This time, I followed a book, and learned that every graphics engine is faced with fundemental design decisions. I made such decisions in my last ray tracer, aimlessly and for better or worse. The book has given me insights into what design paths are available, and the structure that a graphics engine can take.
+
+
+For round 2 of ray tracing, I chose to use C++. Boy did it streamline things. C is great, don't get me wrong, but it really helped me appreciate the simple abstractions that C++ can offer a ray tracing project. This time, I followed a book, and learned that every graphics engine is faced with fundemental design decisions. I made such decisions in my last ray tracer, aimlessly and for better or worse. The book has given me insights into what design paths are available, and the structure that a graphics engine can take.
 
 
 If you're interested in ray tracing, and don't know where to start, I heavily recommend checking out [Ray Tracing in One Weekend - The Book Series](https://raytracing.github.io/).
@@ -41,7 +43,7 @@ This ray tracer features:
 
 Here we have the initial surface-normal gradient shading, shown in the online ppm viewer as Windows does not have a way to view ppm image files. Followed by this, we have a diffusely shaded sphere, and then gamma correction for image files:
 
-<div>
+<div style="padding-bottom:15px;">
   <span>
     <img class="border" src="../img/ray-tracer-cpp/rainbow.png" height="250px" alt="Rainbow">
   </span>
@@ -53,11 +55,10 @@ Here we have the initial surface-normal gradient shading, shown in the online pp
   </span>
 </div>
 
-* * *
  
 After the initial setup, I implemented the different reflection and refraction models:
 
-<div>
+<div style="padding-bottom:15px;">
   <span>
     <img class="border" src="../img/ray-tracer-cpp/rough-reflect.png" height="250px" alt="reflect">
   </span>
@@ -66,11 +67,10 @@ After the initial setup, I implemented the different reflection and refraction m
   </span>
 </div>
 
-* * *
 
 And we can specify if we want reflection to be specular or glossy:
 
-<div>
+<div style="padding-bottom:15px;">
   <span>
     <img class="border" src="../img/ray-tracer-cpp/specular-reflect.png" height="250px" alt="specular">
   </span>
@@ -79,11 +79,10 @@ And we can specify if we want reflection to be specular or glossy:
   </span>
 </div>
 
-* * *
 
 We can then use 2 refracting spheres to simulate a bubble, and even up the resolution and samples a little to get a nicer output:
 
-<div>
+<div style="padding-bottom:15px;">
   <span>
     <img class="border" src="../img/ray-tracer-cpp/lamb.png" height="250px" alt="highresglass">
   </span>
@@ -92,11 +91,10 @@ We can then use 2 refracting spheres to simulate a bubble, and even up the resol
   </span>
 </div>
 
-* * *
 
 Now lets try adjusting our field of view for funzies
 
-<div>
+<div style="padding-bottom:15px;">
   <span>
     <img class="border" src="../img/ray-tracer-cpp/zoomed.png" height="250px" alt="close">
   </span>
@@ -108,12 +106,11 @@ Now lets try adjusting our field of view for funzies
   </span>
 </div>
 
-* * *
 
 And finally, let's set our depth of field:
 
-<img class="border" src="../img/ray-tracer-cpp/depth1.png" height="350px" alt="depth of field">
-
-* * *
+<div  style="padding-bottom:15px;">
+  <img class="border" src="../img/ray-tracer-cpp/depth1.png" height="350px" alt="depth of field">
+</div>
 
 All of these things come together in our final image above, by just dumping a ton of random sphere positions and materials.
