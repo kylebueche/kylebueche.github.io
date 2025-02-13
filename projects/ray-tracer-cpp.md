@@ -61,10 +61,10 @@ After the initial setup, I implemented the different reflection and refraction m
 
 <div>
   <span>
-    <img class="border" src="../img/ray-tracer-cpp/rough-reflect.png" height="250px" alt="metal">
+    <img class="border" src="../img/ray-tracer-cpp/rough-reflect.png" height="250px" alt="reflect">
   </span>
   <span>
-    <img class="border" src="../img/ray-tracer-cpp/refract.png" height="250px" alt="glass">
+    <img class="border" src="../img/ray-tracer-cpp/refract.png" height="250px" alt="refract">
   </span>
 </div>
 
@@ -85,9 +85,29 @@ We can then use 2 refracting spheres to simulate a bubble, and even up the resol
 
 <div>
   <span>
-    <img class="border" src="../img/ray-tracer-cpp/lamb.png" height="250px" alt="rough">
+    <img class="border" src="../img/ray-tracer-cpp/lamb.png" height="250px" alt="highresglass">
   </span>
   <span>
-    <img class="border" src="../img/ray-tracer-cpp/air-bubble.png" height="300px" alt="glass">
+    <img class="border" src="../img/ray-tracer-cpp/air-bubble.png" height="250px" alt="glass2">
   </span>
 </div>
+
+
+Now lets try adjusting our field of view for funzies
+
+<div>
+  <span>
+    <img class="border" src="../img/ray-tracer-cpp/zoomed.png" height="250px" alt="close">
+  </span>
+  <span>
+    <img class="border" src="../img/ray-tracer-cpp/unzoomed.png" height="250px" alt="med">
+  </span>
+  <span>
+    <img class="border" src="../img/ray-tracer-cpp/zoomed-out.png" height="250px" alt="far">
+  </span>
+</div>
+
+
+And finally, let's set our depth of field:
+
+<img class="border" src="../img/ray-tracer-cpp/depth1.png" height="250px" alt="depth of field">
