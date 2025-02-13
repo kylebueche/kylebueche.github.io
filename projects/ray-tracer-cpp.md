@@ -61,10 +61,7 @@ After the initial setup, I implemented the different reflection models:
 
 <div>
   <span>
-    <img class="border" src="../img/ray-tracer-cpp/lamb.png" height="250px" alt="rough">
-  </span>
-  <span>
-    <img class="border" src="../img/ray-tracer-cpp/reflect.png" height="250px" alt="metal">
+    <img class="border" src="../img/ray-tracer-cpp/rough-reflect.png" height="250px" alt="metal">
   </span>
   <span>
     <img class="border" src="../img/ray-tracer-cpp/refract.png" height="250px" alt="glass">
@@ -87,6 +84,9 @@ And we can specify if we want reflection to be specular or glossy:
 We can then use 2 refracting spheres to simulate a bubble, and even up the resolution and samples a little to get a nicer output:
 
 <div>
+  <span>
+    <img class="border" src="../img/ray-tracer-cpp/lamb.png" height="250px" alt="rough">
+  </span>
   <span>
     <img class="border" src="../img/ray-tracer-cpp/air-bubble.png" height="300px" alt="glass">
   </span>
