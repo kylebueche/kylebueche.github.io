@@ -10,6 +10,6 @@ labels:
   - Rendering
   - Ray Tracing
   - C++
-summary: "A ray tracer in windows built entirely from scratch."
+summary: "Another ray tracer in windows built by following 'Ray Tracing in One Weekend.'"
 ---
 
