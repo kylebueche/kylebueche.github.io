@@ -37,3 +37,10 @@ a {
   background-color: var(--bs-white);
   border-top: none;
 }
+
+
+.border {
+  border-style = line;
+  border-color = black;
+  border-width = 2px;
+}
