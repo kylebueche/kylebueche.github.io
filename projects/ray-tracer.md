@@ -23,12 +23,12 @@ The only libraries 0used in this project are windows.h to open a window and draw
 <img class="img-fluid" src="../img/ray-tracer/demo-1.png">
 
 This image is the culmination of months of work on this project. It took about 2 minutes to render. So without further ado, here's a full list of features I've implemented:
-- Spheres and planes as scene objects
+- Implicit spheres and planes
 - Point lights, directional lights, and spherical lights
-- Lambertian and specular reflection with an adjustment for 'reflectiveness'
+- Lambertian and specular reflection with an adjustable roughness
 - Refraction with an adjustable refractive index
 - Soft shadows when spherical lights are used
-- Anti-Aliasing adjustable to any level of detail.
+- Anti-Aliasing adjustable to any number of samples.
 
 And here's a list of all the cool algorithms and data structures I implemented throughout this project:
 - ObjectNode struct that lets me chain several types of objects into one linkedlist
@@ -43,7 +43,7 @@ And here's a list of all the cool algorithms and data structures I implemented t
 - Trace Ray algorithm that finds the closest object a ray hits, determines its transparency and roughness, and recursively reflects and refracts rays until the limit is reached
 - Camera rig that has a height, width, and depth, and accurately spaced pixels based on the current window size. It can shoot a bunch of evenly spaces rays per pixel and average them for Anti-Aliasing
 
-I won't be going too much into the nitty gritty details of building this thing here, but you can read further down for some of my earlier ramblings while building this project.
+I won't be going too much into the nitty gritty details of building this thing here, but I implemented every feature by braining it out. I was obsessing over doing it from scratch, and that taught me a lot. I relied on sources for vector math, but I did a deep dive to answer for myself how the math was derived in each case.
 
 #### First Attempt
 
@@ -124,19 +124,15 @@ And if we resize it:
 
 Huzzah!
 
-
-#### Some Stuff I Wrote Way Before Finishing This Project
-
-So, as you may know, this project is currently incomplete. I didn't want to rely on any libraries, and this means implementing a bunch of math and vector math functions.
-
-Heres an outline for what I plan to do:
+From this point, I did the following:
 1. Create a vector from the origin of the camera, in the direction of a pixel on the screen.
-2. Use a function to check whether a ray following this vector will intersect a plane defined by a triangle.
-3. Find the closest triangle which is intersected.
-4. Set the pixel's color to the color of the triangle.
+2. Use a function to check whether a ray following this vector will intersect a plane or sphere.
+3. Find the closest thing which is intersected.
+4. Set the pixel's color to the color of the thing.
 5. Repeat this process for every pixel.
+6. Add multisampling
 
-The first step in this process is vector math, which I've started to implement:
+The first step in this process is vector math:
 
 ```c
 inline vector3d v3dAdd(vector3d a, vector3d b)
@@ -177,9 +173,9 @@ inline double v3dNormalized(vector3d *a);
 }
 ```
 
-These functions haven't been tested yet, and I'm not sure if I want to change the original vectors' values using pointers, or if I want to return a new vector every time. I'm also not fully sure how inline functions work with memory management on the stack, but the idea is to reduce function call overhead since these functions will be called many many many times per second.
+I wasn't sure if I wanted to change the original vectors' values using pointers, or if I want to return a new vector every time. I'm also not fully sure how inline functions work with memory management on the stack, but the idea is to reduce function call overhead since these functions will be called many many many times per second. I based my inlining off of a C++ example, and assumed that it was the same functionality, but I don't think it's doing what I thought it was.
 
-Some of these functions rely on these basic math functions I've written:
+After that, I wrote some math functions (yes, writing sqrt was silly, I was obsessed with doing it from scratch):
 
 ```c
 inline double sqr(double x)
@@ -201,8 +197,10 @@ inline double sqrt(double x)
 
 The sqrt method is based on Newton's method for calculating a square root. Another idea is to treat the range from 0 to x as a binary search range, and then checking if (0 + x)/2 squared is less than, greater than, or equal to the square root. In practice, however, this has the same runtime as Newton's algorithm, and Newton's algorithm takes less iterations on average.
 
-Eventually, when I've implemented dot products and cross products and the line-plant-intersection-checker, I'll try drawing a basic triangle in 3d space.
+News flash: The CPU has hardware instructions that does it way faster, and the standard library takes advantage of this. Also this was causing WEIRD artifacts later on, so I eventually caved to using the standard math library.
+
+I then implemented dot products, and all the other things I mentioned above, and I don't quite have to time to detail the process right now, but you can check out the code on my GitHub if you want!
 
 #### Additional Notes
 
-The finished product is not going to be very efficient, as every operation defined by me is happening on the cpu. Despite this, my goal is to understand how a ray tracer works behind the scenes. Once I've finished this project, I'll take a stab at using a graphics API like DirectX to do the same thing more efficiently (and probably more elegantly).
+The finished product is not very efficient, as every operation defined by me is happening on the cpu. Despite this, my goal is to understand how a ray tracer works behind the scenes. I'll eventually take a stab at using a graphics API like DirectX to do the same thing more efficiently (and probably more elegantly).
