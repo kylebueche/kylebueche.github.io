@@ -113,3 +113,7 @@ Now lets try adjusting our field of view for funzies
 And finally, let's set our depth of field:
 
 <img class="border" src="../img/ray-tracer-cpp/depth1.png" height="350px" alt="depth of field">
+
+* * *
+
+All of these things come together in our final image above, by just dumping a ton of random sphere positions and materials.
