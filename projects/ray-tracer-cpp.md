@@ -44,21 +44,13 @@ Followed by this, we have a diffusely shaded sphere, and then gamma correction f
 
 <div>
   <span>
-    <div>
-      <p>Normal Vector RGB Shading</p>
-      <img class="border" src="../img/ray-tracer-cpp/rainbow.png" height="250px" alt="Rainbow">
-    </div>
+    <img class="border" src="../img/ray-tracer-cpp/rainbow.png" height="250px" alt="Rainbow">
   </span>
   <span>
-    <div>
-      <p>Diffuse shading</p>
-      <img class="border" src="../img/ray-tracer-cpp/better-diffuse.png" height="250px" alt="Better Diffuse">
-    </div>
+    <img class="border" src="../img/ray-tracer-cpp/better-diffuse.png" height="250px" alt="Better Diffuse">
   </span>
   <span>
-    <div>
-      <p>Image Output Gamma Correction</p>
-      <img class="border" src="../img/ray-tracer-cpp/gamma-corrected.png" height="250px" alt="Gamma Corrected">
-    </div>
+    <img class="border" src="../img/ray-tracer-cpp/gamma-corrected.png" height="250px" alt="Gamma Corrected">
   </span>
 </div>
+<div><span>Normal Vector RGB Shading</span><span>Diffuse shading</span><span>Image Output Gamma Correction</span></div>
