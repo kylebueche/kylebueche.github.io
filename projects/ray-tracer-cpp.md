@@ -39,10 +39,7 @@ This ray tracer features:
 - Outputting images to a ppm file.
 
 
-Here we have the initial surface-normal gradient shading, shown in the online ppm viewer as Windows does not have a way to view ppm image files.
-
-
-Followed by this, we have a diffusely shaded sphere, and then gamma correction for image files:
+Here we have the initial surface-normal gradient shading, shown in the online ppm viewer as Windows does not have a way to view ppm image files. Followed by this, we have a diffusely shaded sphere, and then gamma correction for image files:
 
 <div>
   <span>
@@ -56,6 +53,7 @@ Followed by this, we have a diffusely shaded sphere, and then gamma correction f
   </span>
 </div>
 
+* * *
  
 After the initial setup, I implemented the different reflection and refraction models:
 
@@ -68,6 +66,7 @@ After the initial setup, I implemented the different reflection and refraction m
   </span>
 </div>
 
+* * *
 
 And we can specify if we want reflection to be specular or glossy:
 
@@ -80,6 +79,7 @@ And we can specify if we want reflection to be specular or glossy:
   </span>
 </div>
 
+* * *
 
 We can then use 2 refracting spheres to simulate a bubble, and even up the resolution and samples a little to get a nicer output:
 
@@ -92,6 +92,7 @@ We can then use 2 refracting spheres to simulate a bubble, and even up the resol
   </span>
 </div>
 
+* * *
 
 Now lets try adjusting our field of view for funzies
 
@@ -107,7 +108,8 @@ Now lets try adjusting our field of view for funzies
   </span>
 </div>
 
+* * *
 
 And finally, let's set our depth of field:
 
-<img class="border" src="../img/ray-tracer-cpp/depth1.png" height="250px" alt="depth of field">
+<img class="border" src="../img/ray-tracer-cpp/depth1.png" height="350px" alt="depth of field">
