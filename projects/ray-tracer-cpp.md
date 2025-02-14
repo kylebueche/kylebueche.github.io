@@ -15,7 +15,7 @@ labels:
 summary: "Another ray tracer in windows built by following 'Ray Tracing in One Weekend.'"
 ---
 
-<img class="float-start" style="padding-right:20px;" src="../img/ray-tracer-cpp/final-demo.png" width="500px" alt="Final-demo">
+<img class="float-start" style="padding-right:20px; padding-bottom:10px;" src="../img/ray-tracer-cpp/final-demo.png" width="500px" alt="Final-demo">
 
 For round 2 of ray tracing, I chose to use C++. Boy did it streamline things. C is great, don't get me wrong, but it really helped me appreciate the simple abstractions that C++ can offer a ray tracing project. This time, I followed a book, and learned that every graphics engine is faced with fundemental design decisions. I made such decisions in my last ray tracer, aimlessly and for better or worse. The book has given me insights into what design paths are available, and the structure that a graphics engine can take.
 
@@ -92,7 +92,9 @@ And finally, let's set up our depth of field:
   <img class="border" src="../img/ray-tracer-cpp/depth1.png" height="350px" alt="depth of field">
 </div>
 
+<div style="max-width:700px;">
 All of these things come together in our final image above, by just dumping a ton of random sphere positions and materials, and choosing a nice vantage point with a focal point on our main spheres.
+</div>
 
 # Final Thoughs
 
