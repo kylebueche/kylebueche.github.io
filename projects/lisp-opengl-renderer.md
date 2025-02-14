@@ -43,17 +43,21 @@ In the following videos, I keyframe randomly generated fractal IFS's, and they b
 
 <div style="padding-bottom:40px;">
   <span>
-    <video class="border" src="../img/lisp-opengl-renderer/Fractal-Interpolation-1.mp4" height="250px" alt="fractal vid 1" controls></video>
+    <video src="../img/lisp-opengl-renderer/Fractal-Interpolation-1.mp4" height="250px" alt="fractal vid 1" controls></video>
   </span>
   <span>
-    <video class="border" src="../img/lisp-opengl-renderer/Fractal-Interpolation-1.mp4" height="250px" alt="fractal vid 2" controls></video>
-  </span>
-  <span>
-    <img class="border" src="../img/lisp-opengl-renderer/Fractal-Tree.png" height="250px" alt="fractal tree">
+    <video src="../img/lisp-opengl-renderer/Fractal-Interpolation-2.mp4" height="250px" alt="fractal vid 2" controls></video>
   </span>
 </div>
 
- 
+Here's one of my favorite fractals, it reminds me of a tree:
+
+<div>
+  <span>
+    <img src="../img/lisp-opengl-renderer/Fractal-Tree.png" height="250px" alt="fractal tree">
+  </span>
+</div>
+
 Here's some polyhedrons rendered as wireframes, and then again with backface culling enabled:
 
 <div style="padding-bottom:40px;">
