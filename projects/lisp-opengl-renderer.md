@@ -77,5 +77,5 @@ And here's something I made in 2D, it's a recreation of the popular mobile game 
   - Abstract things a bit more to tidy certain things
   - Honestly not much more, I'd rather take the skills I learned here into new projects
 
-  This renderer was for a class, but keyframes, interpolation, and fractals were all creative freedoms of mine. I really enjoyed figuring out how to implement those things, and I love the results that it gave. I plan to use the skills I learned here to implement some of these things in a more advanced renderer in the future.
+  This renderer was for a class, but keyframes, interpolation, and fractals were all extra functionality that I wanted to build. I really enjoyed figuring out how to implement those things, and I love the results that it gave. I plan to use the skills I learned here to implement some of these things in a more advanced renderer in the future.
 </div>
