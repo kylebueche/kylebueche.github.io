@@ -43,10 +43,10 @@ In the following videos, I keyframe randomly generated fractal IFS's, and they b
 
 <div style="padding-bottom:40px;">
   <span>
-    <video src="../img/lisp-opengl-renderer/Fractal-Interpolation-1.mp4" height="250px" alt="fractal vid 1" controls></video>
+    <video src="../img/lisp-opengl-renderer/Fractal-Interpolation-1.mp4" height="350px" alt="fractal vid 1" controls></video>
   </span>
   <span>
-    <video src="../img/lisp-opengl-renderer/Fractal-interpolation-2.mp4" height="250px" alt="fractal vid 2" controls></video>
+    <video src="../img/lisp-opengl-renderer/Fractal-interpolation-2.mp4" height="350px" alt="fractal vid 2" controls></video>
   </span>
 </div>
 
@@ -60,10 +60,10 @@ Here's some polyhedrons rendered as wireframes, and then again with backface cul
 
 <div style="padding-bottom:40px;">
   <span>
-    <img class="border" src="../img/lisp-opengl-renderer/Polyhedrons-No-Culling.png" height="250px" alt="backface culling">
+    <img class="border" src="../img/lisp-opengl-renderer/Polyhedrons-No-Culling.png" height="350px" alt="backface culling">
   </span>
   <span>
-    <img class="border" src="../img/lisp-opengl-renderer/Polyhedrons-Backface-Culled.png" height="250px" alt="no backface culling">
+    <img class="border" src="../img/lisp-opengl-renderer/Polyhedrons-Backface-Culled.png" height="350px" alt="no backface culling">
   </span>
 </div>
 
