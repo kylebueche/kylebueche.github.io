@@ -50,20 +50,17 @@ In the following videos, I keyframe randomly generated fractal IFS's, and they b
   </span>
 </div>
 
-Here's one of my favorite fractals, it reminds me of a tree:
-
-<div style="padding-bottom:40px;">
-  <img src="../img/lisp-opengl-renderer/Fractal-Tree.png" height="350px" alt="fractal tree">
-</div>
-
-Here's some polyhedrons rendered as wireframes, and then again with backface culling enabled:
+Here's one of my favorite fractals, which reminds me of a tree, alongside a demonstration of backface culling:
 
 <div style="padding-bottom:40px;">
   <span>
-    <img class="border" src="../img/lisp-opengl-renderer/Polyhedrons-No-Culling.png" height="350px" alt="backface culling">
+    <img src="../img/lisp-opengl-renderer/Fractal-Tree.png" height="450px" alt="fractal tree">
   </span>
   <span>
-    <img class="border" src="../img/lisp-opengl-renderer/Polyhedrons-Backface-Culled.png" height="350px" alt="no backface culling">
+    <img class="border" src="../img/lisp-opengl-renderer/Polyhedrons-No-Culling.png" height="450px" alt="backface culling">
+  </span>
+  <span>
+    <img class="border" src="../img/lisp-opengl-renderer/Polyhedrons-Backface-Culled.png" height="450px" alt="no backface culling">
   </span>
 </div>
 
