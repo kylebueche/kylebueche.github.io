@@ -96,13 +96,13 @@ Now lets try adjusting our field of view for funzies
 
 <div style="padding-bottom:40px;">
   <span>
-    <img class="border" src="../img/ray-tracer-cpp/zoomed.png" height="250px" alt="close">
+    <img class="border" src="../img/ray-tracer-cpp/zoomed.png" height="200px" alt="close">
   </span>
   <span>
-    <img class="border" src="../img/ray-tracer-cpp/unzoomed.png" height="250px" alt="med">
+    <img class="border" src="../img/ray-tracer-cpp/unzoomed.png" height="200px" alt="med">
   </span>
   <span>
-    <img class="border" src="../img/ray-tracer-cpp/zoomed-out.png" height="250px" alt="far">
+    <img class="border" src="../img/ray-tracer-cpp/zoomed-out.png" height="200px" alt="far">
   </span>
 </div>
 
