@@ -15,7 +15,7 @@ labels:
 summary: "A renderer I developed in OpenGL, featuring procedural meshes and fractals"
 ---
 
-<img class="float-start" style="padding-right:20px; padding-bottom:10px;" src="../img/ray-tracer-cpp/sierpinski.jpg" width="500px" alt="Final-demo">
+<vid class="float-start" style="padding-right:20px; padding-bottom:10px;" src="../img/lisp-opengl-renderer/ICS481_HW5_bueche.mp4" width="500px" alt="Final-demo">
 
 For round 2 of ray tracing, I chose to use C++. Boy did it streamline things. C is great, don't get me wrong, but it really helped me appreciate the simple abstractions that C++ can offer a ray tracing project. This time, I followed a book, and learned that every graphics engine is faced with fundemental design decisions. I made such decisions in my last ray tracer, aimlessly and for better or worse. The book has given me insights into what design paths are available, and the structure that a graphics engine can take.
 
