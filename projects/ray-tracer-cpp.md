@@ -96,9 +96,11 @@ And finally, let's set up our depth of field:
 All of these things come together in our final image above, by just dumping a ton of random sphere positions and materials, and choosing a nice vantage point with a focal point on our main spheres.
 </div>
 
-# Final Thoughts
-
 <div style="max-width:700px; padding-top:20px;" markdown=1>
+
+  
+  # Final Thoughts
+  
   I loved doing this project, and I'll be revisiting it soon to expand it with the next books.
   I learned a lot about renderer design, and I hope to flesh this engine out into an awesome personal renderer.
   
