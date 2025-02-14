@@ -53,7 +53,7 @@ In the following videos, I keyframe randomly generated fractal IFS's, and they b
 Here's one of my favorite fractals, it reminds me of a tree:
 
 <div style="padding-bottom:40px;">
-  <img src="../img/lisp-opengl-renderer/Fractal-Tree.png" height="250px" alt="fractal tree">
+  <img src="../img/lisp-opengl-renderer/Fractal-Tree.png" height="350px" alt="fractal tree">
 </div>
 
 Here's some polyhedrons rendered as wireframes, and then again with backface culling enabled:
@@ -71,7 +71,7 @@ Here's some polyhedrons rendered as wireframes, and then again with backface cul
 And here's something I made in 2D, it's a recreation of the popular mobile game Geometry Dash:
 
 <div style="padding-bottom:40px;">
-  <video class="border" src="../img/lisp-opengl-renderer/ICS481_HW3_bueche.mp4" height="250px" alt="Geometry Dash video" controls></video>
+  <video class="border" src="../img/lisp-opengl-renderer/ICS481_HW3_bueche.mp4" height="350px" alt="Geometry Dash video" controls></video>
 </div>
 
 <div style="max-width:700px;">
