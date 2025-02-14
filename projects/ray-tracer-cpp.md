@@ -15,7 +15,7 @@ labels:
 summary: "Another ray tracer in windows built by following 'Ray Tracing in One Weekend.'"
 ---
 
-<img class="float-start" style="padding-right:40px;" src="../img/ray-tracer-cpp/final-demo.png" width="500px" alt="Final-demo">
+<img class="float-start" style="padding-right:20px;" src="../img/ray-tracer-cpp/final-demo.png" width="500px" alt="Final-demo">
 
 For round 2 of ray tracing, I chose to use C++. Boy did it streamline things. C is great, don't get me wrong, but it really helped me appreciate the simple abstractions that C++ can offer a ray tracing project. This time, I followed a book, and learned that every graphics engine is faced with fundemental design decisions. I made such decisions in my last ray tracer, aimlessly and for better or worse. The book has given me insights into what design paths are available, and the structure that a graphics engine can take.
 
@@ -96,6 +96,8 @@ All of these things come together in our final image above, by just dumping a to
 
 # Final Thoughs
 
+<div style="max-width:700px;">
 I loved doing this project, and I'll be revisiting it soon to expand it with the material from Ray Tracing: The Next Week. I learned a lot about graphics engine design, and I hope to flesh this engine out into an awesome personal renderer. One thing I want to do independently of the books is rendering to binary image formats, rendering videos with keyframes, and importing 3d objects. These things may require the use of additional libraries, but if possible I'd prefer to implement them myself.
 
 This project was seriously so much fun, and digging deep into the math to answer why the authors did what they did was a great learning experience. I can't recommend it enough.
+</div>
