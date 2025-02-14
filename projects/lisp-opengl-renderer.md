@@ -15,7 +15,7 @@ labels:
 summary: "A renderer I developed in OpenGL, featuring procedural meshes and fractals"
 ---
 
-<video class="float-start" style="padding-right:20px; padding-bottom:10px;" src="../img/lisp-opengl-renderer/ICS481_HW5_bueche.mp4" width="500px" alt="Final-demo" controls></video>
+<video class="float-start" style="padding-right:20px; padding-bottom:10px;" src="../img/lisp-opengl-renderer/ICS481_HW5_bueche.mp4" width="650px" alt="Final-demo" controls></video>
 
 This is my OpenGL renderer, built for a Computer Graphics class. In this demo, a man summons some kinda fractally magic thing, and throws it at another dude. This all runs in real time, and was recorded with OBS.
 
