@@ -21,7 +21,7 @@ For round 2 of ray tracing, I chose to use C++. Boy did it streamline things. C 
 
 This image follows the scene described in the last entry of the first book. It initially took 12 hours to render, but after implementing multi-threading, it went down to about an hour (I have a 12 core processor).
 
-If you're interested in ray tracing, and don't know where to start, I heavily recommend checking out [Ray Tracing in One Weekend - The Book Series](https://raytracing.github.io/).
+If you're interested in ray tracing, I heavily recommend checking out [Ray Tracing in One Weekend - The Book Series](https://raytracing.github.io/).
 
 I wanted to leverage the GPU to make rendering even faster, but unfortunately, I decided that I should use Visual Studio for the first time ever for this project. OpenMP, the parallel processing library I was using, has the capability to offload work to the GPU as of version 4.0. Visual Studio supports OpenMP 2.0 built in. This was intended to be a quick project, so I wasn't going to go download a local version of OpenMP 4.0+ or any other libraries. Overall, I am satisfied with the 12x speedup.
 
