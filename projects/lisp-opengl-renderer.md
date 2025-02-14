@@ -46,16 +46,14 @@ In the following videos, I keyframe randomly generated fractal IFS's, and they b
     <video src="../img/lisp-opengl-renderer/Fractal-Interpolation-1.mp4" height="250px" alt="fractal vid 1" controls></video>
   </span>
   <span>
-    <video src="../img/lisp-opengl-renderer/Fractal-Interpolation-2.mp4" height="250px" alt="fractal vid 2" controls></video>
+    <video src="../img/lisp-opengl-renderer/Fractal-interpolation-2.mp4" height="250px" alt="fractal vid 2" controls></video>
   </span>
 </div>
 
 Here's one of my favorite fractals, it reminds me of a tree:
 
-<div>
-  <span>
-    <img src="../img/lisp-opengl-renderer/Fractal-Tree.png" height="250px" alt="fractal tree">
-  </span>
+<div style="padding-bottom:40px;">
+  <img src="../img/lisp-opengl-renderer/Fractal-Tree.png" height="250px" alt="fractal tree">
 </div>
 
 Here's some polyhedrons rendered as wireframes, and then again with backface culling enabled:
@@ -70,15 +68,10 @@ Here's some polyhedrons rendered as wireframes, and then again with backface cul
 </div>
 
 
-And here's some 2D stuff, including my recreation of Geometry Dash:
+And here's something I made in 2D, it's a recreation of the popular mobile game Geometry Dash:
 
 <div style="padding-bottom:40px;">
-  <span>
-    <video class="border" src="../img/lisp-opengl-renderer/ICS481_HW3_bueche.mp4" height="250px" alt="Pentagon Spiral" controls></video>
-  </span>
-  <span>
-    <img class="border" src="../img/lisp-opengl-renderer/ICS481_HW2_bueche_2.png" height="250px" alt="Geometry Dash Animation">
-  </span>
+  <video class="border" src="../img/lisp-opengl-renderer/ICS481_HW3_bueche.mp4" height="250px" alt="Geometry Dash video" controls></video>
 </div>
 
 <div style="max-width:700px;">
