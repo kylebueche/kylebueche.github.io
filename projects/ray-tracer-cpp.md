@@ -98,7 +98,7 @@ All of these things come together in our final image above, by just dumping a to
 
 # Final Thoughs
 
-<div style="max-width:700px;">
+<div style="max-width:700px;" markdown=1>
   I loved doing this project, and I'll be revisiting it soon to expand it with the next books.
   I learned a lot about renderer design, and I hope to flesh this engine out into an awesome personal renderer.
   
