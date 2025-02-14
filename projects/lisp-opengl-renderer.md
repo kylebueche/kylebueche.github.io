@@ -71,7 +71,7 @@ And here's something I made in 2D, it's a recreation of the popular mobile game 
 <div style="max-width:700px; padding-top:20px;" markdown=1>
 
   
-  # Final Thoughts
+# Final Thoughts
   
   If I were to expand this right now, I would want to:
   - Abstract things a bit more to tidy certain things.
