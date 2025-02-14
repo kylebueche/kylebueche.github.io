@@ -15,7 +15,7 @@ labels:
 summary: "A renderer I developed in OpenGL, featuring procedural meshes and fractals"
 ---
 
-<video class="float-start" style="padding-right:20px; padding-bottom:10px;" src="../img/lisp-opengl-renderer/ICS481_HW5_bueche.mp4" width="500px" alt="Final-demo" controls>
+<video class="float-start" style="padding-right:20px; padding-bottom:10px;" src="../img/lisp-opengl-renderer/ICS481_HW5_bueche.mp4" width="500px" alt="Final-demo" controls></video>
 
 This is my OpenGL renderer, built for a Computer Graphics class. In this demo, a man summons some kinda fractally magic thing, and throws it at another dude. This all runs in real time, and was recorded with OBS.
 
@@ -43,10 +43,10 @@ In the following videos, I keyframe randomly generated fractal IFS's, and they b
 
 <div style="padding-bottom:40px;">
   <span>
-    <video class="border" src="../img/lisp-opengl-renderer/Fractal-Interpolation-1.mp4" height="250px" alt="fractal vid 1" controls>
+    <video class="border" src="../img/lisp-opengl-renderer/Fractal-Interpolation-1.mp4" height="250px" alt="fractal vid 1" controls></video>
   </span>
   <span>
-    <video class="border" src="../img/lisp-opengl-renderer/Fractal-Interpolation-1.mp4" height="250px" alt="fractal vid 2" controls>
+    <video class="border" src="../img/lisp-opengl-renderer/Fractal-Interpolation-1.mp4" height="250px" alt="fractal vid 2" controls></video>
   </span>
   <span>
     <img class="border" src="../img/lisp-opengl-renderer/Fractal-Tree.png" height="250px" alt="fractal tree">
@@ -70,7 +70,7 @@ And here's some 2D stuff, including my recreation of Geometry Dash:
 
 <div style="padding-bottom:40px;">
   <span>
-    <video class="border" src="../img/lisp-opengl-renderer/ICS481_HW3_bueche.mp4" height="250px" alt="Pentagon Spiral" controls>
+    <video class="border" src="../img/lisp-opengl-renderer/ICS481_HW3_bueche.mp4" height="250px" alt="Pentagon Spiral" controls></video>
   </span>
   <span>
     <img class="border" src="../img/lisp-opengl-renderer/ICS481_HW2_bueche_2.png" height="250px" alt="Geometry Dash Animation">
