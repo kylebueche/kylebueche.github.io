@@ -1,10 +1,10 @@
 ---
 layout: project
 type: project
-image: img/ray-tracer-cpp/thumbnail.png
+image: img/lisp-opengl-renderer/thumbnail.png
 title: "Common Lisp OpenGL Renderer"
 date: 2024-12-17
-published: false
+published: true
 labels:
   - Computer Graphics
   - Rendering
@@ -17,97 +17,76 @@ summary: "A renderer I developed in OpenGL, featuring procedural meshes and frac
 
 <vid class="float-start" style="padding-right:20px; padding-bottom:10px;" src="../img/lisp-opengl-renderer/ICS481_HW5_bueche.mp4" width="500px" alt="Final-demo">
 
-For round 2 of ray tracing, I chose to use C++. Boy did it streamline things. C is great, don't get me wrong, but it really helped me appreciate the simple abstractions that C++ can offer a ray tracing project. This time, I followed a book, and learned that every graphics engine is faced with fundemental design decisions. I made such decisions in my last ray tracer, aimlessly and for better or worse. The book has given me insights into what design paths are available, and the structure that a graphics engine can take.
+This is my OpenGL renderer, built for a Computer Graphics class. In this demo, a man summons some kinda fractally magic thing, and throws it at another dude. This all runs in real time, and was recorded with OBS.
 
-This image follows the scene described in the last entry of the first book. It initially took 12 hours to render, but after implementing multi-threading, it went down to about an hour with a 12 core processor.
+The scene features a procedural terrain with randomly sized and randomly placed trees. The trees exhibit smooth shading, while the people exhibit flat shading. The fractal is composed of a particle system using an iterated function system that operates on a list of transforms.
 
-If you're interested in ray tracing, I heavily recommend checking out [Ray Tracing in One Weekend - The Book Series](https://raytracing.github.io/).
+The people are composed of several meshes, offset to rotate around their ends, offset again to build the character. A collection of keyframeable joint transforms allow me to control what the body is doing throughout the whole animation. I simply push the timestamp onto a list, and then hash a copy of the object using the timestamp as a key.
 
-I initially wanted to leverage the GPU to make rendering even faster, but unfortunately, I chose to try out Visual Studio for the first time ever on a project. Visual Studio supports OpenMP 2.0 out of the box, which is the parallel processing library I was using. It has the capability to offload work to the GPU, but only as of version 4.0.  This was intended to be a quick project, so I wasn't going to go download a local version of OpenMP 4.0+ or any other libraries. Overall, I am satisfied with the 12x speedup.
+The terrain is generated using a height field, with y values displaced by a bunch of random sine waves, and trees are placed on random points throughout the scene.
+
+This renderer features:
+- 2D and 3D capability
+- Smooth and flat shading
+- Flat coloring, or gradient coloring
+- Point lights and directional lights
+- Transforms
+- Procedural polygons and polyhedrons
+- Iterated function systems
+- Keyframing transforms and colors
+- Backface culling
 
 
-This ray tracer features:
-- Rough, glossy, specular, and dielectric (refractive) spheres.
-- No lights as of yet. We kind of assume even lighting from a gradient skybox, and each ray bounce absorbs some light.
-- Monte Carlo Integration of the hemisphere of incoming light.
-- Depth of field, with a settable focus range and blurring level.
-- Efficient multithreading, and a percent completion counter.
-- Outputting images to a ppm file.
+I'm most proud of my fractal system, so I wanted to showcase a few videos of fractal interpolation.
 
-
-Here we have the initial surface-normal gradient shading, shown in the online ppm viewer as Windows does not have a way to view ppm image files. Followed by this, we have a diffusely shaded sphere, and then gamma correction for image files:
+In the following videos, I keyframe randomly generated fractal IFS's, and they bautifully transition into eachother. Initially, I accidentally fed my random rotations degrees instead of radians. But this error actually opened up the ability for much more chaotic and beautiful behavior.
 
 <div style="padding-bottom:40px;">
   <span>
-    <img class="border" src="../img/ray-tracer-cpp/rainbow.png" height="250px" alt="Rainbow">
+    <img class="border" src="../img/lisp-opengl-renderer/Fractal-Interpolation-1.mp4" height="250px" alt="fractal vid 1">
   </span>
   <span>
-    <img class="border" src="../img/ray-tracer-cpp/better-diffuse.png" height="250px" alt="Better Diffuse">
+    <img class="border" src="../img/lisp-opengl-renderer/Fractal-Interpolation-1.mp4" height="250px" alt="fractal vid 2">
   </span>
   <span>
-    <img class="border" src="../img/ray-tracer-cpp/gamma-corrected.png" height="250px" alt="Gamma Corrected">
+    <img class="border" src="../img/lisp-opengl-renderer/Fractal-Tree.png" height="250px" alt="fractal tree">
   </span>
 </div>
 
  
-After the initial setup, I implemented the different reflection and refraction models:
+Here's some polyhedrons rendered as wireframes, and then again with backface culling enabled:
 
 <div style="padding-bottom:40px;">
   <span>
-    <img class="border" src="../img/ray-tracer-cpp/rough-reflect.png" height="250px" alt="reflect">
+    <img class="border" src="../img/lisp-opengl-renderer/Polyhedrons-No-Culling.png" height="250px" alt="backface culling">
   </span>
   <span>
-    <img class="border" src="../img/ray-tracer-cpp/refract.png" height="250px" alt="refract">
+    <img class="border" src="../img/" height="250px" alt="no backface culling">
   </span>
 </div>
 
 
-And we can specify if we want reflection to be specular or glossy:
+And here's some 2D stuff, including my recreation of Geometry Dash:
 
 <div style="padding-bottom:40px;">
   <span>
-    <img class="border" src="../img/ray-tracer-cpp/specular-reflect.png" height="250px" alt="specular">
+    <img class="border" src="../img/lisp-opengl-renderer/ICS481_HW3_bueche.mp4" height="250px" alt="Pentagon Spiral">
   </span>
   <span>
-    <img class="border" src="../img/ray-tracer-cpp/rough-reflect.png" height="250px" alt="glossy">
+    <img class="border" src="../img/lisp-opengl-renderer/ICS481_HW2_bueche_2.png" height="250px" alt="Geometry Dash Animation">
   </span>
-</div>
-
-
-We can then use 2 refracting spheres to simulate a bubble, and even up the resolution and samples a little to get a nicer output:
-
-<div style="padding-bottom:40px;">
-  <span>
-    <img class="border" src="../img/ray-tracer-cpp/lamb.png" height="250px" alt="highresglass">
-  </span>
-  <span>
-    <img class="border" src="../img/ray-tracer-cpp/air-bubble.png" height="250px" alt="glass2">
-  </span>
-</div>
-
-
-And finally, let's set up our depth of field:
-
-<div  style="padding-bottom:40px;">
-  <img class="border" src="../img/ray-tracer-cpp/depth1.png" height="350px" alt="depth of field">
 </div>
 
 <div style="max-width:700px;">
-All of these things come together in our final image above, by just dumping a ton of random sphere positions and materials, and choosing a nice vantage point with a focal point on our main spheres.
+  Combining all of these things (except the 2D stuff) into one big animation resulted in the final animation at the top. I'm super proud of the work I did on this, and the things I've learned along the way.
 </div>
 
-# Final Thoughs
+# Final Thoughts
 
 <div style="max-width:700px;" markdown=1>
-  I loved doing this project, and I'll be revisiting it soon to expand it with the next books.
-  I learned a lot about renderer design, and I hope to flesh this engine out into an awesome personal renderer.
-  
   If I were to expand this right now, I would want to:
-  - Render to binary image formats
-  - Be able to render videos using keyframes and interpolation
-  - Import custom 3d objects and materials
-  
-  These things may require the use of additional libraries, but if possible I'd prefer to implement them myself.
+  - Abstract things a bit more to tidy certain things.
+  - Honestly not much more, I'd rather take the skills I learned here into new projects
 
-  This project was seriously so much fun, and digging deep into the math to answer why the authors did what they did was a great learning experience. I can't recommend it enough.
+  This renderer was for a class, but keyframes, interpolation, and fractals were all creative freedoms of mine. I really enjoyed figuring out how to implement those things, and I love the results that it gave. I plan to use the skills I learned here to implement some of these things in a more advanced renderer in the future.
 </div>
