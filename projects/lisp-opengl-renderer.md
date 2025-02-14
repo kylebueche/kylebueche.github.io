@@ -67,9 +67,11 @@ And here's something I made in 2D, it's a recreation of the popular mobile game 
   Combining all of these things (except the 2D stuff) into one big animation resulted in the final animation at the top. I'm super proud of the work I did on this, and the things I've learned along the way.
 </div>
 
-# Final Thoughts
 
-<div style="max-width:700px;" markdown=1>
+<div style="max-width:700px; padding-top:20px;" markdown=1>
+  
+  # Final Thoughts
+  
   If I were to expand this right now, I would want to:
   - Abstract things a bit more to tidy certain things.
   - Honestly not much more, I'd rather take the skills I learned here into new projects
