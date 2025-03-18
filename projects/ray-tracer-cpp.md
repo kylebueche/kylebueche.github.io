@@ -2,6 +2,8 @@
 layout: project
 type: project
 image: img/ray-tracer-cpp/thumbnail.png
+imgow: img/ray-tracer-cpp/one-weekend
+imgcu: img/ray-tracer-cpp/cones-unions
 title: "Ray Tracer in C++"
 date: 2025-02-13
 published: true
@@ -15,9 +17,11 @@ labels:
 summary: "Another ray tracer in windows built by following 'Ray Tracing in One Weekend.'"
 ---
 
-<img class="float-start" style="padding-right:20px; padding-bottom:10px;" src="../img/ray-tracer-cpp/final-demo.png" width="500px" alt="Final-demo">
+<img class="float-start header-img" src="{{imgow}}/final-demo.png" alt="Final-demo">
 
-For round 2 of ray tracing, I chose to use C++. Boy did it streamline things. C is great, don't get me wrong, but it really helped me appreciate the simple abstractions that C++ can offer a ray tracing project. This time, I followed a book, and learned that every graphics engine is faced with fundemental design decisions. I made such decisions in my last ray tracer, aimlessly and for better or worse. The book has given me insights into what design paths are available, and the structure that a graphics engine can take.
+<img class="float-start header-img" src="{{imgcu}}/final-demo.png" alt="Final-demo">
+
+For round 2 of ray tracing, I chose to use C++. Boy did it streamline things. C is great, don't get me wrong, but it really helped me appreciate the simple abstractions that C++ can offer a ray tracing project. This time, I followed a book, and learned that every graphics engine is faced with fundemental design decisions. I made such decisions in my last ray tracer, aimlessly and for better or worse. The book has given me lots of insight into what design paths are available, and the structure that graphics engines can take.
 
 This image follows the scene described in the last entry of the first book. It initially took 12 hours to render, but after implementing multi-threading, it went down to about an hour with a 12 core processor.
 
@@ -32,8 +36,9 @@ This ray tracer features:
 - Monte Carlo Integration of the hemisphere of incoming light.
 - Depth of field, with a settable focus range and blurring level.
 - Efficient multithreading, and a percent completion counter.
-- Outputting images to a ppm file.
+- Outputting images to ppm files.
 
+[Here](https://github.com/kylebueche/Ray-Tracer-2.0) you can check out the source code of this project.
 
 Here we have the initial surface-normal gradient shading, shown in the online ppm viewer as Windows does not have a way to view ppm image files. Followed by this, we have a diffusely shaded sphere, and then gamma correction for image files:
 

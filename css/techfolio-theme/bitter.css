@@ -44,3 +44,9 @@ a {
   border-color = black;
   border-width = 2px;
 }
+
+.header-img {
+  padding-right: 20px;
+  padding-bottom: 10px;
+  width: 500px
+}

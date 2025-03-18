@@ -33,6 +33,10 @@
     {
       "name": "Toolsets",
       "keywords": [ "Git/GitHub", "Unity", "Unreal Engine", "Maya", "Blender" ]
+    },
+    {
+      "name": "IDEs",
+      "keywords":  [ "Vi/Vim", "Emacs", "VSCode" ]
     }
   ],
   "education": [
