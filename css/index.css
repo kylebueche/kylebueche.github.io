@@ -10,3 +10,9 @@ body {
     width: 400px;
     position: absolute;
 }
+
+#main-window {
+    height: 50%;
+    width: 50%;
+    margin: auto;
+}

@@ -17,12 +17,12 @@ function createWindow(id) {
         xpwindow.id = id;
         xpwindow.className = "window";
         xpwindow.style.position = "absolute"; //d
-        titleBar.innerHTML = "Projects";
         titleBar.className = "title-bar";
         titleBarText.className = "title-bar-text";
+        titleBarText.innerHTML = "Projects";
         titleBarControls.className = "title-bar-controls";
         windowBody.className = "window-body";
-        windowBody.innerHTML = "Hey, this is my cool window full of stuff"
+        text.innerHTML = "Hey, this is my cool window full of stuff";
         closeButton.ariaLabel = 'Close';
         closeButton.onmousedown = function() { document.body.removeChild(xpwindow) };
  

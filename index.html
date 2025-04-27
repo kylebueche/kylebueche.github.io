@@ -6,6 +6,8 @@ layout: home
 {  % include about/about.html %}
 {  % include projects/projects.html limit=4 %}
 
-<button aria-label="Close" id="windowCreator">Make a window</button>
-<button aria-label="Close"></button>
-<button aria-label="Maximize"></button>
+<button id="windowCreator">Make a window</button>
+<div class="title-bar-controls">
+    <button aria-label="Close"></button>
+    <button aria-label="Maximize"></button>
+</div>
