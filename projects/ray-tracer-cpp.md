@@ -13,6 +13,7 @@ labels:
   - Ray Tracing
   - C++
   - OpenMP
+  - SIMD
   - Visual Studio
 summary: "Another ray tracer in windows built by following 'Ray Tracing in One Weekend.'"
 ---
