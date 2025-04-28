@@ -1,18 +1,51 @@
+html {
+    height: 100%;
+    padding: 0;
+    margin: 0;
+}
 body {
+	position: absolute;
+	padding: 0;
+    margin: 0;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	left: 0;
+    overflow: hidden;
     background-image: url('../img/windows_xp_bg.jpg');
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .window {
-    height: 200px;
+    height: 400px;
     width: 400px;
+    padding-left: 0;
+    margin-left: 0;
+}
+
+.window.draggable {
     position: absolute;
 }
 
+.window-body {
+	font-size: 15px;
+}
+
+.title-bar {
+	height: 40px;
+}
+
+.title-bar-text {
+	padding-left: 7px;
+	font-size: 22px;
+}
+
 #main-window {
-    height: 50%;
-    width: 50%;
-    margin: auto;
+    height: clamp(400px, 60%, 1600px);
+    width: clamp(400px, 60%, 1600px);
 }
