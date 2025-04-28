@@ -50,15 +50,13 @@ function createWindow(id) {
         windows.push(windowXP);
         
         // Initial Z-ordering:
-        windowXP.style.zIndex = (1 + parseInt(windows.reduce((max, current) =>
+        windowXP.style.zIndex = (1 + parseInt((windows.reduce((max, current) =>
             {
-                console.log(current.id);
-                console.log(current.style.zIndex);
-                if (current != windowXP) {
+                if (current.style.zIndex > max.style.zIndex) {
                     return current;
                 }
                 return max;
-            }).style.zIndex));
+            }).style.zIndex)));
 
         // Draggable window code:
         var mouseInitX = 0, mouseInitY = 0;
@@ -72,13 +70,13 @@ function createWindow(id) {
         function windowToTop(e) {
             e = e || windowXP.event;
             e.preventDefault();
-            windowXP.style.zIndex = (1 + parseInt(windows.reduce((max, current) =>
+            windowXP.style.zIndex = (1 + parseInt((windows.reduce((max, current) =>
                 {
                     if (current.style.zIndex > max.style.zIndex) {
                         return current;
                     }
                     return max;
-                }).style.zIndex));
+                }).style.zIndex)));
         }
         
         function startDragging(e) {
