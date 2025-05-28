@@ -3,11 +3,22 @@ title: Home
 layout: home
 ---
 
-{  % include about/about.html %}
-{  % include projects/projects.html limit=4 %}
+<div id="projects" class="draggable">
+    <div class="window">
+        <div class="title-bar" id = titleBar>
+            <div class="title-bar-text">Projects</div>
+            <div class="title-bar-controls">
+                <button aria-label="Close" id="closeButton"></button>
+            </div>
+        </div>
+        <div class="window-body">
+{% include projects/projects.html limit=4 %}
+        </div>
+    </div>
+</div>
+
+{   % include about/about.html %}
 
 <div id="icons">
-    <button aria-label="window1">window 1</button>
-    <button aria-label="window2">window 2</button>
-    <button aria-label="window3">window 3</button>
+    <button aria-label="projects">window 1</button>
 </div>

@@ -26,14 +26,17 @@ body {
     width: 400px;
     padding-left: 0;
     margin-left: 0;
+    position: relative;
 }
 
-.window.draggable {
+.draggable {
     position: absolute;
 }
 
 .window-body {
 	font-size: 15px;
+    max-height: 100%
+    overflow-y: scroll;
 }
 
 .title-bar {

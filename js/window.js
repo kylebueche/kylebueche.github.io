@@ -1,17 +1,95 @@
+var windows = [];
 
-window.onload = function() {
-    var icons = document.getElementById('icons');
-    if (icons) {
-        console.log("hi");
-        const children = icons.children;
-        for (let i = 0; i < children.length; i++) {
-            const child = children[i];
-            child.onmousedown = function() { createWindow(child.ariaLabel); };
+// 1-based z-indexing. This should maintain order if list of n windows is initialized to z indexes 1, 2, ..., n
+function putWindowOnTop(windowDiv)
+{
+    let currentZIndex = windowDiv.style.zIndex;
+    if (currentZIndex != windows.length) {
+        for (let i = 0; i < windows.length; i++) {
+            if (windows[i].style.zIndex > currentZIndex) {
+                windows[i].style.zIndex--;
+            }
         }
     }
-};
+}
 
-var windows = [];
+function openWindow(windowDiv) {
+    putWindowOnTop(windowDiv);
+    windowDiv.style.display = "block";
+}
+
+function closeWindow(windowDiv) {
+    windowDiv.style.display = "none";
+}
+
+window.onload = function() {
+    var iconDiv = document.getElementById('icons');
+    if (iconDiv) {
+        const icons = iconDiv.children;
+        for (let i = 0; i < icons.length; i++) {
+            const icon = icons[i];
+            windowDiv = document.getElementById(icon.ariaLabel);
+            windowDiv.style.zIndex = i + 1;
+            windows.push(windowDiv);
+            closeWindow(windowDiv);
+            icon.onmousedown = function() { openWindow(windowDiv); };
+            windowDiv.onmousedown = function() { putWindowOnTop(windowDiv); };
+            windowDiv.getElementById("closeButton").onmousedown = function() { closeWindow(windowDiv); };
+            makeDraggable(windowDiv);
+        }
+    }
+}
+
+function makeDraggable(windowDiv) {
+    var mouseInitX = 0, mouseInitY = 0;
+    var windowInitX = 0, windowInitY = 0;
+    var windowRect;
+    var windowMinX = 0, windowMaxX = 0, windowMinY = 0, windowMaxY = 0;
+
+    windowDiv.getElementById("titleBar").onmousedown = startDragging;
+
+    function startDragging(e) {
+        e = e || windowDiv.event;
+        e.preventDefault();
+
+        windowRect = windowDiv.getBoundingClientRect();
+            
+        mouseInitX = e.clientX;
+        mouseInitY = e.clientY;
+        windowInitX = windowXP.offsetLeft;
+        windowInitY = windowXP.offsetTop;
+
+        document.onmouseup = stopDragging;
+        document.onmousemove = dragWindow;
+    };
+
+    function dragWindow(e) {
+        e = e || windowDiv.event;
+        e.preventDefault();
+
+        var mouseCurrX = e.clientX;
+        var mouseCurrY = e.clientY;
+        var windowNewX = windowInitX + mouseCurrX - mouseInitX;
+        var windowNewY = windowInitY + mouseCurrY - mouseInitY;
+
+        windowMinX = 0;
+        windowMinY = 0;
+        windowMaxX = window.innerWidth - windowDiv.offsetWidth;
+        windowMaxY = window.innerHeight - windowDiv.offsetHeight;
+
+        windowNewX = Math.max(Math.min(windowNewX, windowMaxX), windowMinX);
+        windowNewY = Math.max(Math.min(windowNewY, windowMaxY), windowMinY);
+
+        windowDiv.style.left = windowNewX + "px";
+        windowDiv.style.top = windowNewY + "px";
+    };
+        
+    function stopDragging() {
+        document.onmouseup = null;
+        document.onmousemove = null;
+    };
+}
+
 
 function createWindow(id) {
     if (!document.getElementById(id)) {
