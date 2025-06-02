@@ -1,3 +1,8 @@
+:root {
+    --card-border-rad: 5px;
+    --card-height: 225px;
+}
+
 html {
     height: 100%;
     padding: 0;
@@ -21,22 +26,25 @@ body {
     align-items: center;
 }
 
-.window {
-    height: 400px;
-    width: 400px;
+.draggable {
     padding-left: 0;
     margin-left: 0;
-    position: relative;
+    position: absolute;
+    display: none;
 }
 
-.draggable {
-    position: absolute;
+.window {
+    height: clamp(30vh, 600px, 90vh);
+    width: clamp(40vw, 800px, 90vw);
+    padding: 0;
+    display: flex;
+    flex-direction: column;
 }
 
 .window-body {
 	font-size: 15px;
-    max-height: 100%
-    overflow-y: scroll;
+    overflow-y: auto;
+    flex: 1 1 100%
 }
 
 .title-bar {
@@ -49,6 +57,30 @@ body {
 }
 
 #main-window {
-    height: clamp(400px, 60%, 1600px);
-    width: clamp(400px, 60%, 1600px);
+    height: clamp(30vh, 80vh, 90vh);
+    width: clamp(40vw, 80vw, 90vw);
+}
+
+.card {
+    height: var(--card-height);
+    border-radius: var(--card-border-rad);
+    display: flex;
+    flex-direction: row;
+    padding-bottom: 20px;
+}
+
+.card-title {
+    display: inline-block;
+    justify-content: space-between;
+}
+
+.card-body {
+    padding-left: 20px;
+}
+
+.card-img {
+    height: var(--card-height);
+    border-radius: var(--card-border-rad);
+    object-fit: cover;
+    aspect-ratio: 1/1;
 }

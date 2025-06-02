@@ -34,7 +34,7 @@ window.onload = function() {
             closeWindow(windowDiv);
             icon.onmousedown = function() { openWindow(windowDiv); };
             windowDiv.onmousedown = function() { putWindowOnTop(windowDiv); };
-            windowDiv.getElementById("closeButton").onmousedown = function() { closeWindow(windowDiv); };
+            windowDiv.querySelector('[aria-label=Close]').onmousedown = function() { closeWindow(windowDiv); };
             makeDraggable(windowDiv);
         }
     }
@@ -46,7 +46,7 @@ function makeDraggable(windowDiv) {
     var windowRect;
     var windowMinX = 0, windowMaxX = 0, windowMinY = 0, windowMaxY = 0;
 
-    windowDiv.getElementById("titleBar").onmousedown = startDragging;
+    windowDiv.querySelector('.title-bar').onmousedown = startDragging;
 
     function startDragging(e) {
         e = e || windowDiv.event;
@@ -56,8 +56,8 @@ function makeDraggable(windowDiv) {
             
         mouseInitX = e.clientX;
         mouseInitY = e.clientY;
-        windowInitX = windowXP.offsetLeft;
-        windowInitY = windowXP.offsetTop;
+        windowInitX = windowDiv.offsetLeft;
+        windowInitY = windowDiv.offsetTop;
 
         document.onmouseup = stopDragging;
         document.onmousemove = dragWindow;

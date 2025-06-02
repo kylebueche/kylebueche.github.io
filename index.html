@@ -1,24 +1,55 @@
 ---
 title: Home
-layout: home
+layout: default
 ---
 
-<div id="projects" class="draggable">
-    <div class="window">
-        <div class="title-bar" id = titleBar>
-            <div class="title-bar-text">Projects</div>
-            <div class="title-bar-controls">
-                <button aria-label="Close" id="closeButton"></button>
-            </div>
-        </div>
-        <div class="window-body">
-{% include projects/projects.html limit=4 %}
+<!--
+TODO: Make 2 types of windows for each page.
+One type is draggable, z-orderable, and dynamic.
+They turn invisible when viewport width is that of a mobile device.
+
+The other type is the same content, but on a slide=up menu that fills the width.
+It displays content in a mobile friendly way, but auto-hides when viewport width is larger than mobile
+-->
+
+<!-- Main Window -->
+<div id="main-window" class="window">
+    <div class="title-bar">
+        <div class="title-bar-text">Home</div>
+    </div>
+    <div class="window-body">
+        <div id="icons">
+            <button aria-label="projects">window 1</button>
         </div>
     </div>
 </div>
 
-{   % include about/about.html %}
+<!-- Projects Window -->
+<div id="projects" class="draggable">
+    <div class="window">
+        <div class="title-bar">
+            <div class="title-bar-text">Projects</div>
+            <div class="title-bar-controls">
+                <button aria-label="Close"></button>
+            </div>
+        </div>
+        <div class="window-body">
+            {% include projects/projects.html %}
+        </div>
+    </div>
+</div>
 
-<div id="icons">
-    <button aria-label="projects">window 1</button>
+<!-- About Window -->
+<div id="projects" class="draggable">
+    <div class="window">
+        <div class="title-bar">
+            <div class="title-bar-text">About Me</div>
+            <div class="title-bar-controls">
+                <button aria-label="Close"></button>
+            </div>
+        </div>
+        <div class="window-body">
+            {% include about/about.html %}
+        </div>
+    </div>
 </div>

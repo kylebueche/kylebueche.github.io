@@ -1,26 +1,26 @@
-<div style="background-color: var(--tf-page-bg-color)" class="bg-gradient py-3">
-  <div class="container">
+<div>
+  <div>
     <div class="row">
-      <div class="col-lg-4">
-        <img width="300px" src="{{ site.data.bio.basics.picture }}" class="d-block mx-auto rounded-circle">
+      <div class="col">
+        <img width="300px" src="{{ site.data.bio.basics.picture }}" class="">
       </div>
-      <div class="col-lg-8">
-        <h1 class="display-4 text-center">{{ site.data.bio.basics.name }}</h1>
-        <p class="lead text-center">{{ site.data.bio.basics.label }}</p>
-        <p class="lead">{{ site.data.bio.basics.summary }}</p>
-        <hr class="my-4">
-        <p class="lead m-0">
+      <div class="col">
+        <h1>{{ site.data.bio.basics.name }}</h1>
+        <p>{{ site.data.bio.basics.label }}</p>
+        <p>{{ site.data.bio.basics.summary }}</p>
+        <hr>
+        <p>
           Interests:
           {% for interest in site.data.bio.interests %}
           {{ interest.name }}{% if forloop.last != true %}, {% endif %}
           {% endfor %}
         </p>
-        <hr class="my-4">
+        <hr>
         <div class="row">
 
           {% if site.data.bio.basics.website %}
             {% capture url %}{{ site.data.bio.basics.website }}{% endcapture %}
-            <div class="col text-center">
+            <div class="col">
               {% include about/social.html url=url name='house' %}
             </div>
           {% endif %}

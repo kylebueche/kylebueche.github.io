@@ -1,11 +1,13 @@
-<div class="window">
-    <div class="title-bar">
-        <div class="title-bar-text"></div>
-        <div class="title-bar-controls">
-            <button aria-label="Close"></button>
+<div id="projects" class="draggable">
+    <div class="window">
+        <div class="title-bar">
+            <div class="title-bar-text">"{{ include.title }}"</div>
+            <div class="title-bar-controls">
+                <button aria-label="Close"></button>
+            </div>
         </div>
-    </div>
-    <div class="window-body">
-        {{ content }}
+        <div class="window-body">
+            {{ content }}
+        </div>
     </div>
 </div>
