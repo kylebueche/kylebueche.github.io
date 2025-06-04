@@ -1,8 +1,12 @@
 ---
-layout: home
+layout: default
 ---
 
-<div class="container py-4">
-  <h1 class="display-4">{{ page.title }}</h1>
- {{ content }}
+<div id="main-window" class="window">
+    <div class="title-bar">
+        <div class="title-bar-text">{{ page.title }}</div>
+    </div>
+    <div class="window-body">
+        {{ content }}
+    </div>
 </div>

@@ -11,10 +11,6 @@
             <span class="label">{{ label }}</span>
             {% endfor %}
         </p>
-        {% if page.projecturl %}
-        <a href="{{ page.projecturl }}" class="btn">Project Site</a>
-        {% else %}
-        <a href="{{ site.baseurl}}{{ include.page.url }}" class="btn">Read More</a>
-        {% endif %}
+        <a href="{{ site.baseurl}}{{ include.page.url }}" class="button">Read More</a>
     </div>
 </div>

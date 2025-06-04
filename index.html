@@ -18,8 +18,13 @@ It displays content in a mobile friendly way, but auto-hides when viewport width
         <div class="title-bar-text">Home</div>
     </div>
     <div class="window-body">
-        <div id="icons">
-            <button aria-label="projects">window 1</button>
+        <div class="centered">
+            <h1 style="text-align: center">Hi, I'm Kyle</h1>
+            <h4 style="text-align: center">Software Developer & Enthusiast</h4>
+        </div>
+        <div class="field-row" id="buttons">
+            <button aria-label="projects">Projects</button>
+            <button aria-label="about">About Me</button>
         </div>
     </div>
 </div>
@@ -34,13 +39,13 @@ It displays content in a mobile friendly way, but auto-hides when viewport width
             </div>
         </div>
         <div class="window-body">
-            {% include projects/projects.html %}
+            {% include projects.html %}
         </div>
     </div>
 </div>
 
 <!-- About Window -->
-<div id="projects" class="draggable">
+<div id="about" class="draggable">
     <div class="window">
         <div class="title-bar">
             <div class="title-bar-text">About Me</div>
@@ -49,7 +54,7 @@ It displays content in a mobile friendly way, but auto-hides when viewport width
             </div>
         </div>
         <div class="window-body">
-            {% include about/about.html %}
+            {% include about.html %}
         </div>
     </div>
 </div>

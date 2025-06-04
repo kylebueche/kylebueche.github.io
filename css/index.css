@@ -8,6 +8,7 @@ html {
     padding: 0;
     margin: 0;
 }
+
 body {
 	position: absolute;
 	padding: 0;
@@ -35,13 +36,14 @@ body {
 
 .window {
     height: clamp(30vh, 600px, 90vh);
-    width: clamp(40vw, 800px, 90vw);
+    width: clamp(40vw, 950px, 90vw);
     padding: 0;
     display: flex;
     flex-direction: column;
 }
 
 .window-body {
+    padding: 15px;
 	font-size: 15px;
     overflow-y: auto;
     flex: 1 1 100%
@@ -49,6 +51,9 @@ body {
 
 .title-bar {
 	height: 40px;
+    user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
 }
 
 .title-bar-text {
@@ -57,8 +62,8 @@ body {
 }
 
 #main-window {
-    height: clamp(30vh, 80vh, 90vh);
-    width: clamp(40vw, 80vw, 90vw);
+    height: clamp(30vh, 600px, 90vh);
+    width: clamp(40vw, 800px, 90vw);
 }
 
 .card {
@@ -83,4 +88,38 @@ body {
     border-radius: var(--card-border-rad);
     object-fit: cover;
     aspect-ratio: 1/1;
+}
+
+.card-title {
+    color: black;
+}
+
+
+.card-text {
+}
+
+.div.centered {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.a.button {
+    padding: 1px 6px;
+    border: 1px outset;
+    border-radius: 3px;
+    color: black;
+    background-color: grey;
+    text-decoration: none;
+}
+
+.label {
+    display: inline-block;
+    text-align: center;
+    line-height: 1;
+    padding: 3px 10px;
+    border-radius: 10px;
+    color: white;
+    background-color: grey;
+    font-weight: 700;
 }

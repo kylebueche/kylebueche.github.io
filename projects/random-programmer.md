@@ -4,7 +4,7 @@ type: project
 image: img/random-programmer/demo-1.png
 title: "Random Programmer"
 date: 2023-02-03
-published: true
+published: false
 labels:
   - Java
   - ICS211

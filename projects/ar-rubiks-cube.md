@@ -12,9 +12,9 @@ labels:
   - ICS486
 summary: "An AR Rubik's Cube that you can manipulate and solve on your phone."
 ---
-
+<div>
 This project involved the use of unity as well as an augmented reality library, to place a 3d model of a Rubik's Cube onto a handheld cube. The handheld cube has printed patterns on each side that help the software map the Rubik's Cube onto the right area of the screen. The cube is fully functional and solveable, and movement of the cube is entirely controlled by your hand in the real world. Manipulating the Rubik's Cube's faces is as simple as swiping the cube on the screen.
-
+</div>
 <img height="300px" src="../img/ar-rubiks-cube/demo-1.png">
 
 
