@@ -4,7 +4,7 @@ type: essay
 title: "Interests and Goals in Software Engineering"
 # All dates must be YYYY-MM-DD format!
 date: 2023-08-31
-published: true
+published: false
 labels:
   - Computer Science, Animation, Game Dev
 ---

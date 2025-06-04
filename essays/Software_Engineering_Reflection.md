@@ -4,7 +4,7 @@ type: essay
 title: "A Reflection on Software Engineering I"
 # All dates must be YYYY-MM-DD format!
 date: 2023-12-14
-published: true
+published: false
 labels:
   - Computer Science
   - ICS 314

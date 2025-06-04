@@ -3,7 +3,7 @@ layout: essay
 type: essay
 title: "AI is Dumb"
 date: 2023-11-20
-published: true
+published: false
 labels:
   - Artificial Intelligence
 ---
