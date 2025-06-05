@@ -18,13 +18,41 @@ It displays content in a mobile friendly way, but auto-hides when viewport width
         <div class="title-bar-text">Home</div>
     </div>
     <div class="window-body">
-        <div class="centered">
-            <h1 style="text-align: center">Hi, I'm Kyle</h1>
-            <h4 style="text-align: center">Software Developer & Enthusiast</h4>
-        </div>
-        <div class="field-row" id="buttons">
-            <button aria-label="projects">Projects</button>
-            <button aria-label="about">About Me</button>
+        <article role="tabpanel">
+            <div class="row">
+                <div class="col">
+                    <img src="https://github.com/kylebueche.png" class="circle-img">
+                </div>
+                <div class="col">
+                    <h2>Kyle Bueche</h2>
+                    <p>I am a...</p>
+                    <ul>
+                        <li>Hawaiʻi-based Software Developer</li>
+                        <li>Student at the University of Hawaiʻi at Mānoa</li>
+                    </ul>
+                    <p>My interests are...</p>
+                    <ul>
+                        <li>Algorithms</li>
+                        <li>3D Rendering</li>
+                        <li>Functional Programming</li>
+                        <li>Game Development</li>
+                    </ul>
+                </div> 
+            </div>
+        </article>
+        <div class="field-row" style="justify-content: space-evenly">
+            <div class="col">
+                <button id="projects-button" aria-label="projects">
+                    <i class="fa-regular fa-folder-open fa-5x"></i>
+				</button>
+                <p class="row centered smaller">Projects</p>
+            </div>
+            <div class="col">
+                <button id="about-button" aria-label="about">
+                    <i class="fa-regular fa-circle-user fa-5x"></i>
+				</button>
+                <p class="row centered smaller">About Me</p>
+            </div>
         </div>
     </div>
 </div>
@@ -54,7 +82,7 @@ It displays content in a mobile friendly way, but auto-hides when viewport width
             </div>
         </div>
         <div class="window-body">
-            {% include about.html %}
+            {% include about.md %}
         </div>
     </div>
 </div>

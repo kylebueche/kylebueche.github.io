@@ -1,20 +1,19 @@
 var windows = [];
 
 window.onload = function() {
-    var buttonDiv = document.getElementById('buttons');
-    if (buttonDiv) {
-        const buttons = buttonDiv.children;
-        for (let i = 0; i < buttons.length; i++) {
-            let button = buttons[i];
-            let windowDiv = document.getElementById(button.ariaLabel);
-            windowDiv.style.zIndex = i + 1;
-            windows.push(windowDiv);
-            closeWindow(windowDiv);
-            button.onmousedown = function() { openWindow(windowDiv); };
-            windowDiv.onmousedown = function() { putWindowOnTop(windowDiv); };
-            windowDiv.querySelector('[aria-label=Close]').onmousedown = function() { closeWindow(windowDiv); };
-            makeDraggable(windowDiv);
-        }
+	let buttons = [];
+	buttons.push(document.getElementById('projects-button'));
+	buttons.push(document.getElementById('about-button'));
+	for (let i = 0; i < buttons.length; i++) {
+		let button = buttons[i];
+		let windowDiv = document.getElementById(button.ariaLabel);
+		windowDiv.style.zIndex = i + 3;
+		windows.push(windowDiv);
+		closeWindow(windowDiv);
+		button.onmousedown = function() { openWindow(windowDiv); };
+		windowDiv.onmousedown = function() { putWindowOnTop(windowDiv); };
+		windowDiv.querySelector('[aria-label=Close]').onmousedown = function() { closeWindow(windowDiv); };
+		makeDraggable(windowDiv);
     }
 }
 
@@ -33,7 +32,7 @@ window.onresize = function() {
     }
 }
 
-// 1-based z-indexing. This should maintain order if list of n windows is initialized to z indexes 1, 2, ..., n
+// 3-based z-indexing.
 function putWindowOnTop(windowDiv)
 {
     let currentZIndex = windowDiv.style.zIndex;

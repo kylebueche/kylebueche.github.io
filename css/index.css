@@ -1,7 +1,6 @@
-:root {
-    --card-border-rad: 5px;
-    --card-height: 225px;
-}
+@import "xp.css";
+@import "window.css";
+@import "project-card.css";
 
 html {
     height: 100%;
@@ -9,6 +8,7 @@ html {
     margin: 0;
 }
 
+/* Desktop appearance stuff */
 body {
 	position: absolute;
 	padding: 0;
@@ -27,93 +27,40 @@ body {
     align-items: center;
 }
 
-.draggable {
-    padding-left: 0;
-    margin-left: 0;
-    position: absolute;
-    display: none;
+p, h1, h2, h3, h4, h5, span, ul, li, ol {
+    margin: 0.25em;
+    margin-left: 8px;
 }
 
-.window {
-    height: clamp(30vh, 600px, 90vh);
-    width: clamp(40vw, 950px, 90vw);
-    padding: 0;
-    display: flex;
-    flex-direction: column;
+i {
+	color: #555565;
+	padding: 2px;
 }
 
-.window-body {
-    padding: 15px;
-	font-size: 15px;
-    overflow-y: auto;
-    flex: 1 1 100%
+.circle-img {
+    height: 225px;
+    border-radius: 50%;
+    margin: 20px;
+    box-shadow: 0px 0px 5px darkgrey;
 }
 
-.title-bar {
-	height: 40px;
-    user-select: none;
-    -webkit-user-select: none;
-    -ms-user-select: none;
+.smaller {
+	color: #454555;
+	font-size: 14px;
+	font-weight: 700;
 }
 
-.title-bar-text {
-	padding-left: 7px;
-	font-size: 22px;
-}
-
-#main-window {
-    height: clamp(30vh, 600px, 90vh);
-    width: clamp(40vw, 800px, 90vw);
-}
-
-.card {
-    height: var(--card-height);
-    border-radius: var(--card-border-rad);
-    display: flex;
-    flex-direction: row;
-    padding-bottom: 20px;
-}
-
-.card-title {
-    display: inline-block;
-    justify-content: space-between;
-}
-
-.card-body {
-    padding-left: 20px;
-}
-
-.card-img {
-    height: var(--card-height);
-    border-radius: var(--card-border-rad);
-    object-fit: cover;
-    aspect-ratio: 1/1;
-}
-
-.card-title {
-    color: black;
-}
-
-
-.card-text {
-}
-
-.div.centered {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.a.button {
-    padding: 1px 6px;
-    border: 1px outset;
-    border-radius: 3px;
-    color: black;
-    background-color: grey;
-    text-decoration: none;
+a {
+	font-size: 13px;
+	font-weight: 500;
+	padding: 3px 10px;
+	border-radius: 10px;
+	color: black;
+	background-color: white;
 }
 
 .label {
+	font-size: 14px;
     display: inline-block;
     text-align: center;
     line-height: 1;
@@ -121,5 +68,31 @@ body {
     border-radius: 10px;
     color: white;
     background-color: grey;
-    font-weight: 700;
+    font-weight: 650;
+    box-shadow: 0px 3px darkgrey;
+}
+
+.label:hover {
+	transform: translateY(1px);
+	box-shadow: 0px 2px darkgrey;
+	transition: 0.05s;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+}
+
+
+.col {
+    display: flex;
+    flex-direction: column;
+}
+
+.row.centered {
+    justify-content: center;
+}
+
+.col.centered {
+    align-items: center;
 }
