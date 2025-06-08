@@ -11,7 +11,7 @@
     --white: white;
     --black: black;
     --grey: grey;
-    --lightgrey: lightgrey;
+    --lightgrey: #dfdfdf;
     --darkgrey: darkgrey;
     --icon-color: #4c505d;
     --windows-xp-bg: url('../img/windows_xp_bg.jpg');
@@ -43,8 +43,12 @@ body {
     align-items: center;
 }
 
-p, h1, h2, h3, h4, h5, span, ul, li, ol, a {
+p, h1, h2, h3, h4, h5, span, ul, ol, a {
     margin: 0.25rem 0;
+}
+
+li {
+    margin: 0.40rem 0;
 }
 
 span:hover {
@@ -53,6 +57,16 @@ span:hover {
 
 p, span, ul, li, ol, a {
     font-size: inherit;
+    font-weight: 200;
+}
+
+blockquote {
+    border-left: solid 4px var(--lightgrey);
+    padding-top: 0.5em;
+    padding-left: 1em;
+    padding-bottom: 0.2em;
+    margin-top: 0.3em;
+    margin-left: 0;
 }
 
 .text-xs {
@@ -83,6 +97,10 @@ p, span, ul, li, ol, a {
     font-weight: var(--bold);
 }
 
+.grey {
+    color: var(--grey);
+}
+
 .nowrap {
     white-space: nowrap;
 }
@@ -94,7 +112,7 @@ p, span, ul, li, ol, a {
 i {
 	color: var(--icon-color);
 	padding: 2px;
-    font-size: 4.5em;
+    font-size: 4em;
 }
 
 .icon-button {
@@ -233,6 +251,13 @@ a {
     width: clamp(40vw, 800px, 90vw);
 }
 
+.youtube {
+	width: 355.55px;
+	height: 200px;
+	margin-top: 15px;
+	margin-bottom: 15px;
+}
+
 /* Formatting */
 .row {
     display: flex;
@@ -242,6 +267,10 @@ a {
 .col {
     display: flex;
     flex-direction: column;
+}
+
+.flex-wrap {
+	flex-wrap: wrap;
 }
 
 .start {
@@ -283,7 +312,8 @@ a {
     }
 
     .icon-buttons {
-        display: grid;
+        flex-direction: row;
+        flex-wrap: wrap;
     }
 
     .window {

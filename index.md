@@ -17,8 +17,7 @@ languages:
   - C++
   - C#
   - JavaScript
-  - HTML
-  - CSS
+  - HTML/CSS
   - Java
   - Python
   - Lisp
@@ -51,12 +50,12 @@ languages:
                 <p class="bold">Software</p>
             </div>
             <div class="icon-button col center align-center">
-                <i id="animation-button" aria-label="animation" class="fa-regular fa-pen-to-square"></i>
-                <p class="bold">Animation</p>
-            </div>
-            <div class="icon-button col center align-center">
                 <i id="games-button" aria-label="games" class="fa-regular fa-keyboard"></i>
                 <p class="bold">Games</p>
+            </div>
+            <div class="icon-button col center align-center">
+                <i id="animations-button" aria-label="animations" class="fa-regular fa-pen-to-square"></i>
+                <p class="bold">Animations</p>
             </div>
             <div class="icon-button col center align-center">
                 <i id="contact-button" aria-label="contact" class="fa-regular fa-paper-plane"></i>
@@ -85,58 +84,58 @@ languages:
 <div id="software" class="draggable">
     <div class="window">
         <div class="title-bar">
-            <div class="title-bar-text">Projects</div>
+            <div class="title-bar-text">Software</div>
             <div class="title-bar-controls">
                 <button aria-label="Close"></button>
             </div>
         </div>
         <div class="window-body">
-            {% include projects.html %}
+            {% include projects.html page=page %}
         </div>
     </div>
 </div>
 
-<!--  Window -->
-<div id="software" class="draggable">
+<!-- Games Window -->
+<div id="games" class="draggable">
     <div class="window">
         <div class="title-bar">
-            <div class="title-bar-text">Projects</div>
+            <div class="title-bar-text">Games</div>
             <div class="title-bar-controls">
                 <button aria-label="Close"></button>
             </div>
         </div>
         <div class="window-body">
-            {% include projects.html %}
+            {% include games.html page=page %}
         </div>
     </div>
 </div>
 
-<!-- Software Window -->
-<div id="software" class="draggable">
+<!-- Animations Window -->
+<div id="animations" class="draggable">
     <div class="window">
         <div class="title-bar">
-            <div class="title-bar-text">Projects</div>
+            <div class="title-bar-text">Animations</div>
             <div class="title-bar-controls">
                 <button aria-label="Close"></button>
             </div>
         </div>
         <div class="window-body">
-            {% include projects.html %}
+            {% include animations.html page=page %}
         </div>
     </div>
 </div>
 
-<!-- Software Window -->
-<div id="software" class="draggable">
+<!-- Contact Window -->
+<div id="contact" class="draggable">
     <div class="window">
         <div class="title-bar">
-            <div class="title-bar-text">Projects</div>
+            <div class="title-bar-text">Contact</div>
             <div class="title-bar-controls">
                 <button aria-label="Close"></button>
             </div>
         </div>
         <div class="window-body">
-            {% include projects.html %}
+            {% include contact.html page=page %}
         </div>
     </div>
 </div>

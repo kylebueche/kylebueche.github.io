@@ -4,7 +4,7 @@ window.onload = function() {
 	let buttons = [];
 	buttons.push(document.getElementById('about-button'));
 	buttons.push(document.getElementById('software-button'));
-	buttons.push(document.getElementById('animation-button'));
+	buttons.push(document.getElementById('animations-button'));
 	buttons.push(document.getElementById('games-button'));
 	buttons.push(document.getElementById('contact-button'));
 	for (let i = 0; i < buttons.length; i++) {
