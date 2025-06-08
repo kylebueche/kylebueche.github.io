@@ -2,14 +2,16 @@ var windows = [];
 
 window.onload = function() {
 	let buttons = [];
-	buttons.push(document.getElementById('projects-button'));
 	buttons.push(document.getElementById('about-button'));
+	buttons.push(document.getElementById('software-button'));
+	buttons.push(document.getElementById('animation-button'));
+	buttons.push(document.getElementById('games-button'));
+	buttons.push(document.getElementById('contact-button'));
 	for (let i = 0; i < buttons.length; i++) {
 		let button = buttons[i];
 		let windowDiv = document.getElementById(button.ariaLabel);
-		windowDiv.style.zIndex = i + 3;
+		windowDiv.style.zIndex = 10;
 		windows.push(windowDiv);
-		closeWindow(windowDiv);
 		button.onmousedown = function() { openWindow(windowDiv); };
 		windowDiv.onmousedown = function() { putWindowOnTop(windowDiv); };
 		windowDiv.querySelector('[aria-label=Close]').onmousedown = function() { closeWindow(windowDiv); };
@@ -35,24 +37,41 @@ window.onresize = function() {
 // 3-based z-indexing.
 function putWindowOnTop(windowDiv)
 {
-    let currentZIndex = windowDiv.style.zIndex;
-    if (currentZIndex != windows.length) {
-        for (let i = 0; i < windows.length; i++) {
-            if (windows[i].style.zIndex > currentZIndex) {
-                windows[i].style.zIndex--;
-            }
+    for (let i = 0; i < windows.length; i++) {
+        if (windowDiv.style.zIndex <= windows[i].style.zIndex) {
+            windowDiv.style.zIndex = parseInt(windows[i].style.zIndex) + 1;
         }
-        windowDiv.style.zIndex++;
     }
 }
 
 function openWindow(windowDiv) {
-    putWindowOnTop(windowDiv);
-    windowDiv.style.display = "block";
+    if (!windowDiv.isOpen) {
+        putWindowOnTop(windowDiv);
+        windowDiv.style.transition = "0s";
+        windowDiv.style.transform = "scale(0)";
+        windowDiv.style.display = "block";
+        void windowDiv.offsetWidth;
+        windowDiv.style.transition = "0.5s";
+        windowDiv.style.transform = "scale(1)";
+        windowDiv.addEventListener("transitionend", function handler() {
+            windowDiv.style.transition = "0s";
+            windowDiv.removeEventListener("transitionend", handler);
+        });
+    }
+    windowDiv.isOpen = true;
 }
 
 function closeWindow(windowDiv) {
-    windowDiv.style.display = "none";
+    windowDiv.style.transition = "0.5s";
+    windowDiv.style.transform = "scale(0)";
+    function transitionEnd(e) {
+        if (e.propertyName === "transform") {
+            windowDiv.style.display = "none";
+            windowDiv.removeEventListener("transitionend", transitionEnd);
+        }
+    }
+    windowDiv.addEventListener("transitionend", transitionEnd);
+    windowDiv.isOpen = false;
 }
 
 function makeDraggable(windowDiv) {

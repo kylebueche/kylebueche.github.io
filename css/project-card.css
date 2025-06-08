@@ -1,33 +1,25 @@
 .card {
     height: auto;
     border-radius: 10px;
-    display: flex;
-    flex-direction: row;
     padding-bottom: 20px;
 }
 
 .card-title {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0;
-    margin: 0;
-}
-
-.h5.card-title {
     padding: 0;
     margin: 0;
 }
 
 .card-body {
     padding-left: 20px;
+    font-size: 13px;
 }
 
 .card-img {
     height: 200px;
-    border-radius: 10px;
+    border-radius: 20px;
     object-fit: cover;
     aspect-ratio: 1/1;
+    box-shadow: 0px 0px 2px grey;
 }
     
 .card-text {

@@ -13,7 +13,7 @@
     --grey: grey;
     --lightgrey: lightgrey;
     --darkgrey: darkgrey;
-    --icon-color: #4c505d;
+    --icon-color: #555;
     --windows-xp-bg: url('../img/windows_xp_bg.jpg');
 }
 
@@ -25,7 +25,7 @@ html {
 
 /* Desktop appearance stuff */
 body {
-    font-size: var(--text-lg);
+    font-size: var(--font-size-md);
 	position: absolute;
 	padding: 0;
     margin: 0;
@@ -44,7 +44,7 @@ body {
 }
 
 p, h1, h2, h3, h4, h5, span, ul, li, ol, a {
-    margin: 0.25rem 0;
+    margin: 0.2rem 0;
 }
 
 span:hover {
@@ -52,31 +52,19 @@ span:hover {
 }
 
 p, span, ul, li, ol, a {
-    font-size: inherit;
-}
-
-.text-xs {
-    font-size: var(--text-xs);
-}
-
-.text-sm {
-    font-size: var(--text-sm);
-}
-
-.text-md {
     font-size: var(--text-md);
 }
 
-.text-lg {
+.sm {
+    font-size: var(--text-sm);
+}
+
+.md {
+    font-size: var(--text-md);
+}
+
+.lg {
     font-size: var(--text-lg);
-}
-
-.text-xl {
-    font-size: var(--text-xl);
-}
-
-.text-2xl {
-    font-size: var(--text-2xl);
 }
 
 .bold {
@@ -87,31 +75,9 @@ p, span, ul, li, ol, a {
     white-space: nowrap;
 }
 
-.icon-buttons {
-    margin-top: 30px;
-}
-
 i {
 	color: var(--icon-color);
 	padding: 2px;
-    font-size: 4.5em;
-}
-
-.icon-button {
-    width: 5rem;
-    font-size: var(--text-md);
-    color: var(--icon-color);
-    margin: 20px;
-    transition: 0.25s;
-}
-
-
-.icon-button:hover {
-    transform: scale(1.05);
-}
-
-.icon-button:active {
-    transform: scale(0.90);
 }
 
 .circle-img {
@@ -177,8 +143,7 @@ a {
 }
 
 .card-body {
-    padding-left: 14px;
-    width: 100%;
+    padding-left: 14px
 }
 
 .card-img {
@@ -202,9 +167,8 @@ a {
 }
 
 .window {
-    font-size: var(--text-lg);
-    height: clamp(30vh, 590px, 90vh);
-    width: clamp(40vw, 950px, 90vw);
+    height: clamp(30vh, 500px, 90vh);
+    width: clamp(40vw, 700px, 90vw);
     padding: 0;
     display: flex;
     flex-direction: column;
@@ -244,7 +208,7 @@ a {
     flex-direction: column;
 }
 
-.start {
+.left {
     justify-content: flex-start;
 }
 
@@ -252,7 +216,7 @@ a {
     justify-content: center;
 }
 
-.end {
+.right {
     justify-content: flex-end;
 }
 
@@ -268,10 +232,6 @@ a {
     align-items: center;
 }
 
-.align-stretch {
-    align-items: stretch;
-}
-
 @media (max-width: 600px) {
     .row {
         flex-direction: column;
@@ -280,10 +240,6 @@ a {
 
     .card {
         text-align: center;
-    }
-
-    .icon-buttons {
-        display: grid;
     }
 
     .window {
