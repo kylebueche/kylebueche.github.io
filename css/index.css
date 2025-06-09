@@ -349,7 +349,7 @@ i {
 
     .window {
         height: 80vh;
-        width: 90vw;
+        width: 100vw;
     }
 
     #main-window {
@@ -359,11 +359,10 @@ i {
 
 	#contact-window {
     	height: 50vh;
-    	width: 80vw;
 	}
 
     .youtube {
-        width: 75vw;
+        width: 70vw;
     }
 
     i {
