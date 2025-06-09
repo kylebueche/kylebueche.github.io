@@ -42,7 +42,7 @@ languages:
 						<li class="text-md">Former Software Engineering Intern at <a target="_blank" class="icon-color bold" href="https://oceanit.com/">Oceanit</a></li>
 						<li class="text-md">Senior CS Student at UH Mānoa</li>
 					</ul>
-                    <p>Contact me at <p class="grey bold">kyle.bueche@gmail.com</p></p>
+                    <p>Contact me at: <p class="grey bold">kyle.bueche@gmail.com</p></p>
                 </div> 
             </div>
         </article>

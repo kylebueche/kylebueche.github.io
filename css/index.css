@@ -340,15 +340,15 @@ i {
     }
 
 	#contact-window {
-    	height: 80vh;
+    	height: 50vh;
     	width: 80vw;
 	}
 
     .youtube {
-        width: 70vw;
+        width: 75vw;
     }
 
     i {
-        font-size: 2em;
+        font-size: 3em;
     }
 }
