@@ -347,4 +347,8 @@ i {
     .youtube {
         width: 75vw;
     }
+
+    i {
+        font-size: 3em;
+    }
 }
