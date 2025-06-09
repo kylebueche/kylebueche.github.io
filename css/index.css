@@ -343,4 +343,8 @@ i {
     	height: 80vw;
     	width: 80vw;
 	}
+
+    .youtube {
+        width: 75vw;
+    }
 }
