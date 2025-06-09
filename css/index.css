@@ -328,6 +328,10 @@ i {
     align-items: stretch;
 }
 
+.noselect {
+    cursor: default;
+}
+
 @media (max-width: 600px) {
     .row {
         flex-direction: column;

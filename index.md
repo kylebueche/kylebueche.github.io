@@ -47,25 +47,25 @@ languages:
             </div>
     </article>
         <div class="icon-buttons row center">
-            <div class="icon-button col center align-center">
-                <i id="about-button" aria-label="about" class="fa-regular fa-circle-user"></i>
-                <p class="bold">About Me</p>
+            <div id="about-button" aria-label="about" class="icon-button col center align-center">
+                <i class="fa-regular fa-circle-user"></i>
+                <p class="bold noselect">About Me</p>
             </div>
-            <div class="icon-button col center align-center">
-                <i id="software-button" aria-label="software" class="fa-regular fa-file-code"></i>
-                <p class="bold">Software</p>
+            <div id="software-button" aria-label="software" class="icon-button col center align-center">
+                <i class="fa-regular fa-file-code"></i>
+                <p class="bold noselect">Software</p>
             </div>
-            <div class="icon-button col center align-center">
-                <i id="games-button" aria-label="games" class="fa-regular fa-keyboard"></i>
-                <p class="bold">Games</p>
+            <div id="games-button" aria-label="games" class="icon-button col center align-center">
+                <i class="fa-regular fa-keyboard"></i>
+                <p class="bold noselect">Games</p>
             </div>
-            <div class="icon-button col center align-center">
-                <i id="animations-button" aria-label="animations" class="fa-regular fa-pen-to-square"></i>
-                <p class="bold">Animations</p>
+            <div id="animations-button" aria-label="animations" class="icon-button col center align-center">
+                <i class="fa-regular fa-pen-to-square"></i>
+                <p class="bold noselect">Animations</p>
             </div>
-            <div class="icon-button col center align-center">
-                <i id="contact-button" aria-label="contact" class="fa-regular fa-paper-plane"></i>
-                <p class="bold">Links</p>
+            <div id="contact-button" aria-label="contact" class="icon-button col center align-center">
+                <i class="fa-regular fa-paper-plane"></i>
+                <p class="bold noselect">Links</p>
             </div>
         </div>
     </div>
