@@ -65,7 +65,7 @@ languages:
             </div>
             <div class="icon-button col center align-center">
                 <i id="contact-button" aria-label="contact" class="fa-regular fa-paper-plane"></i>
-                <p class="bold">Contact</p>
+                <p class="bold">Links</p>
             </div>
         </div>
     </div>
