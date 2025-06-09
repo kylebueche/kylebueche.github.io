@@ -359,7 +359,13 @@ i {
 
 	#contact-window {
     	height: 50vh;
+        width: 100vw;
 	}
+
+    #animations-window {
+        height: 80vh;
+        width: 100vw;
+    }
 
     .youtube {
         width: 70vw;
