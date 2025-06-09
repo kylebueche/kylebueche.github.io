@@ -340,7 +340,7 @@ i {
     }
 
 	#contact-window {
-    	height: 50vh;
+    	height: 60vh;
     	width: 80vw;
 	}
 
@@ -349,6 +349,6 @@ i {
     }
 
     i {
-        font-size: 2em;
+        font-size: 1em;
     }
 }
