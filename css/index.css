@@ -60,6 +60,10 @@ p, span, ul, li, ol, a {
     font-weight: 200;
 }
 
+ul, ol {
+    padding-bottom: 0.2em;
+}
+
 blockquote {
     border-left: solid 4px var(--lightgrey);
     padding-top: 0.5em;
@@ -132,15 +136,20 @@ i {
     transform: scale(0.90);
 }
 
+.icon-link, .icon-link:hover, .icon-link:active, .icon-line:visited {
+    text-decoration: none;
+    outline: none !important;
+}
+
+.icon-color {
+	color: var(--icon-color);
+}
+
 .circle-img {
     height: 225px;
     border-radius: 50%;
     margin: 20px;
     box-shadow: 0px 0px 5px var(--darkgrey);
-}
-
-a {
-	color: black;
 }
 
 /* Project Cards */
@@ -251,11 +260,15 @@ a {
     width: clamp(40vw, 800px, 90vw);
 }
 
+#contact-window {
+    height: clamp(200px, 300px, 90vh);
+    width: clamp(40vw, 500px, 90vw);
+}
+
 .youtube {
-	width: 355.55px;
-	height: 200px;
-	margin-top: 15px;
-	margin-bottom: 15px;
+	width: 375px;
+    aspect-ratio: 1.777/1;
+	margin: 10px;
 }
 
 /* Formatting */
@@ -324,4 +337,9 @@ a {
     #main-window {
         height: 100vh;
     }
+
+	#contact-window {
+    	height: 400px;
+    	width: 400px;
+	}
 }

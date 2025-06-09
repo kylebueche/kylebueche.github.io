@@ -35,8 +35,13 @@ languages:
                 <div class="col">
                     <img src="https://github.com/kylebueche.png" class="circle-img">
                 </div>
-                <div class="col">
+                <div class="col center">
                     <h2>Kyle Bueche</h2>
+					<ul>
+						<li class="text-md">Software Developer based in Hawaiʻi</li> 
+						<li class="text-md">Former Software Engineering Intern at <a target="_blank" class="icon-color bold" href="https://oceanit.com/">Oceanit</a></li>
+						<li class="text-md">Senior CS Student at UH Mānoa</li>
+					</ul>
                 </div> 
             </div>
         </article>
@@ -112,7 +117,7 @@ languages:
 
 <!-- Animations Window -->
 <div id="animations" class="draggable">
-    <div class="window">
+    <div id="animations-window" class="window">
         <div class="title-bar">
             <div class="title-bar-text">Animations</div>
             <div class="title-bar-controls">
@@ -127,7 +132,7 @@ languages:
 
 <!-- Contact Window -->
 <div id="contact" class="draggable">
-    <div class="window">
+    <div id="contact-window" class="window">
         <div class="title-bar">
             <div class="title-bar-text">Contact</div>
             <div class="title-bar-controls">

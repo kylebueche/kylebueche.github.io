@@ -1,25 +1,4 @@
 {% assign project_pages = site.pages | where: "type", "project" | sort: "date" | reverse %}
-    <div class="row between">
-        <div class="col">
-            <h4>Tools</h4>
-            <p>
-                {% for tool in include.page.tools %}
-                <span class="tag">{{ tool }}</span>
-                {% endfor %}
-            </p>
-        </div>
-        <div class="col">
-            <h4>Languages</h4>
-            <p>
-                {% for language in include.page.languages %}
-                <span class="tag">{{ language }}</span>
-                {% endfor %}
-            </p>
-        </div>
-    </div>
-    <br>
-    <hr>
-    <br>
     {% for page in project_pages %}
         {% unless page.draft %}
             {% include project-card.html page=page %}
