@@ -45,7 +45,7 @@ languages:
                     <p>Contact me at: <p class="grey bold">kyle.bueche@gmail.com</p></p>
                 </div> 
             </div>
-        </article>
+    </article>
         <div class="icon-buttons row center">
             <div class="icon-button col center align-center">
                 <i id="about-button" aria-label="about" class="fa-regular fa-circle-user"></i>

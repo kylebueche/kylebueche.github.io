@@ -120,7 +120,14 @@ i {
 }
 
 .icon-button {
-    width: 5rem;
+    background-color: var(--white);
+    border-radius: 15px;
+    border-color: var(--black);
+    box-shadow: 0px 3px 3px var(--grey);
+    width: unset;
+    height: auto;
+    aspect-ratio: 1/1;
+    padding: 10px;
     font-size: var(--text-md);
     color: var(--icon-color);
     margin: 20px;
@@ -265,10 +272,17 @@ i {
     width: clamp(40vw, 500px, 90vw);
 }
 
+#animations-window {
+    height: clamp(30vh, 650px, 90vh);
+    width: clamp(40vw, 1000px, 90vw);
+}
+
 .youtube {
-	width: 375px;
+	width: 425px;
     aspect-ratio: 1.777/1;
-	margin: 10px;
+	margin-top: 10px;
+    margin-bottom: 10px;
+    box-shadow: 0px 1px 6px var(--grey);
 }
 
 /* Formatting */
