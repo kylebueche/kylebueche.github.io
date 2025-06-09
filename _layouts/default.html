@@ -47,7 +47,9 @@
     <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/css/index.css">
     
     <!-- Custom scripts here -->
+    {% if page.title == "Home" %}
     <script type="text/javascript" src="{{ site.baseurl }}/js/window.js"></script>
+    {% endif $}
   </head>
   <body>
   {{ content }}
