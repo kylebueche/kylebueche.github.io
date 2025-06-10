@@ -23,7 +23,7 @@ sourcecode: "https://github.com/kylebueche/Ray-Tracer-2.0"
 
 <hr>
 
-This is my 2nd Ray Tracer, this time written in C++. I wanted to expand on my [first Ray Tracer]({{ site.baseurl }}/projects/ray-tracer-c/), which I did essentially blind, learning the fundamentals.
+This is my 2nd Ray Tracer, this time written in C++. I wanted to expand on my [first Ray Tracer]({{ site.baseurl }}/projects/ray-tracer-c), which I did essentially blind, learning the fundamentals.
 
 <br>
 
