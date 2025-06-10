@@ -5,8 +5,8 @@ title: "Ray Tracer in C++"
 image: img/ray-tracer-cpp/thumbnail.png
 img: /img/ray-tracer-cpp
 imageurls:
-  - Final-Demo.png
-  - cones-unions/Final-Demo.png
+  - final-demo.png
+  - cones-unions/final-demo.png
 date: 2025-02-13
 published: true
 labels:

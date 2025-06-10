@@ -32,7 +32,9 @@ layout: default
                     <img class="project-img" src="{{ site.baseurl }}{{ page.img }}/{{ imageurl }}" alt="{{ imageurl }}">
                     {% endfor %}
                     {% for videourl in page.videourls %}
-                    <video class="project-img" controls src="{{ site.baseurl }}{{ page.img }}/{{ videourl }}" alt="{{ videourl }}"></video>
+                    <video class="project-img" controls>
+                        <source type="video/mp4" src="{{ site.baseurl }}{{ page.img }}/{{ videourl }}" alt="{{ videourl }}">
+                    </video>
                     {% endfor %}
                 </div>
             </div>

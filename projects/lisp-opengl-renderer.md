@@ -4,10 +4,11 @@ type: project
 image: img/lisp-opengl-renderer/thumbnail.png
 img: /img/lisp-opengl-renderer
 imageurls:
+  - Fractal-Tree.png
+videourls:
   - ICS481_HW5_bueche.mp4
   - Fractal-Interpolation-1.mp4
   - Fractal-Interpolation-2.mp4
-  - Fractal-Tree.png
   - ICS481_HW3_bueche.mp4
 title: "Common Lisp OpenGL Renderer"
 date: 2024-12-17
