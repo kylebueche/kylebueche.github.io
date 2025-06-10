@@ -129,13 +129,17 @@ i {
     border-radius: 15px;
     border-color: var(--black);
     box-shadow: 0px 3px 3px var(--grey);
-    width: fit-content;
+    width: 80px;
     height: auto;
     padding: 10px;
     font-size: var(--text-md);
     color: var(--icon-color);
-    margin: 20px;
+    margin: 15px;
     transition: 0.25s;
+}
+
+.project-button {
+    width: fit-content;
 }
 
 
@@ -273,7 +277,7 @@ i {
 
 #contact-window {
     height: clamp(200px, 300px, 90vh);
-    width: clamp(40vw, 500px, 90vw);
+    width: clamp(40vw, 600px, 90vw);
 }
 
 #animations-window {
