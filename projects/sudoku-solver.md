@@ -4,7 +4,7 @@ type: project
 image: img/sudoku-solver/demo-1.png
 title: "Sudoku Solver"
 date: 2023-04-21
-published: true
+published: false
 labels:
   - Java
   - ICS211

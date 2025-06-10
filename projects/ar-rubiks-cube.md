@@ -1,8 +1,14 @@
 ---
+title: "AR Rubik's Cube"
 layout: project
 type: project
 image: img/ar-rubiks-cube/demo-1.png
-title: "AR Rubik's Cube"
+img: /img/ar-rubiks-cube
+imageurls:
+  - demo-1.png
+  - demo-2.png
+videourls:
+  - demo-video-1.mp4
 date: 2023-09-03
 published: true
 labels:
@@ -12,23 +18,13 @@ labels:
   - ICS486
 summary: "An AR Rubik's Cube that you can manipulate and solve on your phone."
 ---
-<div>
-This project involved the use of unity as well as an augmented reality library, to place a 3d model of a Rubik's Cube onto a handheld cube. The handheld cube has printed patterns on each side that help the software map the Rubik's Cube onto the right area of the screen. The cube is fully functional and solveable, and movement of the cube is entirely controlled by your hand in the real world. Manipulating the Rubik's Cube's faces is as simple as swiping the cube on the screen.
-</div>
-<img height="300px" src="../img/ar-rubiks-cube/demo-1.png">
 
+### Augmented Reality
 
-After rotating a few faces and rotating the cube in my hand:
+<hr>
 
+I used Unity to create an interactable 3D Rubik's Cube, and I used an Augmented Reality library to map it to a real cube with printed patterns on it.
 
-<img height="300px" src="../img/ar-rubiks-cube/demo-2.png">
+<br>
 
-
-The cube maps best in high light conditions, but it follows your hand pretty accurately. For this to work, you do need to print out a special pattern onto the surface of a cube, to be recognized by the mapping software.
-
-#### Project Demo
-
-
-<video height="300px" src="../img/ar-rubiks-cube/demo-video-1.mp4" controls></video>
-
-As you can see, the swiping system isn't fully fleshed out, but this can be redone, as the important thing is that the proper face is selected.
+The cube is fully functional and solveable. You rotate the whole cube physically in the real world, and rotate the sides by swiping on your camera.
