@@ -39,7 +39,7 @@ The final demo render took 2 minutes.
 - Lambertian & Specular Reflection
 - Refraction & Refractive Index
 - Soft shadows
-- MSAA.
+- MSAA
 
 <br>
 
