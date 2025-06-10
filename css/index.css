@@ -390,10 +390,14 @@ i {
         width: 100vw
     }
 
-	#contact-window {
+    .project-img {
+	width: 70vw;
+    }
+
+    #contact-window {
     	height: 50vh;
         width: 100vw;
-	}
+    }
 
     #animations-window {
         height: 80vh;
