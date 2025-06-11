@@ -1,15 +1,14 @@
 var windows = [];
 
 window.onload = function() {
-	let buttons = [];
-	buttons.push(document.getElementById('about-button'));
-	buttons.push(document.getElementById('software-button'));
-	buttons.push(document.getElementById('animations-button'));
-	buttons.push(document.getElementById('games-button'));
-	buttons.push(document.getElementById('contact-button'));
+	let draggables = document.getElementsByClassName('draggable');
+    let buttons = [];
+    for (let i = 0; i < draggables.length; i++) {
+        buttons.push(document.getElementById(draggables.id + '-button'));
+    }
 	for (let i = 0; i < buttons.length; i++) {
 		let button = buttons[i];
-		let windowDiv = document.getElementById(button.ariaLabel);
+		let windowDiv = draggables[i];
 		windowDiv.style.zIndex = 10;
 		windows.push(windowDiv);
 		button.onmousedown = function() { openWindow(windowDiv); };

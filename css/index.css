@@ -350,7 +350,7 @@ i {
 
 /* Project Site */
 
-#project-window {
+.project-window {
     height: clamp(30vh, 700px, 90vh);
     width: clamp(40vw, 1100px, 90vw);
 }
@@ -389,7 +389,7 @@ i {
         width: 95vw;
     }
 
-    #project-window {
+    .project-window {
         height: 80vh;
         width: 100vw
     }

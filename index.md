@@ -145,3 +145,50 @@ languages:
         </div>
     </div>
 </div>
+
+{% assign project_pages = site.pages | where: "type", "project" %}
+    {% for page in project_pages %}
+        {% unless page.draft %}
+<div id="{{ page.url }}" class="draggable">
+<div class="window project-window">
+    <div class="title-bar">
+        <div class="title-bar-text">{{ page.title }}</div>
+        <div class="title-bar-controls">
+            <a href="{{ site.baseurl }}/">
+                <button aria-label="Close"></button>
+            </a>
+        </div>
+    </div>
+    <div class="window-body">
+        <article class="text-lg" role="tabpanel">
+            <div class="row between">
+                <div class="col between">
+                    <div>
+                    {{ page.content }}
+                    </div>
+                    {% if page.sourcecode %}
+                    <a class="icon-link" href="{{ page.sourcecode }}" target="_blank">
+                        <div class="icon-button project-button row center align-center">
+                            <i class="fa-brands fa-github"></i>
+                            <h4 class="bold noselect" style="padding-left: 15px; padding-right: 15px;">Check out the source code on Github!</h4>
+                        </div>
+                    </a>
+                    {% endif %}
+                </div>
+                <div class="col start align-end" style="padding: 10px">
+                    {% for imageurl in page.imageurls %}
+                    <img class="project-img" src="{{ site.baseurl }}{{ page.img }}/{{ imageurl }}" alt="{{ imageurl }}">
+                    {% endfor %}
+                    {% for videourl in page.videourls %}
+                    <video class="project-img" controls>
+                        <source type="video/mp4" src="{{ site.baseurl }}{{ page.img }}/{{ videourl }}" alt="{{ videourl }}">
+                    </video>
+                    {% endfor %}
+                </div>
+            </div>
+        </article>
+    </div>
+</div>
+</div>
+    {% endunless %}
+{% endfor %}

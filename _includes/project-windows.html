@@ -1,0 +1,6 @@
+{% assign project_pages = site.pages | where: "type", "project" }
+    {% for page in project_pages %}
+        {% unless page.draft %}
+            {% include page.url %}
+        {% endunless %}
+    {% endfor %}
