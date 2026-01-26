@@ -1,0 +1,73 @@
+{
+  "maya-animations": {
+    "urls": [
+      "https://www.youtube.com/embed/dylrF0YXPBI",
+      "https://www.youtube.com/embed/128Nzex6-NM?si=9c0jVcnW6Guetc7a",
+      "https://www.youtube.com/embed/eAH6sLl1HEg?si=tDjviZLF3ID379vY",
+      "https://www.youtube.com/embed/jwwS0wVly6w",
+      "https://www.youtube.com/embed/dmHNq3I60k8"
+    ],
+  },
+  "custom-animations": {
+    "urls": [
+      "https://www.youtube.com/embed/CiDQsPG01PQ?si=PlzUiMmcGYE33ZoX",
+      "https://www.youtube.com/embed/Ry8Xi5_Tn2M?si=fSdFhZH3AskH2pTk",
+      "https://www.youtube.com/embed/0pz0nrHzEV4?si=f9SljXwsznZZmANg"
+    ]
+  },
+  "games": [
+    {
+
+      "embed-url": "https://itch.io/embed/3505402",
+      "page-url": "https://uhmanoagamedev.itch.io/poke-the-hornets-nest",
+      "credits": "Poke the Hornet's Nest by UHManoaGameDev",
+      "list-game": true
+    },
+    {
+      "embed-url": "https://itch.io/embed/4058215",
+      "page-url": "https://uhmanoagamedev.itch.io/dreameter",
+      "credits": "DreaMeter by UHManoaGameDev",
+      "list-game": true,
+    },
+    {
+      "embed-url": "https://itch.io/embed/3295501",
+      "page-url": "https://nachocafe.itch.io/meowstrum",
+      "credits": "Meowstrum by NachoCafe, Whsky-Bon, daevinb",
+      "list-game": true
+    },
+    {
+      "embed-url": "https://itch.io/embed/3773317",
+      "page-url": "https://nachocafe.itch.io/dirt-jam-terrain-with-fog",
+      "credits": "Dirt Jam Terrain With Fog by NachoCafe",
+      "list-game": true
+    },
+    {
+      "embed-url": "https://itch.io/embed/2978377",
+      "page-url": "https://nachocafe.itch.io/love-a-la-carte-a-taste-of-romance",
+      "credits": "Love A La Carte, A Taste of Romance by NachoCafe",
+      "list-game": true
+    },
+  ],
+  "contacts": [
+    {
+      "url": "https://www.github.com/kylebueche",
+      "icon-class": "fa-brands fa-github",
+      "platform-name": "Github",
+    },
+    {
+      "url": "https://www.youtube.com/@NachoCafe",
+      "icon-class": "fa-brands fa-youtube",
+      "platform-name": "Youtube",
+    },
+    {
+      "url": "https://www.linkedin.com/in/kyle-bueche-6199b41b5",
+      "icon-class": "fa-brands fa-linkedin",
+      "platform-name": "Linkedin",
+    },
+    {
+      "url": "https://ko-fi.com/nachocafe",
+      "icon-class": "fa-solid fa-mug-saucer",
+      "platform-name": "Ko-fi",
+    }
+  ]
+}
