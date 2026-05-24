@@ -38,9 +38,9 @@ languages:
                 <div class="col center">
                     <h2>Kyle Bueche</h2>
 					<ul>
-						<li class="text-md">Software Developer based in Hawaiʻi</li> 
+						<li class="text-md">Software Developer based in Oregon</li> 
 						<li class="text-md">Former Software Engineering Intern at <a target="_blank" class="icon-color bold" href="https://oceanit.com/">Oceanit</a></li>
-						<li class="text-md">Senior CS Student at UH Mānoa</li>
+						<li class="text-md">BS in Computer Science, CCM Track at UH Mānoa</li>
 					</ul>
                     <p>Contact me at: <p class="grey bold">kyle.bueche@gmail.com</p></p>
                 </div> 
