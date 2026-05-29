@@ -22,7 +22,7 @@ layout: default
                     <a class="icon-link" href="{{ page.sourcecode }}" target="_blank">
                         <div class="icon-button project-button row center align-center">
                             <i class="fa-brands fa-github"></i>
-                            <h4 class="bold noselect" style="padding-left: 15px; padding-right: 15px;">Check out the source code on Github!</h4>
+                            <h4 class="bold noselect" style="padding-left: 15px; padding-right: 15px;">Check out the source code on {% if page.sourcecodesite %}{{ page.sourcecodesite }}{% else %}GitHub{% endif %}!</h4>
                         </div>
                     </a>
                     {% endif %}

@@ -16,6 +16,7 @@ labels:
   - Terrain
 summary: "A terrain generator built using compute shaders"
 sourcecode: "https://compute.toys/view/3138"
+sourcecodesite: "Compute.toys"
 ---
 
 ### How it's Done
